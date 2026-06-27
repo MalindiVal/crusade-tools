@@ -8,12 +8,13 @@
     "vscode": "^1.80.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:log"
+    "*"
   ],
-  "main": "./dist/extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -35,25 +36,18 @@
         "command": "crusade-tools.openErrorLog",
         "title": "🎮 Open error.log",
         "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.openFighter",
+        "title": "Open Fighter",
+        "category": "Crusade"
       }
-    ]
-  },
-  "scripts": {
-    "vsce": "vsce",
-    "pretest": "npm run compile",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.80.0",
-    "@types/node": "16.x",
-    "@types/mocha": "^10.0.0",
-    "typescript": "^5.0.0"
-  },
-  "viewsContainers": {
+    ],
+    "viewsContainers": {
         "activitybar": [
             {
                 "id": "crusade",
-                "title": "Smash Crusade",
+                "title": "Crusade Tools",
                 "icon": "media/icon.svg"
             }
         ]
@@ -62,9 +56,48 @@
         "crusade":[
             {
                 "id":"crusadeExplorer",
-                "name":"Explorer"
+                "name":"Explorer",
+                "icon": "media/icon.svg"
             }
         ]
 
+    },
+    "menus": {
+      "view/item/context": [
+          {
+              "command": "crusade-tools.openFighter",
+              "when": "view == crusadeExplorer",
+              "group": "navigation"
+            }
+        ]
+    },
+    "configuration": {
+      "title": "Crusade Tools",
+      "properties": {
+          "crusade-tools.autoWatch": {
+              "type": "boolean",
+              "default": true,
+              "description": "Automatically watch Crusade logs"
+          },
+          "crusade-tools.gamePath": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Smash Crusade executable"
+          }
+      }
     }
+  },
+  "scripts": {
+    "vsce": "vsce",
+    "pretest": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "16.x",
+    "@types/mocha": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
 }

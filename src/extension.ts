@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
+import { CrusadeTreeProvider } from './tree/crusadeTreeProvider';
 
 interface CrusadeLogEntry {
     type: 'error' | 'warning' | 'info';
@@ -37,8 +38,25 @@ function isCrusadeProject(root: string): boolean {
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('🎮 Crusade Tools activated!');
+	console.log("STEP 1");
+vscode.window.showInformationMessage("STEP 1");
 
 	const workspace = vscode.workspace.workspaceFolders?.[0];
+
+	if(workspace){
+
+		const provider = new CrusadeTreeProvider(
+			workspace.uri.fsPath
+		);
+
+		context.subscriptions.push(
+			vscode.window.registerTreeDataProvider(
+				"crusadeExplorer",
+				provider
+			)
+		);
+
+	}
 
 	if (workspace && isCrusadeProject(workspace.uri.fsPath)) {
 		vscode.window.setStatusBarMessage(
@@ -123,9 +141,19 @@ export function activate(context: vscode.ExtensionContext) {
         }
     };
 
-    errorLogWatcher.onDidChange(analyzeCrusadeLog);
-    spriteCountWatcher.onDidChange(analyzeCrusadeLog);
+	if (workspace) {
+		const errorLog = path.join(
+			workspace.uri.fsPath,
+			"error.log"
+		);
 
+		if (fs.existsSync(errorLog)) {
+			analyzeCrusadeLog(vscode.Uri.file(errorLog));
+		}
+	}
+
+    errorLogWatcher.onDidChange(analyzeCrusadeLog);
+   
     errorLogWatcher.onDidCreate((uri) => {
         if (isWatching) {
             vscode.window.showInformationMessage(`🎮 Crusade error.log created`);
@@ -269,6 +297,33 @@ export function activate(context: vscode.ExtensionContext) {
             await vscode.window.showTextDocument(doc);
         })
     );
+
+	context.subscriptions.push(
+
+		vscode.commands.registerCommand(
+
+			"crusade-tools.openFighter",
+
+			async (folderPath: string) => {
+
+				const initFile = path.join(folderPath, "init.txt");
+
+				if (!fs.existsSync(initFile)) {
+					vscode.window.showWarningMessage(
+						"init.txt not found."
+					);
+					return;
+				}
+
+				const doc = await vscode.workspace.openTextDocument(initFile);
+
+				await vscode.window.showTextDocument(doc);
+
+			}
+
+		)
+
+	);
 
     context.subscriptions.push(errorLogWatcher);
     context.subscriptions.push(spriteCountWatcher);
