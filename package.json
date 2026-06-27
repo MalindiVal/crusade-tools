@@ -35,11 +35,6 @@
         "command": "crusade-tools.openErrorLog",
         "title": "🎮 Open error.log",
         "category": "Crusade"
-      },
-      {
-        "command": "crusade-tools.openSpriteLog",
-        "title": "🎮 Open spritecount.log",
-        "category": "Crusade"
       }
     ]
   },

@@ -19,8 +19,33 @@ const CHARACTER_TEMPLATE_FILES = [
     'step.txt', 'edge_attack.txt', 'glide_attack.txt', 'ai.txt'
 ];
 
+function isCrusadeProject(root: string): boolean {
+    const required = [
+        "data",
+		"fighter",
+        "stage",
+        "item",
+        "music",
+        "palettes",
+        "INDEX"
+    ];
+
+    return required.every(file =>
+        fs.existsSync(path.join(root, file))
+    );
+}
+
 export function activate(context: vscode.ExtensionContext) {
     console.log('🎮 Crusade Tools activated!');
+
+	const workspace = vscode.workspace.workspaceFolders?.[0];
+
+	if (workspace && isCrusadeProject(workspace.uri.fsPath)) {
+		vscode.window.setStatusBarMessage(
+			"🎮 Smash Crusade Project",
+			5000
+		);
+	}
     
     let isWatching = true;
     const diagnosticCollection = vscode.languages.createDiagnosticCollection('crusadeTools');
@@ -117,7 +142,7 @@ export function activate(context: vscode.ExtensionContext) {
             }
 
             const characterName = await vscode.window.showInputBox({
-                prompt: '🎮 Character name (e.g., "yang", "yun", "meter")',
+                prompt: '🎮 Character name (e.g., "vmi_yangyun")',
                 placeHolder: 'character_name',
                 validateInput: (value) => {
                     if (!value.trim()) return 'Name cannot be empty';
@@ -128,7 +153,31 @@ export function activate(context: vscode.ExtensionContext) {
 
             if (!characterName) return;
 
-            const characterPath = path.join(workspaceFolder.uri.fsPath, characterName);
+			const fighterFolder = path.join(
+				workspaceFolder.uri.fsPath,
+				"fighter"
+			);
+
+			if (!fs.existsSync(fighterFolder)) {
+				vscode.window.showErrorMessage(
+					"fighter folder not found."
+				);
+				return;
+			}
+
+			const fighters = fs.readdirSync(fighterFolder);
+
+			if (fighters.includes(characterName)) {
+				vscode.window.showErrorMessage(`Character "${characterName}" already exists!`);
+				return;
+			}
+
+            
+
+			const characterPath = path.join(
+				fighterFolder,
+				characterName
+			);
 
             // Check if exists
             if (fs.existsSync(characterPath)) {
