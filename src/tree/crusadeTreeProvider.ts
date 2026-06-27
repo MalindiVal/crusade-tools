@@ -2,11 +2,23 @@ import * as vscode from "vscode";
 import * as fs from "fs";
 import * as path from "path";
 import { CrusadeNode, CrusadeNodeType } from "./crusadeNode";
+import { FighterAnalyzer } from "../analyzers/FighterAnalyzer";
+import { StageAnalyzer } from "../analyzers/StageAnalyzer";
+import { ItemAnalyzer } from "../analyzers/ItemAnalyzer";
+import { MusicAnalyzer } from "../analyzers/MusicAnalyser";
+import { CrusadeAnalyzer } from "../analyzers/CrusadeAnalyzer";
 
 export class CrusadeTreeProvider
 implements vscode.TreeDataProvider<CrusadeNode> {
 
-    constructor(private root:string){}
+    private analyzers = new Map<CrusadeNodeType, CrusadeAnalyzer>();
+
+    constructor(private root:string){
+        this.analyzers.set("fighter", new FighterAnalyzer(root));
+this.analyzers.set("stage", new StageAnalyzer(root));
+this.analyzers.set("item", new ItemAnalyzer(root));
+this.analyzers.set("music", new MusicAnalyzer(root));
+    }
 
     public getTreeItem(item: CrusadeNode) {
         return item;
@@ -56,16 +68,23 @@ implements vscode.TreeDataProvider<CrusadeNode> {
 
         }
 
-        if (
-    item.fullPath &&
-    fs.existsSync(item.fullPath) &&
-    fs.statSync(item.fullPath).isDirectory() &&
-    item.type !== "root"
-) {
-    return Promise.resolve(
-        this.categorizeFiles(item.fullPath)
-    );
-}
+        if (item.fullPath) {
+
+            const analyzer = this.analyzers.get(item.type);
+
+            if (analyzer) {
+                return Promise.resolve(
+                    analyzer.analyze(item.fullPath)
+                );
+            }
+
+            if (item.type === "folder") {
+                return Promise.resolve(
+                    this.loadFiles(item.fullPath)
+                );
+            }
+
+        }
 
         switch(item.label){
 
@@ -182,76 +201,6 @@ case "Palettes":
 
         });
 
-}
-
-    private categorizeFiles(folderPath: string): CrusadeNode[] {
-
-    const files = fs.readdirSync(folderPath);
-
-    const groups = new Map<string, CrusadeNode[]>();
-
-    const add = (group: string, file: string) => {
-
-        if (!groups.has(group)) {
-            groups.set(group, []);
-        }
-
-        const full = path.join(folderPath, file);
-
-        const node = new CrusadeNode(
-            file,
-            "file",
-            vscode.TreeItemCollapsibleState.None,
-            full
-        );
-
-        node.command = {
-            command: "vscode.open",
-            title: "Open",
-            arguments: [vscode.Uri.file(full)]
-        };
-
-        groups.get(group)!.push(node);
-    };
-
-    for (const file of files) {
-
-        if (file.endsWith(".txt")) {
-            add("📜 Scripts", file);
-        } else {
-            if (file.startsWith("box_") || file.endsWith("mask")) {
-                add("📦 Collision", file);
-            } if (file.startsWith("PALETTE")) {
-                add("🎨 Palettes", file);
-            } else if (file.startsWith("bg")) {
-                add("🖼 Backgrounds", file);
-            } else if (file.endsWith(".wav") || file.endsWith(".mp3") || file.endsWith(".ogg")) {
-                add("🎵 Sounds", file);
-            } else if (file.endsWith(".png") || file.endsWith(".jpg") || file.endsWith(".jpeg") || file.endsWith(".gif")) {
-                add("🖼 Sprites", file);
-            }else if (file.endsWith(".bmp")) {
-                add("🖼 Unpaletted Sprites", file);
-            } else if (file.endsWith(".itm")) {
-                add("Item points", file);
-            } else if (file.endsWith(".bin")) {
-                add("⚙ Compiled", file);
-            } else {
-                add("📄 Other", file);
-            }
-        }
-            
-        
-    }
-
-    return [...groups.entries()].map(([label, children]) =>
-        new CrusadeNode(
-            label,
-            "group",
-            vscode.TreeItemCollapsibleState.Collapsed,
-            undefined,
-            children
-        )
-    );
 }
 
 }
