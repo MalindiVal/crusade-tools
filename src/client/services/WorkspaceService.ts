@@ -130,6 +130,10 @@ export class WorkspaceService {
         );
     }
 
+    public dats(): string {
+        return path.join(this.root, "data", "dats");
+    }
+
     // -----------------------
     // Files
     // -----------------------
@@ -154,6 +158,10 @@ export class WorkspaceService {
         return this.resolve("controls.ini");
     }
 
+    public fightersList(): string {
+        return this.resolve("data", "fighters.txt");
+    }
+
     // -----------------------
     // Helpers
     // -----------------------
@@ -162,11 +170,11 @@ export class WorkspaceService {
 
         return [
 
+            "data",
             "fighter",
             "stage",
             "item",
             "music",
-            "palettes",
             "INDEX"
 
         ].every(file => this.exists(file));
