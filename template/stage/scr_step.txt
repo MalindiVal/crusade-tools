@@ -1,0 +1,7 @@
+////
+// STEP
+////
+
+// Exit script when freeze object is called.
+if ( timer_speed == 0 ) exit;
+timer += timer_speed;

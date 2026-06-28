@@ -1,0 +1,101 @@
+background_index[0] = stage_bg_add ( "stage/vmi_grid/bg.png" );
+
+  // Disable star kos.
+  star_ko_on = 0;
+  
+    // Debug variables.
+  collision_visible = 0;
+
+sccc = 0.73;
+top_x = 151.5 + 272.5 - 272.5 * sccc;
+top_y = 64 + 252 - 252 * sccc;
+
+// Set the camera boundaries + maximal zoom level. Minimal zoom level is determined by camera boundaries.
+
+camera_boundary_l = 64;
+camera_boundary_r = 784;
+camera_boundary_u = 40;
+camera_boundary_d = 445;
+camera_boundary_zoom = 292;
+
+// Set the death boundaries.
+
+death_l = camera_boundary_l - 160 * sccc;
+death_u = camera_boundary_u - 190 * sccc;
+death_r = camera_boundary_r + 160 * sccc;
+death_d = camera_boundary_d + 96 * sccc;
+
+// Set the players' starting position and respawn point.
+
+player_spawn_x [ 0 ] = top_x + 96 * sccc;
+player_spawn_y [ 0 ] = top_y + 249 * sccc;
+player_spawn_x [ 1 ] = top_x + 452 * sccc;
+player_spawn_y [ 1 ] = top_y + 249 * sccc;
+player_spawn_x [ 2 ] = top_x + 272 * sccc;
+player_spawn_y [ 2 ] = top_y + 100 * sccc;
+player_spawn_x [ 3 ] = top_x + 271 * sccc;
+player_spawn_y [ 3 ] = top_y + 249 * sccc;
+player_spawn_x [ 4 ] = top_x + 152 * sccc;
+player_spawn_y [ 4 ] = top_y + 170 * sccc;
+player_spawn_x [ 5 ] = top_x + 396 * sccc;
+player_spawn_y [ 5 ] = top_y + 170 * sccc;
+respawn_x = top_x + 272 * sccc;
+respawn_y = top_y + 52 * sccc;
+
+// Load and set the stage collisions.
+
+global.msk_stg[0] = stage_msk_add ( 'stage/vmi_grid/mask_floor.png' , 1 , 1 , 0 , 0 , 0 );
+global.msk_stg[1] = stage_msk_add ( 'stage/vmi_grid/mask2.png' , 1 , 1 , 0 , 0 , 0 );
+global.msk_stg[2] = stage_msk_add ( 'stage/vmi_grid/mask3.png' , 1 , 1 , 0 , 0 , 0 );
+global.msk_stg[3] = stage_msk_add ( 'stage/vmi_grid/mask_ceil.png' , 1 , 1 , 0 , 0 , 0 );
+global.msk_stg[4] = stage_msk_add ( 'stage/vmi_grid/mask_plat.png' , 1 , 1 , 0 , 0 , 0 );
+
+// Set the ledges.
+
+i = instance_create ( top_x + 52 * sccc , top_y + 250 * sccc , obj_edge_left );
+i.image_alpha = .5;
+  i.depth = 5;
+  i.visible = 1;
+i = instance_create ( top_x + 492 * sccc , top_y + 250 * sccc , obj_edge_right );
+i.image_alpha = .5;
+  i.depth = 5;
+  i.visible = 1;
+
+var i;
+i = instance_create ( top_x , top_y , obj_floor );
+i . sprite_index = global.msk_stg[0];
+i.image_xscale = sccc;
+i.image_yscale = sccc;
+i.depth = 6
+i.visible = 1;
+i = instance_create ( top_x , top_y , obj_leftwall );
+i . sprite_index = global.msk_stg[1];
+i.image_xscale = sccc;
+i.image_yscale = sccc;
+i.depth = 6
+i.visible = 1;
+i = instance_create ( top_x , top_y , obj_rightwall );
+i . sprite_index = global.msk_stg[2];
+i.image_xscale = sccc;
+i.image_yscale = sccc;
+i.depth = 6
+i.visible = 1;
+i = instance_create ( top_x , top_y , obj_ceiling );
+i . sprite_index = global.msk_stg[3];
+i.image_xscale = sccc;
+i.image_yscale = sccc;
+i.depth = 6
+i.visible = 1;
+i = instance_create ( top_x , top_y , obj_platform );
+i . sprite_index = global.msk_stg[4];
+i.image_xscale = sccc;
+i.image_yscale = sccc;
+i.depth = 6
+i.visible = 1;
+
+
+stage_install_bg_object();
+with ( obj_stage_bg )
+  {
+  variantstage0 = other.variantstage0;
+  }
