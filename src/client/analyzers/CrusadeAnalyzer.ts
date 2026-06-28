@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as vscode from "vscode";
-import { CrusadeNode } from "../explorer/crusadeNode";
+import { CrusadeNode } from "../explorer/CrusadeNode";
 
 export abstract class CrusadeAnalyzer {
 
