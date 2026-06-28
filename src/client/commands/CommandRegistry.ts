@@ -11,15 +11,6 @@ export class CommandRegistry {
     public register(): void {
 
         this.registerCommand(
-            "crusade-tools.refreshExplorer",
-            () => {
-                vscode.commands.executeCommand(
-                    "workbench.actions.treeView.crusadeExplorer.refresh"
-                );
-            }
-        );
-
-        this.registerCommand(
             "crusade-tools.createCharacter",
             () => createCharacter(this.context)
         );
