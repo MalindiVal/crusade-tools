@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as vscode from "vscode";
 import { CrusadeAnalyzer } from "./CrusadeAnalyzer";
-import { CrusadeNode } from "../tree/crusadeNode";
+import { CrusadeNode } from "../explorer/crusadeNode";
 import path from "path/win32";
 import { MusicAnalyzer } from "./MusicAnalyser";
 

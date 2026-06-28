@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as vscode from "vscode";
 
-import { CrusadeNode } from "../tree/crusadeNode";
+import { CrusadeNode } from "../explorer/crusadeNode";
 import { CrusadeAnalyzer } from "./CrusadeAnalyzer";
 
 export class MusicAnalyzer extends CrusadeAnalyzer {

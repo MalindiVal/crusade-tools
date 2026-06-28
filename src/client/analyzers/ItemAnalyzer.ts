@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { CrusadeAnalyzer } from "./CrusadeAnalyzer";
-import { CrusadeNode } from "../tree/crusadeNode";
+import { CrusadeNode } from "../explorer/crusadeNode";
 
 export class ItemAnalyzer extends CrusadeAnalyzer {
 
