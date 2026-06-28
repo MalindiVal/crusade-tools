@@ -1,5 +1,7 @@
 import * as vscode from "vscode";
 
+import { createCharacter } from "./character/createCharacter";
+
 export class CommandRegistry {
 
     constructor(
@@ -19,11 +21,7 @@ export class CommandRegistry {
 
         this.registerCommand(
             "crusade-tools.createCharacter",
-            () => {
-                vscode.window.showInformationMessage(
-                    "Create Character (TODO)"
-                );
-            }
+            () => createCharacter(this.context)
         );
 
         this.registerCommand(
@@ -44,45 +42,8 @@ export class CommandRegistry {
             }
         );
 
-        this.registerCommand(
-            "crusade-tools.previewSprite",
-            (uri: vscode.Uri) => {
-                vscode.commands.executeCommand(
-                    "crusade-tools.previewSprite",
-                    uri
-                );
-            }
-        );
-
-        this.registerCommand(
-            "crusade-tools.previewPalette",
-            (uri: vscode.Uri) => {
-                vscode.commands.executeCommand(
-                    "crusade-tools.previewPalette",
-                    uri
-                );
-            }
-        );
-
-        this.registerCommand(
-            "crusade-tools.previewStage",
-            (uri: vscode.Uri) => {
-                vscode.commands.executeCommand(
-                    "crusade-tools.previewStage",
-                    uri
-                );
-            }
-        );
-
-        this.registerCommand(
-            "crusade-tools.previewMusic",
-            (uri: vscode.Uri) => {
-                vscode.commands.executeCommand(
-                    "crusade-tools.previewMusic",
-                    uri
-                );
-            }
-        );
+        // Preview commands are registered by PreviewManager
+        // Do NOT register them here - they're handled by individual Preview classes
 
         this.registerCommand(
             "crusade-tools.toggleWatch",
