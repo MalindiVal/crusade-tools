@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 import { CrusadeAnalyzer } from "./CrusadeAnalyzer";
 import { CrusadeNode } from "../explorer/CrusadeNode";
 import path from "path/win32";
-import { MusicAnalyzer } from "./MusicAnalyser";
+import { MusicAnalyzer } from "./MusicAnalyzer";
 
 export class FighterAnalyzer extends CrusadeAnalyzer {
 
