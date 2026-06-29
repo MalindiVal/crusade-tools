@@ -134,6 +134,10 @@ export class WorkspaceService {
         return path.join(this.root, "data", "dats");
     }
 
+    public cssFolder(): string {
+        return path.join(this.root, "data", "css");
+    }
+
     // -----------------------
     // Files
     // -----------------------
@@ -160,6 +164,14 @@ export class WorkspaceService {
 
     public fightersList(): string {
         return this.resolve("data", "fighters.txt");
+    }
+
+    public gameSettings(): string {
+        return this.resolve("data", "GAME_SETTINGS.txt");
+    }
+
+    public maincss(): string {
+        return this.resolve("data", "css.txt");
     }
 
     // -----------------------
