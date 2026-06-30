@@ -5,6 +5,7 @@ import { PalettePreview } from "./PalettePreview";
 import { StagePreview } from "./StagePreview";
 import { MusicPreview } from "./MusicPreview";
 import { CharacterDataPreview } from "./CharacterDataPreview";
+import { StageDataPreview } from "./StageDataPreview";
 
 export class PreviewManager implements vscode.Disposable {
 
@@ -13,6 +14,7 @@ export class PreviewManager implements vscode.Disposable {
     private readonly stagePreview: StagePreview;
     private readonly musicPreview: MusicPreview;
     private readonly characterDataPreview: CharacterDataPreview;
+    private readonly stageDataPreview: StageDataPreview;
 
     constructor(
         private readonly context: vscode.ExtensionContext
@@ -23,6 +25,7 @@ export class PreviewManager implements vscode.Disposable {
         this.stagePreview = new StagePreview(context);
         this.musicPreview = new MusicPreview(context);
         this.characterDataPreview = new CharacterDataPreview(context);
+        this.stageDataPreview = new StageDataPreview(context);
 
     }
 
@@ -38,6 +41,8 @@ export class PreviewManager implements vscode.Disposable {
 
         this.characterDataPreview.register();
 
+        this.stageDataPreview.register();
+
     }
 
     public dispose(): void {
@@ -51,6 +56,8 @@ export class PreviewManager implements vscode.Disposable {
         this.musicPreview.dispose?.();
 
         this.characterDataPreview.dispose?.();
+
+        this.stageDataPreview.dispose?.();
 
     }
 

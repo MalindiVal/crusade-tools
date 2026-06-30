@@ -140,6 +140,8 @@ case "Palettes":
 
         const entries = fs.readdirSync(dir, { withFileTypes: true });
 
+        const config = this.binListingConfig(type);
+
         const dirNodes = entries
             .filter(f => f.isDirectory())
             .map(f => {
@@ -151,9 +153,9 @@ case "Palettes":
                     path.join(dir, f.name)
                 );
 
-                if (type === "fighter") {
+                if (config) {
 
-                    const icon = this.findStockIcon(f.name);
+                    const icon = this.findIcon(config.iconDir, f.name);
 
                     if (icon) {
                         node.iconPath = vscode.Uri.file(icon);
@@ -165,12 +167,12 @@ case "Palettes":
 
             });
 
-        if (type !== "fighter") {
+        if (!config) {
             return dirNodes.sort((a, b) => a.label.localeCompare(b.label));
         }
 
-        // Personnages dont seul le script compilé fighter/<nom>.bin existe,
-        // sans dossier source : on les liste à part, données via data/dats/<nom>.dat
+        // Entités dont seul le script compilé <type>/<nom>.bin existe,
+        // sans dossier source : on les liste à part.
         const dirNames = new Set(
             entries.filter(f => f.isDirectory()).map(f => f.name)
         );
@@ -190,15 +192,15 @@ case "Palettes":
                     full
                 );
 
-                const icon = this.findStockIcon(name);
+                const icon = this.findIcon(config.iconDir, name);
 
                 if (icon) {
                     node.iconPath = vscode.Uri.file(icon);
                 }
 
                 node.command = {
-                    command: "crusade-tools.previewCharacterData",
-                    title: "Preview Character Data",
+                    command: config.previewCommand,
+                    title: "Preview Data",
                     arguments: [vscode.Uri.file(full)]
                 };
 
@@ -212,29 +214,56 @@ case "Palettes":
     }
 
     /**
-     * Cherche l'icône de stock d'un personnage dans gfx/stock,
-     * en se basant sur le nom de son dossier fighter/<nom>.
+     * Dossier d'icônes et commande de preview de données pour les types
+     * d'entités qui supportent l'icône d'arbre + le listage "bin seul".
      */
-    private findStockIcon(characterName: string): string | undefined {
+    private binListingConfig(
+        type: CrusadeNodeType
+    ): { iconDir: string; previewCommand: string } | undefined {
 
-        const stockDir = path.join(this.root, "gfx", "stock");
+        switch (type) {
 
-        if (!fs.existsSync(stockDir))
+            case "fighter":
+                return {
+                    iconDir: path.join(this.root, "gfx", "stock"),
+                    previewCommand: "crusade-tools.previewCharacterData"
+                };
+
+            case "stage":
+                return {
+                    iconDir: path.join(this.root, "gfx", "stgicons"),
+                    previewCommand: "crusade-tools.previewStageData"
+                };
+
+            default:
+                return undefined;
+
+        }
+
+    }
+
+    /**
+     * Cherche une icône dont le nom commence par celui de l'entité
+     * dans le dossier donné (correspondance exacte privilégiée).
+     */
+    private findIcon(dir: string, name: string): string | undefined {
+
+        if (!fs.existsSync(dir))
             return undefined;
 
-        const exact = path.join(stockDir, `${characterName}.png`);
+        const exact = path.join(dir, `${name}.png`);
 
         if (fs.existsSync(exact))
             return exact;
 
-        const lower = characterName.toLowerCase();
+        const lower = name.toLowerCase();
 
-        const match = fs.readdirSync(stockDir)
+        const match = fs.readdirSync(dir)
             .filter(f => /\.(png|bmp|gif|jpg|jpeg)$/i.test(f))
             .find(f => f.toLowerCase().startsWith(lower));
 
         return match
-            ? path.join(stockDir, match)
+            ? path.join(dir, match)
             : undefined;
 
     }

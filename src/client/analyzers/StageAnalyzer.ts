@@ -21,6 +21,8 @@ export class StageAnalyzer extends CrusadeAnalyzer {
 
         return [
 
+            this.dataNode(folder),
+
             this.category(
                 "📜 Scripts",
                 files.filter(f => f.startsWith("scr_")),
@@ -47,5 +49,27 @@ export class StageAnalyzer extends CrusadeAnalyzer {
             n !== null &&
             (!n.children || n.children.length > 0)
         );
+    }
+
+    /**
+     * Noeud "Données" d'un stage, donnant accès à la page de preview
+     * (icône CSS gfx/stgicons, screenshot gfx/stgprevs).
+     */
+    private dataNode(folder: string): CrusadeNode {
+
+        const node = new CrusadeNode(
+            "📋 Données",
+            "file",
+            vscode.TreeItemCollapsibleState.None,
+            folder
+        );
+
+        node.command = {
+            command: "crusade-tools.previewStageData",
+            title: "Preview Stage Data",
+            arguments: [vscode.Uri.file(folder)]
+        };
+
+        return node;
     }
 }
