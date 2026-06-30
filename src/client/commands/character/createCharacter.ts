@@ -18,24 +18,24 @@ export async function createCharacter(
     // Validate workspace
     if (!workspace.isCrusadeProject()) {
         notifications.error(
-            "Not a Crusade project. Open a folder with INDEX, fighter/, and stage/ directories."
+            vscode.l10n.t("Not a Crusade project. Open a folder with INDEX, fighter/, and stage/ directories.")
         );
         return;
     }
 
     // Prompt for character name
     const name = await vscode.window.showInputBox({
-        prompt: "Enter character name",
-        placeHolder: "e.g., MyCharacter",
+        prompt: vscode.l10n.t("Enter character name"),
+        placeHolder: vscode.l10n.t("e.g., MyCharacter"),
         validateInput: (value: string) => {
             if (!value.trim()) {
-                return "Name cannot be empty";
+                return vscode.l10n.t("Name cannot be empty");
             }
             if (!/^[a-zA-Z0-9_-]+$/.test(value)) {
-                return "Name can only contain letters, numbers, underscores, and hyphens";
+                return vscode.l10n.t("Name can only contain letters, numbers, underscores, and hyphens");
             }
             if (value.length > 32) {
-                return "Name cannot exceed 32 characters";
+                return vscode.l10n.t("Name cannot exceed 32 characters");
             }
             return null;
         }
@@ -49,14 +49,18 @@ export async function createCharacter(
 
     // Check if character already exists
     if (fs.existsSync(fighterPath)) {
+
+        const overwriteLabel = vscode.l10n.t("Overwrite");
+        const cancelLabel = vscode.l10n.t("Cancel");
+
         const overwrite = await vscode.window.showWarningMessage(
-            `Character "${name}" already exists. Overwrite?`,
+            vscode.l10n.t('Character "{0}" already exists. Overwrite?', name),
             { modal: true },
-            "Overwrite",
-            "Cancel"
+            overwriteLabel,
+            cancelLabel
         );
 
-        if (overwrite !== "Overwrite") {
+        if (overwrite !== overwriteLabel) {
             return;
         }
 
@@ -64,7 +68,7 @@ export async function createCharacter(
         try {
             fs.rmSync(fighterPath, { recursive: true, force: true });
         } catch (error) {
-            notifications.error(`Failed to remove existing character: ${error}`);
+            notifications.error(vscode.l10n.t("Failed to remove existing character: {0}", String(error)));
             return;
         }
     }
@@ -80,7 +84,7 @@ export async function createCharacter(
         // Verify template exists
         if (!fs.existsSync(templatePath)) {
             notifications.error(
-                "Character template not found in extension. Please reinstall."
+                vscode.l10n.t("Character template not found in extension. Please reinstall.")
             );
             return;
         }
@@ -104,10 +108,10 @@ export async function createCharacter(
         }
 
         // Show success notification
-        notifications.info(`Character "${name}" created successfully!`);
+        notifications.info(vscode.l10n.t('Character "{0}" created successfully!', name));
         const info = await getDatInfo(workspace, name)
         if (!info) {
-            notifications.warning("Character creation cancelled. Missing DAT info.");
+            notifications.warning(vscode.l10n.t("Character creation cancelled. Missing DAT info."));
             return;
         }
         await createDatFile(context, workspace, name, info);
@@ -132,7 +136,7 @@ export async function createCharacter(
         }
 
     } catch (error) {
-        notifications.error(`Failed to create character: ${error}`);
+        notifications.error(vscode.l10n.t("Failed to create character: {0}", String(error)));
     }
 
 }
@@ -164,8 +168,6 @@ async function copyDirectory(src: string, dest: string): Promise<void> {
 
 }
 
-const CREATE_NEW_SERIES = "$(add) Create new franchise...";
-
 /**
  * Liste les franchises existantes (gfx/seriesicon/<nom>.png) dans une
  * liste déroulante, avec une option pour en saisir une nouvelle.
@@ -181,18 +183,20 @@ async function pickSeriesName(workspace: WorkspaceService): Promise<string | und
             .sort((a, b) => a.localeCompare(b))
         : [];
 
+    const createNewLabel = vscode.l10n.t("$(add) Create new franchise...");
+
     const choice = await vscode.window.showQuickPick(
-        [CREATE_NEW_SERIES, ...existing],
-        { placeHolder: "Select the character's franchise/series" }
+        [createNewLabel, ...existing],
+        { placeHolder: vscode.l10n.t("Select the character's franchise/series") }
     );
 
     if (choice === undefined) return;
 
-    if (choice !== CREATE_NEW_SERIES) return choice;
+    if (choice !== createNewLabel) return choice;
 
     return vscode.window.showInputBox({
-        prompt: "New franchise/series name",
-        placeHolder: "e.g. Mario, Sonic..."
+        prompt: vscode.l10n.t("New franchise/series name"),
+        placeHolder: vscode.l10n.t("e.g. Mario, Sonic...")
     });
 
 }
@@ -207,21 +211,21 @@ interface DatInfo {
 
 async function getDatInfo(workspace: WorkspaceService, name: string): Promise<DatInfo | undefined> {
     const cssName = await vscode.window.showInputBox({
-        prompt: "CSS Name",
+        prompt: vscode.l10n.t("CSS Name"),
         value: name
     });
 
     if (cssName === undefined) return;
 
     const menuName = await vscode.window.showInputBox({
-        prompt: "Menu Name",
+        prompt: vscode.l10n.t("Menu Name"),
         value: name
     });
 
     if (menuName === undefined) return;
 
     const battleName = await vscode.window.showInputBox({
-        prompt: "Battle Name",
+        prompt: vscode.l10n.t("Battle Name"),
         value: name
     });
 
@@ -232,7 +236,7 @@ async function getDatInfo(workspace: WorkspaceService, name: string): Promise<Da
     if (seriesName === undefined) return;
 
     const homeStage = await vscode.window.showInputBox({
-        prompt: "Classic Home Stage",
+        prompt: vscode.l10n.t("Classic Home Stage"),
         value: "suguri_sky"
     });
 
@@ -268,7 +272,7 @@ async function createDatFile(
     }
 
     if (!fs.existsSync(datTemplate)) {
-        notifications.error("DAT template not found.");
+        notifications.error(vscode.l10n.t("DAT template not found."));
         return;
     }
 
@@ -283,7 +287,7 @@ async function createDatFile(
     .replace(/\{\{HOME_STAGE\}\}/g, info.homeStage);
 
     fs.writeFileSync(datFile, datContent, "utf8");
-    
+
 }
 
 /**
@@ -299,7 +303,7 @@ async function addCharacterToRoster(
         const fighterlist = workspace.fightersList();
 
         if (!fs.existsSync(fighterlist)) {
-            notifications.error("DAT template not found.");
+            notifications.error(vscode.l10n.t("DAT template not found."));
             return undefined;
         }
 
@@ -312,16 +316,20 @@ async function addCharacterToRoster(
         let rostersize = parseInt(lines[0], 10);
 
         if (Number.isNaN(rostersize)) {
-            notifications.error("Invalid fighters.txt format.");
+            notifications.error(vscode.l10n.t("Invalid fighters.txt format."));
             return undefined;
         }
         if(listContent.length - 1 > rostersize) {
             const oldsize = rostersize;
             rostersize = Number(listContent.replace(listContent[0], (listContent.length).toString()));
-            notifications.info(`Roster size updated from ${oldsize} to ${rostersize} based on fighters.txt content.`);
+            notifications.info(vscode.l10n.t(
+                "Roster size updated from {0} to {1} based on fighters.txt content.",
+                oldsize,
+                rostersize
+            ));
         }
         if (listContent.includes(name)) {
-            notifications.warning(`Character "${name}" is already in the roster.`);
+            notifications.warning(vscode.l10n.t('Character "{0}" is already in the roster.', name));
             return undefined;
         }
 
@@ -332,12 +340,12 @@ async function addCharacterToRoster(
 
         fs.writeFileSync(fighterlist, listContent, "utf8");
 
-        notifications.info(`Character "${name}" added to roster successfully!`);
+        notifications.info(vscode.l10n.t('Character "{0}" added to roster successfully!', name));
 
         return id;
     } catch (error) {
         const notifications = new NotificationService();
-        notifications.error(`Failed to add character to roster: ${error}`);
+        notifications.error(vscode.l10n.t("Failed to add character to roster: {0}", String(error)));
         return undefined;
     }
 }
@@ -372,7 +380,7 @@ async function ensureCssPageRegistered(
     const settingsPath = workspace.gameSettings();
 
     if (!fs.existsSync(settingsPath)) {
-        notifications.warning("GAME_SETTINGS.txt not found, skipping CSS page registration.");
+        notifications.warning(vscode.l10n.t("GAME_SETTINGS.txt not found, skipping CSS page registration."));
         return;
     }
 
@@ -387,7 +395,7 @@ async function ensureCssPageRegistered(
         const numberMatch = content.match(/global\.css_custom_number\s*=\s*(\d+)\s*;/);
 
         if (!numberMatch) {
-            notifications.warning("Could not find global.css_custom_number in GAME_SETTINGS.txt.");
+            notifications.warning(vscode.l10n.t("Could not find global.css_custom_number in GAME_SETTINGS.txt."));
             return;
         }
 
@@ -413,10 +421,10 @@ async function ensureCssPageRegistered(
 
         fs.writeFileSync(settingsPath, content, "utf8");
 
-        notifications.info(`Registered new CSS page "${displayName}" in GAME_SETTINGS.txt.`);
+        notifications.info(vscode.l10n.t('Registered new CSS page "{0}" in GAME_SETTINGS.txt.', displayName));
 
     } catch (error) {
-        notifications.error(`Failed to register CSS page: ${error}`);
+        notifications.error(vscode.l10n.t("Failed to register CSS page: {0}", String(error)));
     }
 
 }
@@ -434,7 +442,7 @@ async function addCharacterToCss(
     const cssPage = path.join(workspace.cssFolder(), "My-Mods.txt");
 
     if (!fs.existsSync(cssPage)) {
-        notifications.warning("data/css/My-Mods.txt not found, skipping CSS placement.");
+        notifications.warning(vscode.l10n.t("data/css/My-Mods.txt not found, skipping CSS placement."));
         return;
     }
 
@@ -452,10 +460,10 @@ async function addCharacterToCss(
 
         fs.writeFileSync(cssPage, content, "utf8");
 
-        notifications.info(`Character added to CSS (My-Mods, ID ${code}).`);
+        notifications.info(vscode.l10n.t("Character added to CSS (My-Mods, ID {0}).", code));
 
     } catch (error) {
-        notifications.error(`Failed to add character to CSS: ${error}`);
+        notifications.error(vscode.l10n.t("Failed to add character to CSS: {0}", String(error)));
     }
 
 }

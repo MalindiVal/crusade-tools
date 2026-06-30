@@ -1,0 +1,22 @@
+{
+  "crusade-tools.displayName": "Crusade Tools",
+  "crusade-tools.description": "Surveille et analyse les journaux du projet Crusade (error.log, spritecount.log)",
+  "crusade-tools.command.createCharacter": "🎮 Créer un nouveau personnage",
+  "crusade-tools.command.toggleWatch": "🎮 Activer/désactiver la surveillance des journaux",
+  "crusade-tools.command.clearLogs": "🎮 Effacer tous les journaux",
+  "crusade-tools.command.openErrorLog": "🎮 Ouvrir error.log",
+  "crusade-tools.command.openFighter": "Ouvrir le personnage",
+  "crusade-tools.command.refreshExplorer": "Actualiser l'explorateur",
+  "crusade-tools.command.openGame": "Lancer Smash Crusade",
+  "crusade-tools.command.compileCharacter": "Compiler le personnage",
+  "crusade-tools.command.openPalette": "Ouvrir la palette",
+  "crusade-tools.command.openMusic": "Ouvrir la musique",
+  "crusade-tools.command.previewSprite": "Aperçu du sprite",
+  "crusade-tools.command.previewCharacterData": "Aperçu des données du personnage",
+  "crusade-tools.command.previewStageData": "Aperçu des données du stage",
+  "crusade-tools.view.explorer": "Explorateur",
+  "crusade-tools.view.diagnostics": "Diagnostics",
+  "crusade-tools.view.assets": "Ressources",
+  "crusade-tools.config.autoWatch": "Surveiller automatiquement les journaux Crusade",
+  "crusade-tools.config.gamePath": "Chemin de l'exécutable Smash Crusade"
+}

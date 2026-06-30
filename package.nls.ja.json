@@ -1,0 +1,22 @@
+{
+  "crusade-tools.displayName": "Crusade Tools",
+  "crusade-tools.description": "Crusade プロジェクトのログ (error.log、spritecount.log) を監視・解析します",
+  "crusade-tools.command.createCharacter": "🎮 新しいキャラクターを作成",
+  "crusade-tools.command.toggleWatch": "🎮 ログ監視の切り替え",
+  "crusade-tools.command.clearLogs": "🎮 すべてのログをクリア",
+  "crusade-tools.command.openErrorLog": "🎮 error.log を開く",
+  "crusade-tools.command.openFighter": "キャラクターを開く",
+  "crusade-tools.command.refreshExplorer": "エクスプローラーを更新",
+  "crusade-tools.command.openGame": "Smash Crusade を起動",
+  "crusade-tools.command.compileCharacter": "キャラクターをコンパイル",
+  "crusade-tools.command.openPalette": "パレットを開く",
+  "crusade-tools.command.openMusic": "音楽を開く",
+  "crusade-tools.command.previewSprite": "スプライトのプレビュー",
+  "crusade-tools.command.previewCharacterData": "キャラクターデータのプレビュー",
+  "crusade-tools.command.previewStageData": "ステージデータのプレビュー",
+  "crusade-tools.view.explorer": "エクスプローラー",
+  "crusade-tools.view.diagnostics": "診断",
+  "crusade-tools.view.assets": "アセット",
+  "crusade-tools.config.autoWatch": "Crusade のログを自動的に監視する",
+  "crusade-tools.config.gamePath": "Smash Crusade 実行ファイルのパス"
+}

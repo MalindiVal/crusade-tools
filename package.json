@@ -1,9 +1,10 @@
 {
   "name": "crusade-tools",
-  "displayName": "Crusade Tools",
-  "description": "Monitor and analyze Crusade project logs (error.log, spritecount.log)",
+  "displayName": "%crusade-tools.displayName%",
+  "description": "%crusade-tools.description%",
   "version": "0.0.1",
   "publisher": "valentin",
+  "l10n": "./l10n",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -49,63 +50,68 @@
     "commands": [
       {
         "command": "crusade-tools.createCharacter",
-        "title": "🎮 Create New Character",
+        "title": "%crusade-tools.command.createCharacter%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.toggleWatch",
-        "title": "🎮 Toggle Log Watch",
+        "title": "%crusade-tools.command.toggleWatch%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.clearLogs",
-        "title": "🎮 Clear All Logs",
+        "title": "%crusade-tools.command.clearLogs%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.openErrorLog",
-        "title": "🎮 Open error.log",
+        "title": "%crusade-tools.command.openErrorLog%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.openFighter",
-        "title": "Open Fighter",
+        "title": "%crusade-tools.command.openFighter%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.refreshExplorer",
-        "title": "Refresh Explorer",
+        "title": "%crusade-tools.command.refreshExplorer%",
         "category": "Crusade",
         "icon": "$(refresh)"
       },
       {
         "command": "crusade-tools.openGame",
-        "title": "Launch Smash Crusade",
+        "title": "%crusade-tools.command.openGame%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.compileCharacter",
-        "title": "Compile Character",
+        "title": "%crusade-tools.command.compileCharacter%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.openPalette",
-        "title": "Open Palette",
+        "title": "%crusade-tools.command.openPalette%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.openMusic",
-        "title": "Open Music",
+        "title": "%crusade-tools.command.openMusic%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.previewSprite",
-        "title": "Preview Sprite",
+        "title": "%crusade-tools.command.previewSprite%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.previewCharacterData",
-        "title": "Preview Character Data",
+        "title": "%crusade-tools.command.previewCharacterData%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.previewStageData",
+        "title": "%crusade-tools.command.previewStageData%",
         "category": "Crusade"
       }
     ],
@@ -113,7 +119,7 @@
       "activitybar": [
         {
           "id": "crusade",
-          "title": "Crusade Tools",
+          "title": "%crusade-tools.displayName%",
           "icon": "media/icon.svg"
         }
       ]
@@ -122,16 +128,16 @@
       "crusade": [
         {
           "id": "crusadeExplorer",
-          "name": "Explorer",
+          "name": "%crusade-tools.view.explorer%",
           "icon": "media/icon.svg"
         },
         {
           "id": "crusadeDiagnostics",
-          "name": "Diagnostics"
+          "name": "%crusade-tools.view.diagnostics%"
         },
         {
           "id": "crusadeAssets",
-          "name": "Assets"
+          "name": "%crusade-tools.view.assets%"
         }
       ]
     },
@@ -172,17 +178,17 @@
       ]
     },
     "configuration": {
-      "title": "Crusade Tools",
+      "title": "%crusade-tools.displayName%",
       "properties": {
         "crusade-tools.autoWatch": {
           "type": "boolean",
           "default": true,
-          "description": "Automatically watch Crusade logs"
+          "description": "%crusade-tools.config.autoWatch%"
         },
         "crusade-tools.gamePath": {
           "type": "string",
           "default": "",
-          "description": "Path to Smash Crusade executable"
+          "description": "%crusade-tools.config.gamePath%"
         }
       }
     }
