@@ -7,6 +7,7 @@ import { InitAnalyzer } from "../analyzers/InitAnalyzer";
 import { CharacterDat } from "../models/CharacterDat";
 
 const IMAGE_EXTENSIONS = /\.(png|bmp|gif|jpg|jpeg)$/i;
+const AUDIO_EXTENSIONS = /\.(ogg|mp3|wav)$/i;
 
 export class CharacterDataPreview implements vscode.Disposable {
 
@@ -121,6 +122,16 @@ export class CharacterDataPreview implements vscode.Disposable {
             ? this.findImage(path.join(projectRoot, "gfx", "seriesicon"), dat.seriesName)
             : undefined;
 
+        const folderMusic = this.findAudioFiles(
+            path.join(projectRoot, "music", characterName)
+        );
+
+        const versusMusic = this.findVersusMusic(projectRoot, characterName);
+
+        const victoryTrack = this.findVictoryMusic(projectRoot, characterName, dat?.seriesName);
+
+        const victoryLoopTrack = this.findVictoryLoopMusic(projectRoot, characterName, dat?.seriesName);
+
         this.panel.title = `Données - ${characterName}`;
 
         this.panel.webview.html = this.html(
@@ -150,8 +161,34 @@ export class CharacterDataPreview implements vscode.Disposable {
             bustVariants.map((p, i) => ({
                 uri: this.panel!.webview.asWebviewUri(vscode.Uri.file(p)),
                 name: this.paletteLabel(dat, i)
-            }))
+            })),
+            this.toMusicEntries(folderMusic),
+            this.toMusicEntries(versusMusic),
+            this.toVictoryEntry(victoryTrack),
+            this.toVictoryEntry(victoryLoopTrack)
         );
+
+    }
+
+    private toVictoryEntry(
+        track: { file: string; label: string } | undefined
+    ): { uri: vscode.Uri; label: string } | undefined {
+
+        return track
+            ? {
+                uri: this.panel!.webview.asWebviewUri(vscode.Uri.file(track.file)),
+                label: track.label
+            }
+            : undefined;
+
+    }
+
+    private toMusicEntries(files: string[]): { uri: vscode.Uri; name: string }[] {
+
+        return files.map(f => ({
+            uri: this.panel!.webview.asWebviewUri(vscode.Uri.file(f)),
+            name: path.basename(f, path.extname(f))
+        }));
 
     }
 
@@ -306,6 +343,160 @@ export class CharacterDataPreview implements vscode.Disposable {
 
     }
 
+    /**
+     * Liste les fichiers audio d'un dossier donné.
+     */
+    private findAudioFiles(dir: string): string[] {
+
+        if (!fs.existsSync(dir))
+            return [];
+
+        return fs.readdirSync(dir)
+            .filter(f => AUDIO_EXTENSIONS.test(f))
+            .sort((a, b) => a.localeCompare(b))
+            .map(f => path.join(dir, f));
+
+    }
+
+    /**
+     * Cherche les musiques de victoire/versus d'un personnage dans
+     * music/versus, par préfixe ou occurrence du nom dans le fichier
+     * (même logique que MusicAnalyzer.getCharacterVersusMusic).
+     */
+    private findVersusMusic(projectRoot: string, characterName: string): string[] {
+
+        const dir = path.join(projectRoot, "music", "versus");
+
+        if (!fs.existsSync(dir))
+            return [];
+
+        const lower = characterName.toLowerCase();
+
+        return fs.readdirSync(dir)
+            .filter(f => AUDIO_EXTENSIONS.test(f))
+            .filter(f => {
+
+                const name = f.toLowerCase();
+
+                return (
+                    name.startsWith(lower + "_") ||
+                    name.includes("_" + lower + "_") ||
+                    name.includes("_" + lower + ".") ||
+                    name.includes(lower + ".")
+                );
+
+            })
+            .sort((a, b) => a.localeCompare(b))
+            .map(f => path.join(dir, f));
+
+    }
+
+    /**
+     * Cherche le thème de victoire d'un personnage : un thème individuel
+     * dans music/victory/individual/<nom> est prioritaire, sinon le thème
+     * de la franchise (music/victory/<code franchise>) est utilisé.
+     */
+    private findVictoryMusic(
+        projectRoot: string,
+        characterName: string,
+        seriesCode: string | undefined
+    ): { file: string; label: string } | undefined {
+
+        const individualDir = path.join(projectRoot, "music", "victory", "individual");
+
+        const individual = this.findExactAudio(individualDir, characterName);
+
+        if (individual)
+            return { file: individual, label: "Individuel" };
+
+        if (!seriesCode)
+            return undefined;
+
+        const victoryDir = path.join(projectRoot, "music", "victory");
+
+        const series = this.findExactAudio(victoryDir, seriesCode);
+
+        return series
+            ? { file: series, label: `Franchise (${seriesCode})` }
+            : undefined;
+
+    }
+
+    /**
+     * Cherche un fichier audio dont le nom (hors extension) correspond
+     * exactement (insensible à la casse) au nom donné.
+     */
+    private findExactAudio(dir: string, name: string): string | undefined {
+
+        if (!fs.existsSync(dir))
+            return undefined;
+
+        const lower = name.toLowerCase();
+
+        const match = fs.readdirSync(dir)
+            .filter(f => AUDIO_EXTENSIONS.test(f))
+            .find(f => f.toLowerCase().replace(AUDIO_EXTENSIONS, "") === lower);
+
+        return match
+            ? path.join(dir, match)
+            : undefined;
+
+    }
+
+    /**
+     * Cherche la version en boucle du thème de victoire : un thème
+     * individuel dans music/victory/individual_loop/<nom>_... est
+     * prioritaire, sinon celui de la franchise dans
+     * music/victory/series_loop/<code franchise>_... est utilisé.
+     * (les fichiers de boucle ont un suffixe, ex: <nom>_victory__....ogg)
+     */
+    private findVictoryLoopMusic(
+        projectRoot: string,
+        characterName: string,
+        seriesCode: string | undefined
+    ): { file: string; label: string } | undefined {
+
+        const individualLoopDir = path.join(projectRoot, "music", "victory", "individual_loop");
+
+        const individual = this.findPrefixedAudio(individualLoopDir, characterName);
+
+        if (individual)
+            return { file: individual, label: "Individuel (boucle)" };
+
+        if (!seriesCode)
+            return undefined;
+
+        const seriesLoopDir = path.join(projectRoot, "music", "victory", "series_loop");
+
+        const series = this.findPrefixedAudio(seriesLoopDir, seriesCode);
+
+        return series
+            ? { file: series, label: `Franchise (${seriesCode}, boucle)` }
+            : undefined;
+
+    }
+
+    /**
+     * Cherche un fichier audio dont le nom commence par "<préfixe>_"
+     * (insensible à la casse).
+     */
+    private findPrefixedAudio(dir: string, prefix: string): string | undefined {
+
+        if (!fs.existsSync(dir))
+            return undefined;
+
+        const lower = prefix.toLowerCase();
+
+        const match = fs.readdirSync(dir)
+            .filter(f => AUDIO_EXTENSIONS.test(f))
+            .find(f => f.toLowerCase().startsWith(`${lower}_`));
+
+        return match
+            ? path.join(dir, match)
+            : undefined;
+
+    }
+
     private html(
         characterName: string,
         dat: CharacterDat | null,
@@ -321,7 +512,11 @@ export class CharacterDataPreview implements vscode.Disposable {
         palettes: { uri: vscode.Uri; name?: string }[],
         portraitVariants: { uri: vscode.Uri; name?: string }[],
         mugVariants: { uri: vscode.Uri; name?: string }[],
-        bustVariants: { uri: vscode.Uri; name?: string }[]
+        bustVariants: { uri: vscode.Uri; name?: string }[],
+        folderMusic: { uri: vscode.Uri; name: string }[],
+        versusMusic: { uri: vscode.Uri; name: string }[],
+        victoryTrack: { uri: vscode.Uri; label: string } | undefined,
+        victoryLoopTrack: { uri: vscode.Uri; label: string } | undefined
     ): string {
 
         const datRows = dat
@@ -487,6 +682,35 @@ td.key{
 
 }
 
+.music-list{
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 640px;
+
+}
+
+.music-list li{
+
+    margin-bottom: 10px;
+
+}
+
+.music-list .track-name{
+
+    font-size: 0.85em;
+    margin-bottom: 2px;
+
+}
+
+.music-list audio{
+
+    width: 100%;
+    height: 32px;
+
+}
+
 </style>
 
 </head>
@@ -541,6 +765,21 @@ ${palettes.length
         ? `<div class="palettes">${palettes.map(p => `<figure><img src="${p.uri}"><figcaption>${this.escape(p.name ?? "")}</figcaption></figure>`).join("")}</div>`
         : `<p class="empty">Aucune palette trouvée dans palettes/${this.escape(characterName)}.</p>`}
 
+<h2>🎵 Musique du personnage</h2>
+
+${this.musicListHtml(folderMusic, `Aucune musique trouvée dans music/${this.escape(characterName)}.`)}
+
+<h2>⚔️ Musique de combat (Versus)</h2>
+
+${this.musicListHtml(versusMusic, "Aucune musique de combat trouvée dans music/versus.")}
+
+<h2>🏆 Thème de victoire</h2>
+
+${this.victoryListHtml(
+        [victoryTrack, victoryLoopTrack],
+        "Aucun thème de victoire trouvé dans music/victory."
+    )}
+
 </body>
 
 </html>`;
@@ -569,6 +808,36 @@ ${palettes.length
         return figures
             ? `<div class="gallery">${figures}</div>`
             : `<p class="empty">Aucun visuel trouvé pour ce personnage.</p>`;
+
+    }
+
+    private victoryListHtml(
+        tracks: ({ uri: vscode.Uri; label: string } | undefined)[],
+        emptyMessage: string
+    ): string {
+
+        return this.musicListHtml(
+            tracks
+                .filter((t): t is { uri: vscode.Uri; label: string } => t !== undefined)
+                .map(t => ({ uri: t.uri, name: t.label })),
+            emptyMessage
+        );
+
+    }
+
+    private musicListHtml(
+        tracks: { uri: vscode.Uri; name: string }[],
+        emptyMessage: string
+    ): string {
+
+        if (!tracks.length)
+            return `<p class="empty">${this.escape(emptyMessage)}</p>`;
+
+        const items = tracks
+            .map(t => `<li><div class="track-name">${this.escape(t.name)}</div><audio controls src="${t.uri}"></audio></li>`)
+            .join("");
+
+        return `<ul class="music-list">${items}</ul>`;
 
     }
 
