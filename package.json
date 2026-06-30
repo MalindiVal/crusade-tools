@@ -102,6 +102,11 @@
         "command": "crusade-tools.previewSprite",
         "title": "Preview Sprite",
         "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.previewCharacterData",
+        "title": "Preview Character Data",
+        "category": "Crusade"
       }
     ],
     "viewsContainers": {
