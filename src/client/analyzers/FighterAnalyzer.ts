@@ -2,15 +2,22 @@ import * as fs from "fs";
 import * as vscode from "vscode";
 import { CrusadeAnalyzer } from "./CrusadeAnalyzer";
 import { CrusadeNode } from "../explorer/CrusadeNode";
-import path from "path/win32";
+import * as path from "path";
 import { MusicAnalyzer } from "./MusicAnalyzer";
+import { InitAnalyzer } from "./InitAnalyzer";
+import { DataAnalyzer } from "./DataAnalyzer";
 
 export class FighterAnalyzer extends CrusadeAnalyzer {
 
     private readonly musicAnalyzer: MusicAnalyzer;
+    private readonly initAnalyzer: InitAnalyzer;
+    private readonly dataAnalyzer: DataAnalyzer;
+
     constructor(projectRoot: string) {
         super(projectRoot);
         this.musicAnalyzer = new MusicAnalyzer(projectRoot);
+        this.initAnalyzer = new InitAnalyzer(projectRoot);
+        this.dataAnalyzer = new DataAnalyzer(projectRoot);
     }
 
     analyze(folder: string): CrusadeNode[] {
@@ -20,8 +27,9 @@ export class FighterAnalyzer extends CrusadeAnalyzer {
         
         return [
 
+            ...this.initAnalyzer.analyze(folder),
+            this.dataAnalyzer.getDataNode(folder),
             this.group("⚙ Configuration", files, folder, [
-                "init.txt",
                 "ai.txt"
             ]),
 
@@ -101,7 +109,11 @@ export class FighterAnalyzer extends CrusadeAnalyzer {
             this.folder(folder, "gfx"),
             this.folder(folder, "sfx"),
 
-            this.spriteGroup(folder),
+            this.binGroup(characterName),
+
+            this.portraitGroup(characterName),
+
+            this.initAnalyzer.getSpriteGroup(folder),
 
             this.paletteGroup(folder),
 
@@ -112,5 +124,59 @@ export class FighterAnalyzer extends CrusadeAnalyzer {
             n !== null &&
             (!n.children || n.children.length > 0)
         );
+    }
+
+    /**
+     * Récupère le script compilé fighter/<nom>.bin, situé à côté
+     * du dossier source du personnage plutôt qu'à l'intérieur.
+     */
+    private binGroup(characterName: string): CrusadeNode | null {
+
+        const fightersDir = path.join(this.projectRoot, "fighter");
+        const binFile = `${characterName}.bin`;
+
+        if (!fs.existsSync(path.join(fightersDir, binFile)))
+            return null;
+
+        return this.category("🗄 Compiled Script", [binFile], fightersDir);
+    }
+
+    /**
+     * Récupère les portraits (gfx/portrait) et icônes de stock (gfx/stock)
+     * d'un personnage, stockés à la racine du projet plutôt que dans
+     * son dossier fighter/.
+     */
+    private portraitGroup(characterName: string): CrusadeNode | null {
+
+        const portraitDir = path.join(this.projectRoot, "gfx", "portrait");
+        const stockDir = path.join(this.projectRoot, "gfx", "stock");
+
+        const portraits = this.matchingImageFiles(portraitDir, characterName);
+        const icons = this.matchingImageFiles(stockDir, characterName);
+
+        const children: CrusadeNode[] = [];
+
+        if (portraits.length > 0)
+            children.push(this.category("🖼 Portraits", portraits, portraitDir));
+
+        if (icons.length > 0)
+            children.push(this.category("🔘 Icônes", icons, stockDir));
+
+        if (children.length === 0)
+            return null;
+
+        return this.groupNode("🎴 Portraits & Icônes", children);
+    }
+
+    private matchingImageFiles(dir: string, characterName: string): string[] {
+
+        if (!fs.existsSync(dir))
+            return [];
+
+        const lower = characterName.toLowerCase();
+
+        return fs.readdirSync(dir)
+            .filter(f => /\.(png|bmp|gif|jpg|jpeg)$/i.test(f))
+            .filter(f => f.toLowerCase().startsWith(lower));
     }
 }
