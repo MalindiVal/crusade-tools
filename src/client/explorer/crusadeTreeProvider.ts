@@ -138,7 +138,9 @@ case "Palettes":
         if (!fs.existsSync(dir))
             return [];
 
-        return fs.readdirSync(dir, { withFileTypes: true })
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+        const dirNodes = entries
             .filter(f => f.isDirectory())
             .map(f => {
 
@@ -149,10 +151,91 @@ case "Palettes":
                     path.join(dir, f.name)
                 );
 
+                if (type === "fighter") {
+
+                    const icon = this.findStockIcon(f.name);
+
+                    if (icon) {
+                        node.iconPath = vscode.Uri.file(icon);
+                    }
+
+                }
+
                 return node;
 
-            })
+            });
+
+        if (type !== "fighter") {
+            return dirNodes.sort((a, b) => a.label.localeCompare(b.label));
+        }
+
+        // Personnages dont seul le script compilé fighter/<nom>.bin existe,
+        // sans dossier source : on les liste à part, données via data/dats/<nom>.dat
+        const dirNames = new Set(
+            entries.filter(f => f.isDirectory()).map(f => f.name)
+        );
+
+        const binOnlyNodes = entries
+            .filter(f => f.isFile() && /\.bin$/i.test(f.name))
+            .map(f => path.basename(f.name, path.extname(f.name)))
+            .filter(name => !dirNames.has(name))
+            .map(name => {
+
+                const full = path.join(dir, `${name}.bin`);
+
+                const node = new CrusadeNode(
+                    name,
+                    type,
+                    vscode.TreeItemCollapsibleState.None,
+                    full
+                );
+
+                const icon = this.findStockIcon(name);
+
+                if (icon) {
+                    node.iconPath = vscode.Uri.file(icon);
+                }
+
+                node.command = {
+                    command: "crusade-tools.previewCharacterData",
+                    title: "Preview Character Data",
+                    arguments: [vscode.Uri.file(full)]
+                };
+
+                return node;
+
+            });
+
+        return [...dirNodes, ...binOnlyNodes]
             .sort((a, b) => a.label.localeCompare(b.label));
+
+    }
+
+    /**
+     * Cherche l'icône de stock d'un personnage dans gfx/stock,
+     * en se basant sur le nom de son dossier fighter/<nom>.
+     */
+    private findStockIcon(characterName: string): string | undefined {
+
+        const stockDir = path.join(this.root, "gfx", "stock");
+
+        if (!fs.existsSync(stockDir))
+            return undefined;
+
+        const exact = path.join(stockDir, `${characterName}.png`);
+
+        if (fs.existsSync(exact))
+            return exact;
+
+        const lower = characterName.toLowerCase();
+
+        const match = fs.readdirSync(stockDir)
+            .filter(f => /\.(png|bmp|gif|jpg|jpeg)$/i.test(f))
+            .find(f => f.toLowerCase().startsWith(lower));
+
+        return match
+            ? path.join(stockDir, match)
+            : undefined;
 
     }
 
