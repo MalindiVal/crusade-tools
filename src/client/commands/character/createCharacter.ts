@@ -105,13 +105,18 @@ export async function createCharacter(
 
         // Show success notification
         notifications.info(`Character "${name}" created successfully!`);
-        const info =await getDatInfo(name)
+        const info = await getDatInfo(workspace, name)
         if (!info) {
             notifications.warning("Character creation cancelled. Missing DAT info.");
             return;
         }
         await createDatFile(context, workspace, name, info);
-        await addCharacterToRoster(workspace, name);
+        const id = await addCharacterToRoster(workspace, name);
+
+        if (id !== undefined) {
+            await ensureCssPageRegistered(workspace, "My-Mods.txt", "My-Mods");
+            await addCharacterToCss(workspace, id);
+        }
 
         // Open character folder in explorer
         const uri = vscode.Uri.file(fighterPath);
@@ -159,6 +164,39 @@ async function copyDirectory(src: string, dest: string): Promise<void> {
 
 }
 
+const CREATE_NEW_SERIES = "$(add) Create new franchise...";
+
+/**
+ * Liste les franchises existantes (gfx/seriesicon/<nom>.png) dans une
+ * liste déroulante, avec une option pour en saisir une nouvelle.
+ */
+async function pickSeriesName(workspace: WorkspaceService): Promise<string | undefined> {
+
+    const seriesIconDir = path.join(workspace.gfx(), "seriesicon");
+
+    const existing = fs.existsSync(seriesIconDir)
+        ? fs.readdirSync(seriesIconDir)
+            .filter(f => /\.(png|bmp|gif|jpg|jpeg)$/i.test(f))
+            .map(f => path.basename(f, path.extname(f)))
+            .sort((a, b) => a.localeCompare(b))
+        : [];
+
+    const choice = await vscode.window.showQuickPick(
+        [CREATE_NEW_SERIES, ...existing],
+        { placeHolder: "Select the character's franchise/series" }
+    );
+
+    if (choice === undefined) return;
+
+    if (choice !== CREATE_NEW_SERIES) return choice;
+
+    return vscode.window.showInputBox({
+        prompt: "New franchise/series name",
+        placeHolder: "e.g. Mario, Sonic..."
+    });
+
+}
+
 interface DatInfo {
     cssName: string;
     menuName: string;
@@ -167,7 +205,7 @@ interface DatInfo {
     homeStage: string;
 }
 
-async function getDatInfo(name: string): Promise<DatInfo | undefined> {
+async function getDatInfo(workspace: WorkspaceService, name: string): Promise<DatInfo | undefined> {
     const cssName = await vscode.window.showInputBox({
         prompt: "CSS Name",
         value: name
@@ -189,10 +227,7 @@ async function getDatInfo(name: string): Promise<DatInfo | undefined> {
 
     if (battleName === undefined) return;
 
-    const seriesName = await vscode.window.showInputBox({
-        prompt: "Series Name",
-        placeHolder: "e.g. Mario, Sonic..."
-    });
+    const seriesName = await pickSeriesName(workspace);
 
     if (seriesName === undefined) return;
 
@@ -251,20 +286,24 @@ async function createDatFile(
     
 }
 
+/**
+ * Ajoute le personnage à fighters.txt et retourne son ID dans le roster
+ * (= sa position dans la liste, utilisée comme ID CSS).
+ */
 async function addCharacterToRoster(
     workspace: WorkspaceService,
     name: string
-): Promise<void> {
+): Promise<number | undefined> {
     try{
         const notifications = new NotificationService();
         const fighterlist = workspace.fightersList();
 
         if (!fs.existsSync(fighterlist)) {
             notifications.error("DAT template not found.");
-            return;
+            return undefined;
         }
 
-        
+
 
         let listContent = fs.readFileSync(fighterlist, "utf8");
 
@@ -274,7 +313,7 @@ async function addCharacterToRoster(
 
         if (Number.isNaN(rostersize)) {
             notifications.error("Invalid fighters.txt format.");
-            return;
+            return undefined;
         }
         if(listContent.length - 1 > rostersize) {
             const oldsize = rostersize;
@@ -283,16 +322,140 @@ async function addCharacterToRoster(
         }
         if (listContent.includes(name)) {
             notifications.warning(`Character "${name}" is already in the roster.`);
-            return;
+            return undefined;
         }
-        listContent = listContent.replace(listContent[0], (rostersize + 1).toString());
+
+        const id = rostersize + 1;
+
+        listContent = listContent.replace(listContent[0], id.toString());
         listContent = listContent.concat(`\n${name}`);
 
         fs.writeFileSync(fighterlist, listContent, "utf8");
 
         notifications.info(`Character "${name}" added to roster successfully!`);
+
+        return id;
     } catch (error) {
         const notifications = new NotificationService();
         notifications.error(`Failed to add character to roster: ${error}`);
+        return undefined;
     }
+}
+
+/**
+ * S'assure qu'une page CSS (ex: My-Mods.txt) existe et qu'elle est
+ * enregistrée dans GAME_SETTINGS.txt (global.css_custom[...]),
+ * sans quoi le jeu ne saura pas l'afficher comme onglet du CSS.
+ */
+async function ensureCssPageRegistered(
+    workspace: WorkspaceService,
+    fileName: string,
+    displayName: string
+): Promise<void> {
+
+    const notifications = new NotificationService();
+
+    // Crée le fichier de page CSS s'il n'existe pas encore
+    const cssPage = path.join(workspace.cssFolder(), fileName);
+
+    if (!fs.existsSync(cssPage)) {
+
+        if (!fs.existsSync(workspace.cssFolder())) {
+            fs.mkdirSync(workspace.cssFolder(), { recursive: true });
+        }
+
+        fs.writeFileSync(cssPage, "0000 0000 0000 0000 0000 0000 0000 0000\r\n", "utf8");
+
+    }
+
+    // Enregistre la page dans GAME_SETTINGS.txt si elle n'y est pas déjà
+    const settingsPath = workspace.gameSettings();
+
+    if (!fs.existsSync(settingsPath)) {
+        notifications.warning("GAME_SETTINGS.txt not found, skipping CSS page registration.");
+        return;
+    }
+
+    try {
+
+        let content = fs.readFileSync(settingsPath, "utf8");
+
+        if (content.includes(`css\\${fileName}`) || content.includes(`css/${fileName}`)) {
+            return; // déjà enregistrée
+        }
+
+        const numberMatch = content.match(/global\.css_custom_number\s*=\s*(\d+)\s*;/);
+
+        if (!numberMatch) {
+            notifications.warning("Could not find global.css_custom_number in GAME_SETTINGS.txt.");
+            return;
+        }
+
+        const currentNumber = parseInt(numberMatch[1], 10);
+        const newNumber = currentNumber + 1;
+
+        content = content.replace(
+            numberMatch[0],
+            `global.css_custom_number = ${newNumber};`
+        );
+
+        const newEntry =
+            `global.css_custom[${newNumber}] = "css\\${fileName}";\r\n` +
+            `global.css_custom_name[${newNumber}] = "${displayName}";`;
+
+        const lastEntryRegex = new RegExp(
+            `global\\.css_custom_name\\[${currentNumber}\\][^\\r\\n]*`
+        );
+
+        content = lastEntryRegex.test(content)
+            ? content.replace(lastEntryRegex, match => `${match}\r\n${newEntry}`)
+            : content.trimEnd().concat(`\r\n${newEntry}\r\n`);
+
+        fs.writeFileSync(settingsPath, content, "utf8");
+
+        notifications.info(`Registered new CSS page "${displayName}" in GAME_SETTINGS.txt.`);
+
+    } catch (error) {
+        notifications.error(`Failed to register CSS page: ${error}`);
+    }
+
+}
+
+/**
+ * Ajoute l'ID du personnage à la page CSS data/css/My-Mods.txt,
+ * en remplaçant le premier emplacement vide (0000) disponible.
+ */
+async function addCharacterToCss(
+    workspace: WorkspaceService,
+    id: number
+): Promise<void> {
+
+    const notifications = new NotificationService();
+    const cssPage = path.join(workspace.cssFolder(), "My-Mods.txt");
+
+    if (!fs.existsSync(cssPage)) {
+        notifications.warning("data/css/My-Mods.txt not found, skipping CSS placement.");
+        return;
+    }
+
+    try {
+
+        const code = id.toString().padStart(4, "0");
+
+        let content = fs.readFileSync(cssPage, "utf8");
+
+        if (content.includes("0000")) {
+            content = content.replace("0000", code);
+        } else {
+            content = content.trimEnd().concat(` ${code}\n`);
+        }
+
+        fs.writeFileSync(cssPage, content, "utf8");
+
+        notifications.info(`Character added to CSS (My-Mods, ID ${code}).`);
+
+    } catch (error) {
+        notifications.error(`Failed to add character to CSS: ${error}`);
+    }
+
 }
