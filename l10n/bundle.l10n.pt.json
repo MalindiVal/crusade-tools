@@ -1,4 +1,10 @@
 {
+  "The path to the Smash Crusade executable is not configured.": "O caminho do executável do Smash Crusade não está configurado.",
+  "Browse...": "Procurar...",
+  "Open Settings": "Abrir configurações",
+  "Select the Smash Crusade executable": "Selecione o executável do Smash Crusade",
+  "Game executable not found: {0}": "Executável do jogo não encontrado: {0}",
+  "Failed to launch Smash Crusade: {0}": "Falha ao iniciar o Smash Crusade: {0}",
   "Not a Crusade project. Open a folder with INDEX, fighter/, and stage/ directories.": "Não é um projeto Crusade. Abra uma pasta com os diretórios INDEX, fighter/ e stage/.",
   "Enter character name": "Digite o nome do personagem",
   "e.g., MyCharacter": "ex.: MeuPersonagem",
