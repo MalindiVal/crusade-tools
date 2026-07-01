@@ -27,7 +27,7 @@ export class CrusadeExplorer {
         if (!this.workspace.isCrusadeProject()) {
 
             this.notifications.warning(
-                "The current workspace is not a Smash Crusade project."
+                vscode.l10n.t("The current workspace is not a Smash Crusade project.")
             );
 
             return;

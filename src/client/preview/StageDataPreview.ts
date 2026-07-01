@@ -11,6 +11,7 @@ const AUDIO_EXTENSIONS = /\.(ogg|mp3|wav)$/i;
 export class StageDataPreview implements vscode.Disposable {
 
     private panel?: vscode.WebviewPanel;
+    private currentUri?: vscode.Uri;
 
     constructor(
         private readonly context: vscode.ExtensionContext
@@ -34,6 +35,8 @@ export class StageDataPreview implements vscode.Disposable {
 
     private open(uri: vscode.Uri): void {
 
+        this.currentUri = uri;
+
         const projectRoot = this.projectRoot(uri);
 
         if (this.panel) {
@@ -50,12 +53,12 @@ export class StageDataPreview implements vscode.Disposable {
 
             "crusadeStageDataPreview",
 
-            `Données - ${this.stageName(uri)}`,
+            vscode.l10n.t("Data - {0}", this.stageName(uri)),
 
             vscode.ViewColumn.Beside,
 
             {
-                enableScripts: false,
+                enableScripts: true,
                 localResourceRoots: [
                     vscode.Uri.file(projectRoot)
                 ]
@@ -69,7 +72,46 @@ export class StageDataPreview implements vscode.Disposable {
 
         });
 
+        this.panel.webview.onDidReceiveMessage(
+            message => this.handleMessage(message)
+        );
+
         this.update(uri);
+
+    }
+
+    private async handleMessage(message: { type: string; path?: string }): Promise<void> {
+
+        if (message.type !== "deleteMusic" || !message.path || !this.currentUri) {
+            return;
+        }
+
+        const filePath = message.path;
+        const projectRoot = this.projectRoot(this.currentUri);
+        const relative = path.relative(projectRoot, filePath);
+
+        if (relative.startsWith("..") || path.isAbsolute(relative)) {
+            return;
+        }
+
+        const deleteLabel = vscode.l10n.t("Delete");
+
+        const confirm = await vscode.window.showWarningMessage(
+            vscode.l10n.t('Delete "{0}"?', path.basename(filePath)),
+            { modal: true },
+            deleteLabel
+        );
+
+        if (confirm !== deleteLabel) {
+            return;
+        }
+
+        try {
+            fs.unlinkSync(filePath);
+            this.update(this.currentUri);
+        } catch (error) {
+            vscode.window.showErrorMessage(vscode.l10n.t("Failed to delete file: {0}", String(error)));
+        }
 
     }
 
@@ -78,6 +120,8 @@ export class StageDataPreview implements vscode.Disposable {
         if (!this.panel) {
             return;
         }
+
+        this.currentUri = uri;
 
         const projectRoot = this.projectRoot(uri);
         const stageName = this.stageName(uri);
@@ -109,11 +153,12 @@ export class StageDataPreview implements vscode.Disposable {
             label: group.label,
             tracks: group.files.map(f => ({
                 uri: this.panel!.webview.asWebviewUri(vscode.Uri.file(f)),
-                name: path.basename(f, path.extname(f))
+                name: path.basename(f, path.extname(f)),
+                path: f
             }))
         }));
 
-        this.panel.title = `Données - ${displayName}`;
+        this.panel.title = vscode.l10n.t("Data - {0}", displayName);
 
         this.panel.webview.html = this.html(displayName, stageName, info, {
             icon: icon ? this.panel.webview.asWebviewUri(vscode.Uri.file(icon)) : undefined,
@@ -180,7 +225,7 @@ export class StageDataPreview implements vscode.Disposable {
             .sort((a, b) => a.localeCompare(b));
 
         if (looseFiles.length > 0)
-            groups.push({ label: "Default", files: looseFiles });
+            groups.push({ label: vscode.l10n.t("Default"), files: looseFiles });
 
         const subDirs = entries
             .filter(e => e.isDirectory())
@@ -213,7 +258,7 @@ export class StageDataPreview implements vscode.Disposable {
             preview?: vscode.Uri;
             seriesIcon?: vscode.Uri;
         },
-        music: { label: string; tracks: { uri: vscode.Uri; name: string }[] }[]
+        music: { label: string; tracks: { uri: vscode.Uri; name: string; path: string }[] }[]
     ): string {
 
         return `<!DOCTYPE html>
@@ -338,6 +383,39 @@ h2{
 
 }
 
+.music-list .track-row{
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.music-list .track-row audio{
+
+    flex: 1;
+
+}
+
+.delete-btn{
+
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid var(--vscode-panel-border, #444);
+    color: var(--vscode-errorForeground, #f48771);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-size: 0.85em;
+
+}
+
+.delete-btn:hover{
+
+    background: var(--vscode-inputValidation-errorBackground, #5a1d1d);
+
+}
+
 .music-group-label{
 
     font-size: 0.9em;
@@ -357,15 +435,22 @@ h2{
 
 ${info?.seriesName ? `<p class="series">${this.escape(info.seriesName)}</p>` : ""}
 
-<h2>🖼 Visuels</h2>
+<h2>🖼 ${this.escape(vscode.l10n.t("Visuals"))}</h2>
 
 ${this.galleryHtml(images)}
 
-<h2>🎵 Musique du stage</h2>
+<h2>🎵 ${this.escape(vscode.l10n.t("Stage music"))}</h2>
 
 ${music.length
         ? music.map(group => `<div class="music-group-label">${this.escape(group.label)}</div>${this.musicListHtml(group.tracks, "")}`).join("")
-        : `<p class="empty">Aucune musique trouvée dans music/stage/${this.escape(stageId)}.</p>`}
+        : `<p class="empty">${this.escape(vscode.l10n.t("No music found in music/stage/{0}.", stageId))}</p>`}
+
+<script>
+const vscode = acquireVsCodeApi();
+function deleteTrack(encodedPath) {
+    vscode.postMessage({ type: "deleteMusic", path: decodeURIComponent(encodedPath) });
+}
+</script>
 
 </body>
 
@@ -379,8 +464,8 @@ ${music.length
     }): string {
 
         const entries: [string, vscode.Uri | undefined][] = [
-            ["Icon (CSS)", images.icon],
-            ["Preview", images.preview]
+            [vscode.l10n.t("Icon (CSS)"), images.icon],
+            [vscode.l10n.t("Preview"), images.preview]
         ];
 
         const figures = entries
@@ -390,20 +475,22 @@ ${music.length
 
         return figures
             ? `<div class="gallery">${figures}</div>`
-            : `<p class="empty">Aucun visuel trouvé pour ce stage.</p>`;
+            : `<p class="empty">${this.escape(vscode.l10n.t("No visuals found for this stage."))}</p>`;
 
     }
 
     private musicListHtml(
-        tracks: { uri: vscode.Uri; name: string }[],
+        tracks: { uri: vscode.Uri; name: string; path: string }[],
         emptyMessage: string
     ): string {
 
         if (!tracks.length)
             return `<p class="empty">${this.escape(emptyMessage)}</p>`;
 
+        const deleteLabel = this.escape(vscode.l10n.t("Delete"));
+
         const items = tracks
-            .map(t => `<li><div class="track-name">${this.escape(t.name)}</div><audio controls src="${t.uri}"></audio></li>`)
+            .map(t => `<li><div class="track-name">${this.escape(t.name)}</div><div class="track-row"><audio controls src="${t.uri}"></audio><button class="delete-btn" onclick="deleteTrack('${encodeURIComponent(t.path)}')">${deleteLabel}</button></div></li>`)
             .join("");
 
         return `<ul class="music-list">${items}</ul>`;

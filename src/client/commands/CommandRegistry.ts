@@ -19,7 +19,7 @@ export class CommandRegistry {
             "crusade-tools.openGame",
             () => {
                 vscode.window.showInformationMessage(
-                    "Launch Smash Crusade (TODO)"
+                    vscode.l10n.t("Launch Smash Crusade (TODO)")
                 );
             }
         );
@@ -28,7 +28,7 @@ export class CommandRegistry {
             "crusade-tools.compileCharacter",
             (node) => {
                 vscode.window.showInformationMessage(
-                    `Compile ${node?.label ?? ""} (TODO)`
+                    vscode.l10n.t("Compile {0} (TODO)", node?.label ?? "")
                 );
             }
         );
@@ -40,7 +40,7 @@ export class CommandRegistry {
             "crusade-tools.toggleWatch",
             () => {
                 vscode.window.showInformationMessage(
-                    "Toggle Log Watch (TODO)"
+                    vscode.l10n.t("Toggle Log Watch (TODO)")
                 );
             }
         );
@@ -49,7 +49,7 @@ export class CommandRegistry {
             "crusade-tools.clearLogs",
             () => {
                 vscode.window.showInformationMessage(
-                    "Clear Logs (TODO)"
+                    vscode.l10n.t("Clear Logs (TODO)")
                 );
             }
         );
@@ -58,7 +58,7 @@ export class CommandRegistry {
             "crusade-tools.openErrorLog",
             () => {
                 vscode.window.showInformationMessage(
-                    "Open error.log (TODO)"
+                    vscode.l10n.t("Open error.log (TODO)")
                 );
             }
         );
