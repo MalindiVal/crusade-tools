@@ -37,6 +37,12 @@
         "aliases": [
           "Crusade Script"
         ],
+        "filenamePatterns": [
+          "**/fighter/**/*.txt",
+          "**/item/**/*.txt",
+          "**/stage/**/*.txt",
+          "**/assist/**/*.txt"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
