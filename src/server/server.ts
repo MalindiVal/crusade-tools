@@ -18,6 +18,7 @@ import {
 } from "./data/builtins";
 
 import engineFunctions from "./data/engineFunctions.json";
+import { validateDocument } from "./parser/validator";
 
 const connection = createConnection(
     ProposedFeatures.all
@@ -96,6 +97,19 @@ connection.onInitialize(() => {
 });
 
 connection.onCompletion((): CompletionItem[] => completionItems);
+
+function validate(document: TextDocument): void {
+    connection.sendDiagnostics({
+        uri: document.uri,
+        diagnostics: validateDocument(document)
+    });
+}
+
+documents.onDidChangeContent(change => validate(change.document));
+
+documents.onDidClose(event => {
+    connection.sendDiagnostics({ uri: event.document.uri, diagnostics: [] });
+});
 
 documents.listen(connection);
 

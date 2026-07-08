@@ -10,7 +10,7 @@ export interface BuiltinFunction {
 }
 
 export const KEYWORDS: string[] = [
-    "if", "else", "while", "do", "until", "for", "repeat",
+    "if", "then", "else", "while", "do", "until", "for", "repeat",
     "switch", "case", "default", "break", "continue", "return", "exit",
     "with", "var", "globalvar",
     "true", "false", "and", "or", "not", "xor", "div", "mod",
