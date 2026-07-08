@@ -19,54 +19,54 @@ Thanks for reading! :D
 
 // System Animations
 
-	entry_sprite = cspr_add('fighter/rika/gfx/entry.png',8,1,1,0,1,45,78);
+	entry_sprite = cspr_add('fighter/rika/entry.png',8,1,1,0,1,45,78);
     sprite_start = entry_sprite //from which sprite the game should begin reading downwards in this file. IMPORTANT.
 	
-    stand_sprite = cspr_add('fighter/rika/gfx/stand.png',23,0,1,0,1,45,78);
-    mask_sprite = cspr_add('fighter/rika/masks/mask.png',1,0,1,0,1,45,78);
+    stand_sprite = cspr_add('fighter/rika/stand.png',23,0,1,0,1,45,78);
+    mask_sprite = cspr_add('fighter/rika/mask.png',1,0,1,0,1,45,78);
 	//your character's hurtbox when doing anything but crouching
 	//should be a square of a different colour than the sprites's background, of the same dimensions as the standing animation's first frame
 	//it should cover the relevant bodyparts of your character's standing animation's first frame
 	//since it uses the standing sprite as a base, it should also share its aligning coordinates (last two numbers)
 	
-	walk_sprite = cspr_add('fighter/rika/gfx/walk.png',8,1,1,0,1,52,78);
-    run_sprite = cspr_add('fighter/rika/gfx/run.png',8,1,1,0,1,52,78);
+	walk_sprite = cspr_add('fighter/rika/walk.png',8,1,1,0,1,52,78);
+    run_sprite = cspr_add('fighter/rika/run.png',8,1,1,0,1,52,78);
 	
-    jump_sprite = cspr_add('fighter/rika/gfx/jump.png',2,1,1,0,1,56,76);
-    mid_jump_sprite = cspr_add('fighter/rika/gfx/jump2.png',6,1,1,0,1,56,76);
+    jump_sprite = cspr_add('fighter/rika/jump.png',2,1,1,0,1,56,76);
+    mid_jump_sprite = cspr_add('fighter/rika/jump2.png',6,1,1,0,1,56,76);
 	
-	crouch_sprite = cspr_add('fighter/rika/gfx/crouch.png',1,1,1,0,1,45,45);
-    crouch_mask_sprite = cspr_add('fighter/rika/masks/crouchmask.png',1,0,1,0,1,45,45);
+	crouch_sprite = cspr_add('fighter/rika/crouch.png',1,1,1,0,1,45,45);
+    crouch_mask_sprite = cspr_add('fighter/rika/crouchmask.png',1,0,1,0,1,45,45);
 	
-	shield_sprite = cspr_add('fighter/rika/gfx/shield.png',1,1,1,0,1,57,92);
-    roll_sprite = cspr_add('fighter/rika/gfx/roll.png',4,1,1,0,1,57,92);
-	air_dodge_sprite = cspr_add('fighter/gfx/rika/airdodge.png',4,1,1,0,1,57,92); 
-	spot_dodge_sprite = cspr_add('fighter/gfx/rika/airdodge.png',4,1,1,0,1,57,92); 
+	shield_sprite = cspr_add('fighter/rika/shield.png',1,1,1,0,1,57,92);
+    roll_sprite = cspr_add('fighter/rika/roll.png',4,1,1,0,1,57,92);
+	air_dodge_sprite = cspr_add('fighter/rika/airdodge.png',4,1,1,0,1,57,92); 
+	spot_dodge_sprite = cspr_add('fighter/rika/airdodge.png',4,1,1,0,1,57,92); 
 	
-    flinch_sprite = cspr_add('fighter/rika/gfx/flinch.png',1,1,1,0,1,57,92);
-    flinch2_sprite = cspr_add('fighter/rika/gfx/flinch2.png',1,1,1,0,1,57,92);
-    flinch3_sprite = cspr_add('fighter/rika/gfx/flinch3.png',1,1,1,0,1,57,92);
+    flinch_sprite = cspr_add('fighter/rika/flinch.png',1,1,1,0,1,57,92);
+    flinch2_sprite = cspr_add('fighter/rika/flinch2.png',1,1,1,0,1,57,92);
+    flinch3_sprite = cspr_add('fighter/rika/flinch3.png',1,1,1,0,1,57,92);
 	
 	launched_sprite = flinch_sprite
 	//this sprite is for when you're actually launched by a strong attack, should be 8 frames long preferably, imagine the sonic battle sprite where you're spinning backwards in the air. Align it in the same way you align flinch sprites, and make sure the sprite doesn't have extra canvas space so that the game actually spins it properly to avoid wack results
 	
-	broken_sprite = cspr_add('fighter/rika/gfx/broken.png',17,1,1,0,1,57,92);
-    fall_sprite = cspr_add('fighter/rika/gfx/fall.png',2,1,1,0,1,56,76);
-	land_sprite = cspr_add('fighter/rika/gfx/land.png',3,1,1,0,1,56,76);
+	broken_sprite = cspr_add('fighter/rika/broken.png',17,1,1,0,1,57,92);
+    fall_sprite = cspr_add('fighter/rika/fall.png',2,1,1,0,1,56,76);
+	land_sprite = cspr_add('fighter/rika/land.png',3,1,1,0,1,56,76);
 	
 	sleep_sprite = broken_sprite // sprite for when jigglypuff sings to you
 	
-	taunt_sprite = cspr_add('fighter/rika/gfx/taunt.png',6,1,1,0,1,47,76);
+	taunt_sprite = cspr_add('fighter/rika/taunt.png',6,1,1,0,1,47,76);
     win_sprite = taunt_sprite;
-    lose_sprite = cspr_add('fighter/rika/gfx/lose.png',3,1,1,0,1,45,78);
+    lose_sprite = cspr_add('fighter/rika/lose.png',3,1,1,0,1,45,78);
 	
 	henrytaunt_sprite = taunt_sprite; //for if the opponent uses the henry distraction dance assist on you
 	
 	edge_sprite = cspr_add('fighter/rika/edge.png',1,1,1,0,1,26,20);
     edge_climb_sprite = cspr_add('fighter/rika/edgeclimb.png',1,1,1,0,1,26,20);
 	
-	down_sprite = cspr_add('fighter/rika/gfx/getup.png',4,1,1,0,1,57,92);
-    ukemi_sprite = cspr_add('fighter/rika/gfx/tech.png',7,1,1,0,1,57,92);
+	down_sprite = cspr_add('fighter/rika/getup.png',4,1,1,0,1,57,92);
+    ukemi_sprite = cspr_add('fighter/rika/tech.png',7,1,1,0,1,57,92);
 	
     swim_sprite = fall_sprite;
     ladder_sprite = fall_sprite;
@@ -74,36 +74,36 @@ Thanks for reading! :D
 
 // Attack Animations
 
-    jab_sprite = cspr_add('fighter/rika/gfx/jab.png',7,1,1,0,1,69,92);
+    jab_sprite = cspr_add('fighter/rika/jab.png',7,1,1,0,1,69,92);
 	
-    stilt_sprite = cspr_add('fighter/rika/gfx/stilt.png',7,1,1,0,1,69,92);
-    utilt_sprite = cspr_add('fighter/rika/gfx/utilt.png',7,1,1,0,1,69,92);
-	dtilt_sprite = cspr_add('fighter/rika/gfx/dtilt.png',4,1,1,0,1,73,91);
+    stilt_sprite = cspr_add('fighter/rika/stilt.png',7,1,1,0,1,69,92);
+    utilt_sprite = cspr_add('fighter/rika/utilt.png',7,1,1,0,1,69,92);
+	dtilt_sprite = cspr_add('fighter/rika/dtilt.png',4,1,1,0,1,73,91);
 
-    ssmash_sprite = cspr_add('fighter/rika/gfx/ssmash.png',10,1,1,0,1,69,92);
-    usmash_sprite = cspr_add('fighter/rika/gfx/usmash.png',7,1,1,0,1,56,76);
-    dsmash_sprite = cspr_add('fighter/rika/gfx/dsmash.png',6,0,1,0,1,73,91);
+    ssmash_sprite = cspr_add('fighter/rika/ssmash.png',10,1,1,0,1,69,92);
+    usmash_sprite = cspr_add('fighter/rika/usmash.png',7,1,1,0,1,56,76);
+    dsmash_sprite = cspr_add('fighter/rika/dsmash.png',6,0,1,0,1,73,91);
 	
-    nair_sprite = cspr_add('fighter/rika/gfx/nair.png',3,1,1,0,1,69,92);
-    fair_sprite = cspr_add('fighter/rika/gfx/fair.png',4,1,1,0,1,49,72);
-    bair_sprite = cspr_add('fighter/rika/gfx/bair.png',5,0,1,0,1,69,92);
-    uair_sprite = cspr_add('fighter/rika/gfx/uair.png',6,1,1,0,1,69,92);
-    dair_sprite = cspr_add('fighter/rika/gfx/dair.png',3,1,1,0,1,69,92);	
+    nair_sprite = cspr_add('fighter/rika/nair.png',3,1,1,0,1,69,92);
+    fair_sprite = cspr_add('fighter/rika/fair.png',4,1,1,0,1,49,72);
+    bair_sprite = cspr_add('fighter/rika/bair.png',5,0,1,0,1,69,92);
+    uair_sprite = cspr_add('fighter/rika/uair.png',6,1,1,0,1,69,92);
+    dair_sprite = cspr_add('fighter/rika/dair.png',3,1,1,0,1,69,92);	
 	
-	dash_attack_sprite = cspr_add('fighter/rika/gfx/dashattack.png',5,0,1,0,1,69,92);
-    down_attack_sprite = cspr_add('fighter/rika/gfx/getupattack.png',4,1,1,0,1,57,92);
+	dash_attack_sprite = cspr_add('fighter/rika/dashattack.png',5,0,1,0,1,69,92);
+    down_attack_sprite = cspr_add('fighter/rika/getupattack.png',4,1,1,0,1,57,92);
     edge_attack_sprite = stilt_sprite
 	
-    b_sprite = cspr_add('fighter/rika/gfx/b.png',12,1,1,0,1,57,92);
-    upb_sprite = cspr_add('fighter/rika/gfx/upb.png',3,0,1,0,1,32,53);
-	sideb_sprite = cspr_add('fighter/rika/gfx/sideb.png',3,0,1,0,1,47,58);
-    downb_sprite = cspr_add('fighter/rika/gfx/downb.png',4,0,1,0,1,69,92);
+    b_sprite = cspr_add('fighter/rika/b.png',12,1,1,0,1,57,92);
+    upb_sprite = cspr_add('fighter/rika/upb.png',3,0,1,0,1,32,53);
+	sideb_sprite = cspr_add('fighter/rika/sideb.png',3,0,1,0,1,47,58);
+    downb_sprite = cspr_add('fighter/rika/downb.png',4,0,1,0,1,69,92);
 	final_smash_sprite = b_sprite
 	
 // Grabs and Throws
     
     grab_sprite = jab_sprite;
-    hold_sprite = cspr_add('fighter/rika/gfx/hold.png',1,1,1,0,1,69,92);
+    hold_sprite = cspr_add('fighter/rika/hold.png',1,1,1,0,1,69,92);
     pummel_sprite = jab_sprite;
     fthrow_sprite = jab_sprite;
     bthrow_sprite = bair_sprite;
@@ -181,37 +181,37 @@ Thanks for reading! :D
 
 	//Delete the * and / symbols preceding and ending this section when you're ready to start adding voice files to your character.
 	
-	jump_voice = sound_add("fighter/rika/sfx/attack.wav",0,1); // voice for first jump
-	mid_jump_voice = sound_add("fighter/rika/sfx/attack.wav",0,1); // voice for double jump
+	jump_voice = sound_add("fighter/rika/attack.wav",0,1); // voice for first jump
+	mid_jump_voice = sound_add("fighter/rika/attack.wav",0,1); // voice for double jump
     sound_mute = mid_jump_voice
 	//sound_mute takes the sound you specify and mutes all sounds from that sound onwards for when you grab a Metal Cap.
 	//Effect lasts until Metal Cap runs out.
 	
-	b_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
-    upb_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
-	sideb_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
-    downb_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
+	b_voice = sound_add("fighter/rika/smash.wav",0,1);
+    upb_voice = sound_add("fighter/rika/smash.wav",0,1);
+	sideb_voice = sound_add("fighter/rika/smash.wav",0,1);
+    downb_voice = sound_add("fighter/rika/smash.wav",0,1);
 	
-    usmash_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
-	ssmash_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
-	dsmash_voice = sound_add("fighter/rika/sfx/smash.wav",0,1);
+    usmash_voice = sound_add("fighter/rika/smash.wav",0,1);
+	ssmash_voice = sound_add("fighter/rika/smash.wav",0,1);
+	dsmash_voice = sound_add("fighter/rika/smash.wav",0,1);
 	
-    attack_voice1 = sound_add("fighter/rika/sfx/attack.wav",0,1);
-    attack_voice2 = sound_add("fighter/rika/sfx/attack2.wav",0,1);
-    attack_voice3 = sound_add("fighter/rika/sfx/attack3.wav",0,1);
-    attack_voice4 = sound_add("fighter/rika/sfx/attack4.wav",0,1);
+    attack_voice1 = sound_add("fighter/rika/attack.wav",0,1);
+    attack_voice2 = sound_add("fighter/rika/attack2.wav",0,1);
+    attack_voice3 = sound_add("fighter/rika/attack3.wav",0,1);
+    attack_voice4 = sound_add("fighter/rika/attack4.wav",0,1);
 	 
-	hit_voice1 = sound_add("fighter/rika/sfx/hit.wav",0,1); // voice for when you get hit by a normal attack
+	hit_voice1 = sound_add("fighter/rika/hit.wav",0,1); // voice for when you get hit by a normal attack
 	hit_voice2 = hit_voice1 // another voice for when you get hit by a normal attack
 	broken_voice = sound_add("fighter/rika/hit.wav",0,1); // voice for when your shield breaks and you get up and are stunned
 	
-    starko_voice = sound_add("fighter/rika/sfx/hit.wav",0,1);
-    fly_voice1 = sound_add("fighter/rika/sfx/hit.wav",0,1);
-    fly_voice2 = sound_add("fighter/rika/sfx/hit2.wav",0,1);
-    die_voice1 = sound_add("fighter/rika/sfx/die.wav",0,1);
-    die_voice2 = sound_add("fighter/rika/sfx/die2.wav",0,1);;
-	entry_voice = sound_add("fighter/rika/sfx/intro.wav",0,1);
-	taunt_voice = sound_add("fighter/rika/sfx/nipah.wav",0,1);
+    starko_voice = sound_add("fighter/rika/hit.wav",0,1);
+    fly_voice1 = sound_add("fighter/rika/hit.wav",0,1);
+    fly_voice2 = sound_add("fighter/rika/hit2.wav",0,1);
+    die_voice1 = sound_add("fighter/rika/die.wav",0,1);
+    die_voice2 = sound_add("fighter/rika/die2.wav",0,1);;
+	entry_voice = sound_add("fighter/rika/intro.wav",0,1);
+	taunt_voice = sound_add("fighter/rika/nipah.wav",0,1);
 	
 	*/
 	

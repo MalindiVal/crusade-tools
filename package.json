@@ -95,11 +95,6 @@
         "category": "Crusade"
       },
       {
-        "command": "crusade-tools.openMusic",
-        "title": "%crusade-tools.command.openMusic%",
-        "category": "Crusade"
-      },
-      {
         "command": "crusade-tools.previewSprite",
         "title": "%crusade-tools.command.previewSprite%",
         "category": "Crusade"
