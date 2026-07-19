@@ -34,6 +34,7 @@ function isIdentPart(ch: string): boolean {
     return /[A-Za-z0-9_]/.test(ch);
 }
 
+/** Turns Crusade script source text into a flat token stream for the Parser. */
 export class Lexer {
 
     private pos = 0;
@@ -43,6 +44,7 @@ export class Lexer {
 
     constructor(private readonly text: string) {}
 
+    /** Tokenizes the whole source, always ending with an EOF token. Lexical errors (bad characters, unterminated strings/comments) are collected rather than thrown, so tokenizing never aborts early. */
     public tokenize(): LexResult {
 
         const tokens: Token[] = [];
@@ -68,15 +70,18 @@ export class Lexer {
 
     }
 
+    /** Whether the cursor has consumed the entire source text. */
     private isAtEnd(): boolean {
         return this.pos >= this.text.length;
     }
 
+    /** Looks at a character ahead of the cursor without consuming it; "\0" past the end of the text. */
     private peek(offset = 0): string {
         const i = this.pos + offset;
         return i < this.text.length ? this.text[i] : "\0";
     }
 
+    /** Consumes and returns the current character, updating line/column bookkeeping. */
     private advance(): string {
 
         const ch = this.text[this.pos++];
@@ -92,6 +97,7 @@ export class Lexer {
 
     }
 
+    /** Advances past whitespace, "//" line comments and "/* *\/" block comments; reports an unterminated block comment that never finds its closing "*\/". */
     private skipWhitespaceAndComments(): void {
 
         for (;;) {
@@ -143,6 +149,7 @@ export class Lexer {
 
     }
 
+    /** Reads exactly one token starting at the cursor (number, string, identifier/keyword, or punctuator). Returns null for a bad character, which is recorded as an error rather than a token. */
     private readToken(): Token | null {
 
         const startLine = this.line;
@@ -186,6 +193,7 @@ export class Lexer {
 
     }
 
+    /** Reads an integer or decimal literal (e.g. "12", "0.5", ".5"). */
     private readNumber(startLine: number, startColumn: number): Token {
 
         let value = "";
@@ -201,6 +209,7 @@ export class Lexer {
 
     }
 
+    /** Reads a single- or double-quoted string literal. */
     private readString(startLine: number, startColumn: number, quote: string): Token {
 
         let value = "";
@@ -229,6 +238,7 @@ export class Lexer {
 
     }
 
+    /** Reads an identifier and classifies it as a Keyword or Identifier token depending on the KEYWORDS set. */
     private readIdentifier(startLine: number, startColumn: number): Token {
 
         let value = "";
@@ -244,6 +254,7 @@ export class Lexer {
 
     }
 
+    /** Builds a token spanning from (startLine, startColumn) to the lexer's current position. */
     private makeToken(
         type: Token["type"],
         value: string,

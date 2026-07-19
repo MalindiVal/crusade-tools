@@ -20,6 +20,7 @@ if (!scriptsDir) {
     process.exit(1);
 }
 
+/** Best-effort one-line description for a script: the first non-empty line of its leading "/* *\/" doc block, or its leading "//" comments, whichever is present. */
 function extractDetail(content) {
 
     const blockMatch = content.match(/\/\*([\s\S]*?)\*\//);
@@ -49,6 +50,7 @@ function extractDetail(content) {
 
 }
 
+/** GM8 scripts don't declare a parameter list; this infers one from the highest argumentN referenced anywhere in the body. */
 function extractArity(content) {
 
     let maxArg = -1;

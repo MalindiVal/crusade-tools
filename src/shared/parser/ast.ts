@@ -1,3 +1,7 @@
+// AST node shapes produced by Parser.ts. Every node carries its own source
+// span (start/end) so the language server can turn any node into a
+// diagnostic range or a hover/completion location.
+
 export interface Position {
     line: number;
     column: number;

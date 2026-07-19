@@ -26,6 +26,7 @@ const connection = createConnection(
 
 const documents = new TextDocuments(TextDocument);
 
+/** Builds a tab-through snippet for a function completion, e.g. "create_hitbox(${1:argument0}, ${2:argument1})"; a no-arg function just gets "name()". */
 function snippetFor(name: string, params: string[]): string {
 
     if (params.length === 0) {
@@ -98,6 +99,7 @@ connection.onInitialize(() => {
 
 connection.onCompletion((): CompletionItem[] => completionItems);
 
+/** Re-validates a document's syntax and pushes the resulting diagnostics to the client. */
 function validate(document: TextDocument): void {
     connection.sendDiagnostics({
         uri: document.uri,

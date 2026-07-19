@@ -37,6 +37,7 @@ const PRECEDENCE: Record<string, number> = {
     "*": 10, "/": 10, "%": 10, "div": 10, "mod": 10
 };
 
+/** Recursive-descent parser for Crusade scripts: turns a Lexer token stream into an AST.Program and a list of syntax errors, recovering after each error so one mistake doesn't stop the rest of the file from being checked. */
 export class Parser {
 
     private pos = 0;
@@ -44,6 +45,7 @@ export class Parser {
 
     private constructor(private readonly tokens: Token[]) {}
 
+    /** Entry point: parses a full token stream and returns both the resulting AST and any syntax errors found along the way. */
     public static parse(tokens: Token[]): ParseResult {
         const parser = new Parser(tokens);
         const program = parser.parseProgram();
@@ -52,6 +54,7 @@ export class Parser {
 
     // ---- token stream helpers ----------------------------------------
 
+    /** The token at the current cursor position. */
     private current(): Token {
         return this.tokens[this.pos];
     }
@@ -60,30 +63,35 @@ export class Parser {
         return this.current().type === "EOF";
     }
 
+    /** Whether the current token matches the given type (and, optionally, exact value) without consuming it. */
     private check(type: TokenType, value?: string): boolean {
         const token = this.current();
         if (token.type !== type) return false;
         return value === undefined || token.value === value;
     }
 
+    /** Consumes and returns the current token, stopping at EOF. */
     private advance(): Token {
         const token = this.current();
         if (!this.isAtEnd()) this.pos += 1;
         return token;
     }
 
+    /** Consumes the current token if it matches; returns whether it did. */
     private match(type: TokenType, value?: string): boolean {
         if (!this.check(type, value)) return false;
         this.advance();
         return true;
     }
 
+    /** Consumes the current token if it matches, otherwise records a syntax error and leaves the cursor in place so the caller can attempt to recover. */
     private expect(type: TokenType, value: string, message: string): Token | null {
         if (this.check(type, value)) return this.advance();
         this.error(message, this.current());
         return null;
     }
 
+    /** Records a syntax error spanning the given token. */
     private error(message: string, at: Token): void {
         this.errors.push({
             message,
@@ -94,10 +102,12 @@ export class Parser {
         });
     }
 
+    /** Start position of a token, as an AST.Position. */
     private pos_(token: Token): AST.Position {
         return { line: token.line, column: token.column };
     }
 
+    /** End position of a token, as an AST.Position. */
     private endPos_(token: Token): AST.Position {
         return { line: token.endLine, column: token.endColumn };
     }
@@ -127,6 +137,7 @@ export class Parser {
 
     // ---- program / statements ------------------------------------------
 
+    /** Parses the whole file as a flat list of top-level statements. */
     private parseProgram(): AST.Program {
 
         const start = this.pos_(this.current());
@@ -142,6 +153,7 @@ export class Parser {
 
     }
 
+    /** Dispatches on the current token to parse one statement of any kind, falling back to an expression statement. Catches any thrown error, records it, and resynchronizes so parsing can continue past it. */
     private parseStatement(): AST.Statement {
 
         try {
@@ -182,16 +194,19 @@ export class Parser {
 
     }
 
+    /** GM8 doesn't require statement-terminating semicolons; consume one if present, otherwise do nothing. */
     private consumeOptionalSemicolon(): void {
         this.match("Punctuator", ";");
     }
 
+    /** Parses a bare ";" with no statement before it. */
     private parseEmpty(): AST.EmptyStatement {
         const start = this.pos_(this.current());
         const token = this.advance();
         return { kind: "EmptyStatement", start, end: this.endPos_(token) };
     }
 
+    /** Parses a "{ ... }" block of statements. */
     private parseBlock(): AST.BlockStatement {
 
         const open = this.advance();
@@ -212,6 +227,7 @@ export class Parser {
 
     }
 
+    /** Parses "if test [then] consequent [else alternate]". */
     private parseIf(): AST.IfStatement {
 
         const start = this.pos_(this.current());
@@ -230,6 +246,7 @@ export class Parser {
 
     }
 
+    /** Parses "while test body". */
     private parseWhile(): AST.WhileStatement {
         const start = this.pos_(this.current());
         this.advance();
@@ -238,6 +255,7 @@ export class Parser {
         return { kind: "WhileStatement", start, end: body.end, test, body };
     }
 
+    /** Parses "do body until test". */
     private parseDoUntil(): AST.DoUntilStatement {
 
         const start = this.pos_(this.current());
@@ -254,6 +272,7 @@ export class Parser {
 
     }
 
+    /** Parses a C-style "for (init; test; update) body". */
     private parseFor(): AST.ForStatement {
 
         const start = this.pos_(this.current());
@@ -284,8 +303,7 @@ export class Parser {
 
     }
 
-    // init/update clauses of a for-loop are plain statements (assignment or
-    // var-decl) without their own trailing ';' — the for-loop supplies it.
+    /** Parses a for-loop's init/update clause: a plain assignment or var-decl without its own trailing ";" — the for-loop's own ";"/")" delimits it instead. */
     private parseForClauseStatement(): AST.Statement {
 
         if (this.check("Keyword", "var")) {
@@ -304,6 +322,7 @@ export class Parser {
 
     }
 
+    /** Parses "repeat count body". */
     private parseRepeat(): AST.RepeatStatement {
         const start = this.pos_(this.current());
         this.advance();
@@ -312,6 +331,7 @@ export class Parser {
         return { kind: "RepeatStatement", start, end: body.end, count, body };
     }
 
+    /** Parses "switch discriminant { case test: ... default: ... }". */
     private parseSwitch(): AST.SwitchStatement {
 
         const start = this.pos_(this.current());
@@ -371,6 +391,7 @@ export class Parser {
 
     }
 
+    /** Parses "with object body". */
     private parseWith(): AST.WithStatement {
         const start = this.pos_(this.current());
         this.advance();
@@ -379,6 +400,7 @@ export class Parser {
         return { kind: "WithStatement", start, end: body.end, object, body };
     }
 
+    /** Parses "var name [= init] (, name [= init])*". consumeSemicolon is false when called from a for-loop's init clause, which supplies its own ";". */
     private parseVarDeclaration(consumeSemicolon = true): AST.VarDeclaration {
 
         const start = this.pos_(this.current());
@@ -422,6 +444,7 @@ export class Parser {
 
     }
 
+    /** Parses "globalvar name (, name)*". */
     private parseGlobalVarDeclaration(): AST.GlobalVarDeclaration {
 
         const start = this.pos_(this.current());
@@ -450,6 +473,7 @@ export class Parser {
 
     }
 
+    /** Parses a single-keyword statement ("break" / "continue" / "exit") with no arguments. */
     private parseSimpleKeyword(
         kind: "BreakStatement" | "ContinueStatement" | "ExitStatement"
     ): AST.Statement {
@@ -458,6 +482,7 @@ export class Parser {
         return { kind, start: this.pos_(token), end: this.endPos_(this.tokens[this.pos - 1]) };
     }
 
+    /** Whether the current token could begin an expression — used to tell a bare "return;" apart from "return value;" without a lookahead grammar rule for each case. */
     private canStartExpression(): boolean {
 
         const token = this.current();
@@ -478,6 +503,7 @@ export class Parser {
 
     }
 
+    /** Parses "return [argument]"; the argument is optional. */
     private parseReturn(): AST.ReturnStatement {
 
         const start = this.pos_(this.current());
@@ -495,6 +521,7 @@ export class Parser {
 
     }
 
+    /** Parses a statement that's just an expression (typically an assignment or a call), e.g. "state_type = "jump";". */
     private parseExpressionStatement(): AST.ExpressionStatement {
 
         const start = this.pos_(this.current());
@@ -540,10 +567,12 @@ export class Parser {
 
     }
 
+    /** Parses a full expression where a bare "=" means equality (the condition of an if/while/switch/etc., a call argument, an array index, an operand of a larger expression — anywhere that isn't the very start of a statement). */
     private parseExpression(): AST.Expression {
         return this.parseBinaryFrom(this.parseUnary(), 0);
     }
 
+    /** Precedence-climbing binary operator parser: repeatedly consumes an operator at or above minPrecedence and folds `left OP right` into a new left, so "a + b * c" groups as "a + (b * c)". */
     private parseBinaryFrom(left: AST.Expression, minPrecedence: number): AST.Expression {
 
         for (;;) {
@@ -575,10 +604,12 @@ export class Parser {
 
     }
 
+    /** Parses the right-hand operand of a binary operator: a fresh unary expression, then anything tighter-binding that follows it. */
     private parseBinaryClimb(minPrecedence: number): AST.Expression {
         return this.parseBinaryFrom(this.parseUnary(), minPrecedence);
     }
 
+    /** Parses a prefix unary expression ("!", "-", "+", "~", "not"), or falls through to a postfix expression. */
     private parseUnary(): AST.Expression {
 
         const token = this.current();
@@ -602,6 +633,7 @@ export class Parser {
 
     }
 
+    /** Parses a primary expression followed by any chain of calls "f(...)", member access ".x", and indexing "[i]" or "[i, j]". */
     private parsePostfix(): AST.Expression {
 
         let expr = this.parsePrimary();
@@ -689,6 +721,7 @@ export class Parser {
 
     }
 
+    /** Parses the smallest possible expression: a literal, an identifier, or a parenthesized sub-expression. Any token that can't start an expression is reported as an error and consumed so the parser can keep going. */
     private parsePrimary(): AST.Expression {
 
         const token = this.current();
