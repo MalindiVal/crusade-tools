@@ -1,0 +1,22 @@
+{
+  "crusade-tools.displayName": "Crusade Tools",
+  "crusade-tools.description": "Monitora e analisa os registros do projeto Crusade (error.log, spritecount.log)",
+  "crusade-tools.command.createCharacter": "🎮 Criar novo personagem",
+  "crusade-tools.command.toggleWatch": "🎮 Ativar/desativar monitoramento de registros",
+  "crusade-tools.command.clearLogs": "🎮 Limpar todos os registros",
+  "crusade-tools.command.openErrorLog": "🎮 Abrir error.log",
+  "crusade-tools.command.openFighter": "Abrir personagem",
+  "crusade-tools.command.refreshExplorer": "Atualizar explorador",
+  "crusade-tools.command.openGame": "Iniciar Smash Crusade",
+  "crusade-tools.command.compileCharacter": "Compilar personagem",
+  "crusade-tools.command.openPalette": "Abrir paleta",
+  "crusade-tools.command.openMusic": "Abrir música",
+  "crusade-tools.command.previewSprite": "Pré-visualizar sprite",
+  "crusade-tools.command.previewCharacterData": "Pré-visualizar dados do personagem",
+  "crusade-tools.command.previewStageData": "Pré-visualizar dados do estágio",
+  "crusade-tools.view.explorer": "Explorador",
+  "crusade-tools.view.diagnostics": "Diagnósticos",
+  "crusade-tools.view.assets": "Recursos",
+  "crusade-tools.config.autoWatch": "Monitorar automaticamente os registros do Crusade",
+  "crusade-tools.config.gamePath": "Caminho do executável do Smash Crusade"
+}

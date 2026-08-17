@@ -1,0 +1,9009 @@
+[
+  {
+    "name": "___directory_clean",
+    "params": [
+      "argument0"
+    ],
+    "detail": "this function is dangerous"
+  },
+  {
+    "name": "add_crusade_money",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "add_extra_arcade_enemy",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "add_hit_sfx",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "adler32",
+    "params": [
+      "argument0"
+    ],
+    "detail": "This function creates checksum value of the data inside the buffer."
+  },
+  {
+    "name": "after_image",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "+x_rotate_correction*sin(degtorad(image_angle))"
+  },
+  {
+    "name": "ai_attack_now",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ai_hard",
+    "params": [],
+    "detail": "&& (string(parent.p1name) !=\"Yoshi\" || (vspeed> 0.1 && air > 1))"
+  },
+  {
+    "name": "ai_newaction",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ai_newctrl",
+    "params": [],
+    "detail": "Not-temporary variables - functions:"
+  },
+  {
+    "name": "ai_point",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ai_revamp",
+    "params": [],
+    "detail": "if ( !is_string ( savedstate ) )"
+  },
+  {
+    "name": "ai_snip_avoid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "shieldup = 1;"
+  },
+  {
+    "name": "ai_training",
+    "params": [],
+    "detail": "if ( obj_training.ai_type != 0 || ai_state == \"idle\" || ai_state == \"idle2\""
+  },
+  {
+    "name": "air_rangeatk",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "AI routine - ranged attack charging"
+  },
+  {
+    "name": "akyuu_check",
+    "params": [],
+    "detail": "if not_cmc = 1"
+  },
+  {
+    "name": "angle_correct",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "angle_difference",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "apply_camera",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "apply_flower_status",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "apply_flower_status(target_player_object,duration,damagepersecscalar)"
+  },
+  {
+    "name": "apply_hitlag_on_self",
+    "params": [],
+    "detail": "Put the hitlag on the enemy."
+  },
+  {
+    "name": "apply_hitlag_on_the_player",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "apply_light",
+    "params": [],
+    "detail": "This is for PLAYER OBJECTS only. It allows more precise collision checks, but more processor-consuming too."
+  },
+  {
+    "name": "apply_physics",
+    "params": [],
+    "detail": "Interacting with curvy terrains LIKE A BOSS."
+  },
+  {
+    "name": "apply_physics2",
+    "params": [],
+    "detail": "if ( abs ( x - xprevious ) < abs ( x - xprev ) )"
+  },
+  {
+    "name": "apply_physics2o",
+    "params": [],
+    "detail": "|| string(state_type) == \"down\""
+  },
+  {
+    "name": "apply_physics2o0",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_enemy_setting",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9"
+    ],
+    "detail": "global.gs_character[1] = argument0"
+  },
+  {
+    "name": "arcade_load",
+    "params": [],
+    "detail": "Load classic mode resources"
+  },
+  {
+    "name": "arcade_load_common",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_load_dialogue_gfx",
+    "params": [],
+    "detail": "background_index[7] = bg_add(string(ARCADE_ROUND_BG[current_stage]),0,0,1);"
+  },
+  {
+    "name": "arcade_load_enemy_bust",
+    "params": [],
+    "detail": "Player character"
+  },
+  {
+    "name": "arcade_load_player_bust",
+    "params": [],
+    "detail": "Player character"
+  },
+  {
+    "name": "arcade_make_bin",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_read_bin",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_set_lives",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "arcade_sfx_play",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "arcade_swap_bg",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "arcade_swap_bgm",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "arcade_swap_portrait",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "arcade_text_queue_add",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "arcade_unload",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_unload_common",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_unload_dialogue_gfx",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_unload_enemy_bust",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_unload_player_bust",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "arcade_win_quotes",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "assist_action",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "assist_call",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "DEPRECIATED"
+  },
+  {
+    "name": "assist_custom",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "assist_deinit",
+    "params": [],
+    "detail": "if ( assist_thread[i] > -1 && thread_is_running( assist_thread[i] ) )"
+  },
+  {
+    "name": "assist_draw",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "assist_end",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "assist_entry",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "assist_get_dbid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - stage name"
+  },
+  {
+    "name": "assist_init",
+    "params": [],
+    "detail": "Initializes the assist system."
+  },
+  {
+    "name": "assist_load",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "|| obj_game_control.assist_index[i] == argument2"
+  },
+  {
+    "name": "assist_load_script",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "assist_load_tru",
+    "params": [],
+    "detail": "myassist = instance_create(x,y,obj_assist)"
+  },
+  {
+    "name": "assist_meter_draw",
+    "params": [],
+    "detail": "Draw script for HUD thing"
+  },
+  {
+    "name": "assist_meter_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "assist_proj_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "assist_step",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "assist_trophy_deinit",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "assist_trophy_summon",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "attack_script",
+    "params": [],
+    "detail": "p.draw_script = gfx_fslaunch_scr;"
+  },
+  {
+    "name": "bg_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "bonus_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "bonus_add_attack",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "bonus_add_multi",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "bonus_add_super",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "bonus_calculate",
+    "params": [],
+    "detail": "if ( obj_score_control.kos[number] == 0 && !obj_score_control.no_contest )"
+  },
+  {
+    "name": "bonus_clear",
+    "params": [],
+    "detail": "Called by Player Data object at start and when fighter_load_settings is called."
+  },
+  {
+    "name": "bonus_clear_global",
+    "params": [],
+    "detail": "Called by obj_game_control in gc_start, this clears the global special bonus flags."
+  },
+  {
+    "name": "bonus_ko_now",
+    "params": [],
+    "detail": "if ( metal_transformation != 0 )"
+  },
+  {
+    "name": "bonus_platform_stage",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "bonus_target_stage",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "bonus_volley_stage",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "booster_script",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "booster_scriptxten",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "bufferdecrypt",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "same as bufferencrypt but used to prevent confusion on how to decrypt."
+  },
+  {
+    "name": "bufferencrypt",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Encrypts the buffer with the RC4 encryption algorithm"
+  },
+  {
+    "name": "bufferexists",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns true if the buffer exists"
+  },
+  {
+    "name": "buffsize",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the amount of bytes in a buffer."
+  },
+  {
+    "name": "buildbyte",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": "returns a byte based on true/false arguments"
+  },
+  {
+    "name": "bytesleft",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns how much bytes are left to read. Buffsize-Buffreadpos."
+  },
+  {
+    "name": "calc_sizediv",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "can_be_real",
+    "params": [
+      "argument0"
+    ],
+    "detail": "returns 1 if the string can be converted to a real value"
+  },
+  {
+    "name": "challenge_load_first",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "challenge_make_bin",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "challenge_read_bin",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "change_character",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - short name of character to transform into."
+  },
+  {
+    "name": "char_ab",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_ai",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_b",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_bair",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_bthrow",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom1",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom10",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom11",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom12",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom13",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom14",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom15",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom16",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom17",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom18",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom19",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom2",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom3",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom4",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom5",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom6",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom7",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom8",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_custom9",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_dab",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_dair",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_dash_attack",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_down_attack",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_downb",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_dsmash",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_dthrow",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_dtilt",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_edge_attack",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_edge_jump",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_edge_roll",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_entry",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_fair",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_final_smash",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_final_smash2",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_fthrow",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_get_data_slot",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = \"bin name\""
+  },
+  {
+    "name": "char_get_data_slot_with_id",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 = gs_character"
+  },
+  {
+    "name": "char_glide_attack",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_grab",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_hold",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_hud",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_item",
+    "params": [],
+    "detail": "This is for projectiles created by items - calls CUSTOM script"
+  },
+  {
+    "name": "char_items_load",
+    "params": [],
+    "detail": "This is a list of items generated by player characters (Link's bombs, Peach's turnips, etc)."
+  },
+  {
+    "name": "char_items_unload",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_items_unload_id",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "char_jab",
+    "params": [],
+    "detail": "show_message (\"JABBU\" );"
+  },
+  {
+    "name": "char_load_script",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "show_debug_message(\"checking if file: \"+string(argument2)+\" exists\")"
+  },
+  {
+    "name": "char_lose",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_nair",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_pummel",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_result",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_sab",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_sideb",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_smashb",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_ssmash",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_stage0",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "char_stage1",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 1 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "char_stage2",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 2 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "char_stage3",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 3 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "char_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_stilt",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_tag",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_taunt",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_uab",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_uair",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_upb",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_usmash",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_uthrow",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_utilt",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_win",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "char_zair",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "check_challenge_switch",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = Switch ID 0-49"
+  },
+  {
+    "name": "circle_wave_bullshit",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9"
+    ],
+    "detail": "circle_wave_bullshit(x, y, maximum_radius, distance_radius, speed, quantity, pause_time, pause_duration, color1, color2)"
+  },
+  {
+    "name": "clamp",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "classic_add_av",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - side (1 for left, -1 for right)"
+  },
+  {
+    "name": "classic_add_stage",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "add a stage to classic mode index"
+  },
+  {
+    "name": "classic_load",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Load classic mode resources"
+  },
+  {
+    "name": "classic_load_char",
+    "params": [],
+    "detail": "Load busts and announcers for each character"
+  },
+  {
+    "name": "classic_unload",
+    "params": [],
+    "detail": "Unload classic mode resources"
+  },
+  {
+    "name": "clearbuffer",
+    "params": [
+      "argument0"
+    ],
+    "detail": "[Argument0]: The buffer id to use. Leave out this argument or set"
+  },
+  {
+    "name": "clerp",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "cosine lerp"
+  },
+  {
+    "name": "cload_text",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - File to parse"
+  },
+  {
+    "name": "closesocket",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Disconnects and frees the selected socket."
+  },
+  {
+    "name": "closeup_c_munny",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "cmc_v7_check",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "cmc_v72_check",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "cmc_v8_check",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "common_entry",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "common_load",
+    "params": [],
+    "detail": "globalvar narration_good, narration_verygood, narration_great, narration_super, narration_awesome;"
+  },
+  {
+    "name": "common_unload",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "compareip",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "This script compares an ip to a masked ip. Will return true if they match."
+  },
+  {
+    "name": "copybuffer",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "appends one buffers data to the end of another"
+  },
+  {
+    "name": "copybuffer2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "appends PART of one buffers data to the end of another"
+  },
+  {
+    "name": "create_blur",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "create_custom_hitspark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 = ID number"
+  },
+  {
+    "name": "create_custom_hud",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "argument0 = sprite"
+  },
+  {
+    "name": "create_damage_popup",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "create_danmaku",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common projectile script for all normal projectile attacks."
+  },
+  {
+    "name": "create_generic_blur",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "Argument0 parent"
+  },
+  {
+    "name": "create_gfx",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "create_grab_box",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "This is the common grab box script."
+  },
+  {
+    "name": "create_hitbox",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common hitbox script for all non-projectile attacks."
+  },
+  {
+    "name": "create_hitbox_impaler",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common hitbox script for all non-projectile attacks."
+  },
+  {
+    "name": "create_hitbox2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common hitbox script for all non-projectile attacks."
+  },
+  {
+    "name": "create_hitbox3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common hitbox script for all non-projectile attacks."
+  },
+  {
+    "name": "create_hitbox4",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common hitbox script for all non-projectile attacks."
+  },
+  {
+    "name": "create_hitspark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "if (spark.facing == -1){"
+  },
+  {
+    "name": "create_homing_bubble",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "This script creates a bubble that tags a target for homing in on by attacks like Homing Missiles and Homing Attack."
+  },
+  {
+    "name": "create_homing_bubble_hit",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "This script creates a bubble that tags a target for homing in on by attacks like Homing Missiles and Homing Attack."
+  },
+  {
+    "name": "create_hurtbox",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "xsize       argument0"
+  },
+  {
+    "name": "create_hurtbox_new",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "x        argument0"
+  },
+  {
+    "name": "create_hurtbox_precise",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - Calling player ID"
+  },
+  {
+    "name": "create_hurtbox_precise2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - Calling player ID"
+  },
+  {
+    "name": "create_hurtbox2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "xsize       argument0"
+  },
+  {
+    "name": "create_hurtbox3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "xsize       argument0"
+  },
+  {
+    "name": "create_hurtbox4",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "xsize       argument0"
+  },
+  {
+    "name": "create_itmpnt_blur",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": "argument0 - attacker ID"
+  },
+  {
+    "name": "create_projectile",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This is the common projectile script for all normal projectile attacks."
+  },
+  {
+    "name": "create_projectile_impaler",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13",
+      "argument14"
+    ],
+    "detail": "This script creates a projectile that will bury the foe in the ground."
+  },
+  {
+    "name": "create_smoke",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "*"
+  },
+  {
+    "name": "create_spark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "create_sword_trail",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "Argument0 - owner of the sword trail"
+  },
+  {
+    "name": "create_sword_trail2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "Argument0 - owner of the sword trail"
+  },
+  {
+    "name": "create_throw_box",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10",
+      "argument11",
+      "argument12",
+      "argument13"
+    ],
+    "detail": "This script is for creating throw attack collisions. The scrips uses the same arguments as those for other hitboxes"
+  },
+  {
+    "name": "create_trail",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "Argument0 - owner object"
+  },
+  {
+    "name": "create_wind",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "This script creates a bubble that pushes foes. Used in moves like Kirby's Inhale."
+  },
+  {
+    "name": "create_wind2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "This script creates a bubble that pushes foes. Used in moves like Kirby's Inhale."
+  },
+  {
+    "name": "createbuffer",
+    "params": [],
+    "detail": "Creates a new buffer and returns the buffers ID"
+  },
+  {
+    "name": "crowd_call",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - emotion"
+  },
+  {
+    "name": "cspr_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": "This is a \"sprite_add\" script to be used in characters."
+  },
+  {
+    "name": "cspr_add_alpha",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "This is a \"sprite_add\" script to be used in characters."
+  },
+  {
+    "name": "cspr_add_pal",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": "This is a \"sprite_add\" script to be used in characters."
+  },
+  {
+    "name": "css_back",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_back_to_menu",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_back_to_menu2",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_change_form",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - player"
+  },
+  {
+    "name": "css_change_palette",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - player"
+  },
+  {
+    "name": "css_create_mugshot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "arg0 - bg base"
+  },
+  {
+    "name": "css_default_description",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_draw_back_bar",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_load",
+    "params": [],
+    "detail": "globalvar spr_mugshot;"
+  },
+  {
+    "name": "css_load_settings",
+    "params": [],
+    "detail": "if ( ver != \"~\" )"
+  },
+  {
+    "name": "css_randomize_players",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_save_settings",
+    "params": [],
+    "detail": "Save VS settings."
+  },
+  {
+    "name": "css_start_arcade",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_start_challenge",
+    "params": [],
+    "detail": "obj_fmod_cont.dont_stop_music = 1;"
+  },
+  {
+    "name": "css_start_classic",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_start_multiman",
+    "params": [],
+    "detail": "obj_fmod_cont.dont_stop_music = 1;"
+  },
+  {
+    "name": "css_start_platforms",
+    "params": [],
+    "detail": "obj_fmod_cont.dont_stop_music = 1;"
+  },
+  {
+    "name": "css_start_targets",
+    "params": [],
+    "detail": "obj_fmod_cont.dont_stop_music = 1;"
+  },
+  {
+    "name": "css_start_vs",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "css_unload",
+    "params": [],
+    "detail": "Unload resources used by CSS."
+  },
+  {
+    "name": "css_update_layout",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "cutscene_load_resources",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "cutscene_swap_bg",
+    "params": [
+      "argument0"
+    ],
+    "detail": "var r;"
+  },
+  {
+    "name": "cutscene_swap_bgm",
+    "params": [
+      "argument0"
+    ],
+    "detail": "var r;"
+  },
+  {
+    "name": "cutscene_swap_portrait",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "var r;"
+  },
+  {
+    "name": "cutscene_text_queue_add",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "var r;"
+  },
+  {
+    "name": "dbl_get_message_id",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = provided ID"
+  },
+  {
+    "name": "dbl_get_stage",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = provided ID"
+  },
+  {
+    "name": "debug_adesign_frame",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "shakex = obj_debug_animation.anim_frame_x[argument0,i] * ( 1 - facing * 2 ) * size;"
+  },
+  {
+    "name": "debug_adesign_gen",
+    "params": [
+      "argument0"
+    ],
+    "detail": "for ( i = 0 ; i < 32 ; i += 1 )"
+  },
+  {
+    "name": "debug_adesign_load",
+    "params": [],
+    "detail": "Create all the animations."
+  },
+  {
+    "name": "debug_adesign_save",
+    "params": [],
+    "detail": "Create all the animations."
+  },
+  {
+    "name": "debug_message",
+    "params": [
+      "argument0"
+    ],
+    "detail": "if ( !debuggin ) exit;"
+  },
+  {
+    "name": "debug_quick_match",
+    "params": [],
+    "detail": "room_goto_notify ( rm_main_menu );"
+  },
+  {
+    "name": "debug_reload_players",
+    "params": [],
+    "detail": "if ( file_exists ( temp_directory+\"/fighter/\"+string(db_charname[global.gs_character[i],1+global.gs_form[i]*3])+\"/link.txt\" )"
+  },
+  {
+    "name": "debug_show_code_pos",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "discord_free_app",
+    "params": [],
+    "detail": "Call this script to free the application and shut it down corretly."
+  },
+  {
+    "name": "discord_free_dll",
+    "params": [],
+    "detail": "Call this script to free the dll files. (Optional)"
+  },
+  {
+    "name": "discord_init_app",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Call this script your discord application."
+  },
+  {
+    "name": "discord_init_dll",
+    "params": [],
+    "detail": "Call this script to init the dll files."
+  },
+  {
+    "name": "discord_initiate_on_game_start",
+    "params": [],
+    "detail": "exit;"
+  },
+  {
+    "name": "discord_update_presence",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "Call this script to update the presence of your app."
+  },
+  {
+    "name": "dll_crypt",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "dll_crypt2",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "dll_crypt3",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "dllfree",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "dllinit",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "Initializes the dll."
+  },
+  {
+    "name": "draw_fs_meter",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_line_custom",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_name",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_percent",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_self",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "draw_shadow",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0,1 - position"
+  },
+  {
+    "name": "draw_sprite_ext_blur",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9",
+      "argument10"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_stocks_and_score",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "if ( targetnumbers >= 10 ){"
+  },
+  {
+    "name": "draw_tags",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "draw_text_glow",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_text_glow2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_text_glows",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_text_outline",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_text_outline_transformed",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "draw_text_shadow",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_back",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_bounce",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_circ",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_cubic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_elastic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_expo",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_quad",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_quart",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_quint",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_in_sine",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_back",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_bounce",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_circ",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_cubic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_elastic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_expo",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_quad",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_quart",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_quint",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_inout_sine",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_back",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_bounce",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_circ",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_cubic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_elastic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_expo",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_quad",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_quart",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_quint",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ease_out_sine",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "elerp",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "arg0 - x1"
+  },
+  {
+    "name": "enemy_create",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "enemy_custom",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "enemy_death",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "enemy_draw",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "enemy_get_id",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "enemy_onhit",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "enemy_step",
+    "params": [],
+    "detail": "This is for projectiles created by stages - calls USER EVENT 0 of obj_stage_bg (which is scr_user0.txt)"
+  },
+  {
+    "name": "enter_pre_countdown",
+    "params": [],
+    "detail": "Game state types:"
+  },
+  {
+    "name": "event_set_1x2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "gc_reset_settings();    // Default match settings"
+  },
+  {
+    "name": "event_set_1x3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "gc_reset_settings();    // Default match settings"
+  },
+  {
+    "name": "event_set_3x3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "global.gs_character[0] = argument0"
+  },
+  {
+    "name": "event_set_simple",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "gc_reset_settings();    // Default match settings"
+  },
+  {
+    "name": "event_test1",
+    "params": [],
+    "detail": "if ( two_player )"
+  },
+  {
+    "name": "fade_music",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - target volume (from 0 to 1)"
+  },
+  {
+    "name": "favorite_css_loader",
+    "params": [],
+    "detail": "mug_w = 58;"
+  },
+  {
+    "name": "fighter_clean_up",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fighter_create",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "creates a fighter"
+  },
+  {
+    "name": "fighter_die",
+    "params": [
+      "argument0"
+    ],
+    "detail": "!intangible &&"
+  },
+  {
+    "name": "fighter_draw",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "xs = image_xscale;"
+  },
+  {
+    "name": "fighter_draw_backup",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "xs = image_xscale;"
+  },
+  {
+    "name": "fighter_get_dbid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - fighter name"
+  },
+  {
+    "name": "fighter_get_dbid_no_fail",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - fighter name"
+  },
+  {
+    "name": "fighter_get_palette",
+    "params": [],
+    "detail": "show_message ( string ( number ) + \";\" + string ( slot ) );"
+  },
+  {
+    "name": "fighter_get_width_height",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument 0 - new mask box sprite"
+  },
+  {
+    "name": "fighter_glide",
+    "params": [],
+    "detail": "hspeed = -1 * sign ( hspeed );"
+  },
+  {
+    "name": "fighter_is_custom",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "fighter_load_data",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "if ( !directory_exists ( working_directory + '\\palettes\\' + string ( argument0 ) ) )"
+  },
+  {
+    "name": "fighter_load_data_pak",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "if ( !directory_exists ( working_directory + '\\fighter\\' + string ( argument0 ) ) )"
+  },
+  {
+    "name": "fighter_load_settings",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "execute_file(\"penismusic.txt\")"
+  },
+  {
+    "name": "fighter_remove_data",
+    "params": [],
+    "detail": "&& i != obj_score_control.result_sprite[number-1]"
+  },
+  {
+    "name": "fighter_swap_pal",
+    "params": [],
+    "detail": "show_message ( string ( number ) + \";\" + string ( slot ) );"
+  },
+  {
+    "name": "fighter_tagalong",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fighter_tagalong_free",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fighter_tagalong_play",
+    "params": [],
+    "detail": "s = chr(48+ceil(movedown))+chr(48+ceil(moveright))+chr(48+ceil(moveup))+chr(48+ceil(moveleft))"
+  },
+  {
+    "name": "fighter_tagalong_record",
+    "params": [],
+    "detail": "s = string(ceil(movedown));"
+  },
+  {
+    "name": "file_bin_read_int",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "file_bin_read_short",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "file_bin_read_short_ACTUAL",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "file_bin_read_version",
+    "params": [
+      "argument0"
+    ],
+    "detail": "reads 4 bytes, assembles them into a string and returns"
+  },
+  {
+    "name": "file_bin_write_int",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "file_bin_write_short",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "file_bin_write_version",
+    "params": [
+      "argument0"
+    ],
+    "detail": "writes the internal version string into the binary file"
+  },
+  {
+    "name": "file_text_write_stringln",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "fileclose",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Closes a open file"
+  },
+  {
+    "name": "fileopen",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Opens or creates a file for reading or writing."
+  },
+  {
+    "name": "filepos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = file id"
+  },
+  {
+    "name": "fileread",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "Reads bytes from the file and copies to the internal buffer (starting at the"
+  },
+  {
+    "name": "filesetpos",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Sets the read/write pos in the open file."
+  },
+  {
+    "name": "filesize",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = file id"
+  },
+  {
+    "name": "filewrite",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes the data in a buffer into the open file."
+  },
+  {
+    "name": "find_individual_loop",
+    "params": [
+      "argument0"
+    ],
+    "detail": "while ( 1 )"
+  },
+  {
+    "name": "find_series_loop",
+    "params": [
+      "argument0"
+    ],
+    "detail": "while ( 1 )"
+  },
+  {
+    "name": "fmod_please_do",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "FMODAllStop",
+    "params": [],
+    "detail": "export double FMODAllStop(void)"
+  },
+  {
+    "name": "FMODBlockerAdd",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8"
+    ],
+    "detail": "export double FMODBlockerAdd(double x, double y, double z, double xs, double ys, double zs, double xe, double ye, double ze)"
+  },
+  {
+    "name": "FMODBlockerGetEnabled",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODBlockerGetEnabled(double blocker)"
+  },
+  {
+    "name": "FMODBlockerGetStrength",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODBlockerGetStrength(double blocker)"
+  },
+  {
+    "name": "FMODBlockersAddGMObjects",
+    "params": [
+      "argument0"
+    ],
+    "detail": "FMODBlockerAddGMObjects (ObjectIndex or instance ID)"
+  },
+  {
+    "name": "FMODBlockerSet3dOrientation",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "export double FMODBlockerSet3dOrientation(double blocker, double fx, double fy, double fz, double ux, double uy, double uz)"
+  },
+  {
+    "name": "FMODBlockerSet3dPosition",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODBlockerSet3dPosition(double blocker, double x, double y, double z)"
+  },
+  {
+    "name": "FMODBlockerSet3dScale",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODBlockerSet3dScale(double blocker, double sx, double sy, double sz)"
+  },
+  {
+    "name": "FMODBlockerSetEnabled",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODBlockerSetEnabled(double blocker, double enabled)"
+  },
+  {
+    "name": "FMODBlockerSetStrength",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODBlockerSetStrength(double blocker,double strength)"
+  },
+  {
+    "name": "FMODBlockersFree",
+    "params": [],
+    "detail": "export double FMODBlockersFree()"
+  },
+  {
+    "name": "FMODBlockersInit",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODBlockersInit(double NumBlockers, double xs, double ys, double zs)"
+  },
+  {
+    "name": "FMODCreateSoundFromMicInput",
+    "params": [],
+    "detail": "export double FMODCreateSoundFromMicInput()"
+  },
+  {
+    "name": "FMODEffectFree",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectFree(double effect)"
+  },
+  {
+    "name": "FMODEffectGetActive",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectGetActive(double effect)"
+  },
+  {
+    "name": "FMODEffectGetBypass",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectGetBypass(double effect)"
+  },
+  {
+    "name": "FMODEffectGetDefaultFr",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectGetDefaultFr(double effect)"
+  },
+  {
+    "name": "FMODEffectGetDefaultPan",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectGetDefaultPan(double effect)"
+  },
+  {
+    "name": "FMODEffectGetDefaultVol",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectGetDefaultVol(double effect)"
+  },
+  {
+    "name": "FMODEffectGetNumParams",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectGetNumParams(double effect)"
+  },
+  {
+    "name": "FMODEffectGetParamDesc",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamDesc(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetParamLabel",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamLabel(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetParamMax",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamMax(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetParamMin",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamMin(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetParamName",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamName(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetParamValue",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamValue(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetParamValueStr",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetParamValueStr(double effect, double p)"
+  },
+  {
+    "name": "FMODEffectGetSpeakerActive",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectGetSpeakerActive(double effect, double speaker)"
+  },
+  {
+    "name": "FMODEffectReset",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODEffectReset(double effect)"
+  },
+  {
+    "name": "FMODEffectSetActive",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectSetActive(double effect, double active)"
+  },
+  {
+    "name": "FMODEffectSetBypass",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectSetBypass(double effect, double bypass)"
+  },
+  {
+    "name": "FMODEffectSetDefaultFr",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectSetDefaultFr(double effect, double frequency)"
+  },
+  {
+    "name": "FMODEffectSetDefaultPan",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectSetDefaultPan(double effect, double pan)"
+  },
+  {
+    "name": "FMODEffectSetDefaultVol",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODEffectSetDefaultVol(double effect, double vol)"
+  },
+  {
+    "name": "FMODEffectSetParamValue",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODEffectSetParamValue(double effect, double p, double v)"
+  },
+  {
+    "name": "FMODEffectSetSpeakerActive",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODEffectSetSpeakerActive(double effect, double speaker, double true/false)"
+  },
+  {
+    "name": "FMODEncryptFile",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODEncryptFile(string sourcefile, string destfile, string password)"
+  },
+  {
+    "name": "FMODErrorStr",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Tried to call lock a second time before unlock was called."
+  },
+  {
+    "name": "FMODfree",
+    "params": [],
+    "detail": "export double FMODfree(void)"
+  },
+  {
+    "name": "FMODGetLastError",
+    "params": [],
+    "detail": "Get the last error in the dll"
+  },
+  {
+    "name": "FMODGetNumInstances",
+    "params": [],
+    "detail": "returns the number of instances playing"
+  },
+  {
+    "name": "FMODGetSnapshotEntry",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODGetSnapshotEntry(double pos)"
+  },
+  {
+    "name": "FMODGetSpectrumBuffer",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGetSpectrumBuffer(double start, double size)"
+  },
+  {
+    "name": "FMODGetTagData",
+    "params": [],
+    "detail": "export double FMODGetTagData()"
+  },
+  {
+    "name": "FMODGetTagName",
+    "params": [],
+    "detail": "export double FMODGetTagName()"
+  },
+  {
+    "name": "FMODGetWaveBuffer",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGetWaveBuffer(double start, double size)"
+  },
+  {
+    "name": "FMODGroupAddEffect",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "This unit does nothing but take inputs and mix them together then feed the result to the soundcard unit."
+  },
+  {
+    "name": "FMODGroupFadePan",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "YourInstanceID"
+  },
+  {
+    "name": "FMODGroupFadePitch",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "FMODGroupFadePitch(group,targetfreq,numframes)"
+  },
+  {
+    "name": "FMODGroupFadeVolume",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "FMODGroupFadeVolume(group,targetvolume,numframes)"
+  },
+  {
+    "name": "FMODGroupGetMuted",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODGroupGetMuted(double group)"
+  },
+  {
+    "name": "FMODGroupGetPaused",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODGroupGetPaused(double group)"
+  },
+  {
+    "name": "FMODGroupGetPitch",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODGroupGetPitch(double group)"
+  },
+  {
+    "name": "FMODGroupGetSpectrumSnapshot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODGroupGetSpectrumSnapshot(double group, double channel, double size, LPSTR Buffer)"
+  },
+  {
+    "name": "FMODGroupGetSpectrumSnapshot2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODGroupGetSpectrumSnapshot2(double group, double channel, double size)"
+  },
+  {
+    "name": "FMODGroupGetVolume",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODGroupGetVolume(double group)"
+  },
+  {
+    "name": "FMODGroupGetWaveSnapshot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODGroupGetWaveSnapshot(double group, double channel, double size, LPSTR Buffer)"
+  },
+  {
+    "name": "FMODGroupGetWaveSnapshot2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODGroupGetWaveSnapshot2(double group, double channel, double size)"
+  },
+  {
+    "name": "FMODGroupSetFrequency",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGroupSetFrequency(double group, double freq)"
+  },
+  {
+    "name": "FMODGroupSetMuted",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGroupSetMuted(double group, double mute)"
+  },
+  {
+    "name": "FMODGroupSetPan",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGroupSetPan(double group, double pan)"
+  },
+  {
+    "name": "FMODGroupSetPaused",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGroupSetPaused(double group, double pause)"
+  },
+  {
+    "name": "FMODGroupSetPitch",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGroupSetPitch(double group, double pitch)"
+  },
+  {
+    "name": "FMODGroupSetVolume",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODGroupSetVolume(double group, double volume)"
+  },
+  {
+    "name": "FMODGroupStop",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODGroupStop(double group)"
+  },
+  {
+    "name": "FMODinit",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODinit(double maxsounds, double supportwebmusic)"
+  },
+  {
+    "name": "FMODInstanceAddEffect",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "This unit does nothing but take inputs and mix them together then feed the result to the soundcard unit."
+  },
+  {
+    "name": "FMODInstanceAsyncOK",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceAsyncOK(double instance)"
+  },
+  {
+    "name": "FMODInstanceFadeFrequency",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "FMODInstanceFadeFrequency(instance,targetfr, time)"
+  },
+  {
+    "name": "FMODInstanceFadePan",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "YourInstanceID"
+  },
+  {
+    "name": "FMODInstanceFadeVolume",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "YourInstanceID"
+  },
+  {
+    "name": "FMODInstanceGet3DPanLevel",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGet3DPanLevel(double instance)"
+  },
+  {
+    "name": "FMODInstanceGet3DSpread",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGet3DSpread(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetAudibility",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetAudibility(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetFrequency",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetFrequency(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetLoopCount",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetLoopCount(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetMaxDist",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetMaxDist(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetMuted",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetMuted(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetNextTag",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetNextTag(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetPan",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetPan(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetPaused",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetPaused(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetPitch",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetPitch(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetPosition",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetPosition(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetSound",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetSound(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetSpectrumSnapshot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODInstanceGetSpectrumSnapshot(double instance, double channel, double size)"
+  },
+  {
+    "name": "FMODInstanceGetSpectrumSnapshot2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODInstanceGetSpectrumSnapshot2(double instance, double channel, double size)"
+  },
+  {
+    "name": "FMODInstanceGetVolume",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceGetVolume(double instance)"
+  },
+  {
+    "name": "FMODInstanceGetWaveSnapshot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODInstanceGetWaveSnapshot(double instance, double channel, double size)"
+  },
+  {
+    "name": "FMODInstanceGetWaveSnapshot2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODInstanceGetWaveSnapshot2(double instance, double channel, double size)"
+  },
+  {
+    "name": "FMODInstanceIsPlaying",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceIsPlaying(double instance)"
+  },
+  {
+    "name": "FMODInstanceSet3dCone",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODInstanceSet3dCone(double sound, double insideconeangle, double outsideconeangle, double outsidevolume)"
+  },
+  {
+    "name": "FMODInstanceSet3dConeOrientation",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODInstanceSet3dConeOrientation(double instance, double dx, double dy, double dz)"
+  },
+  {
+    "name": "FMODInstanceSet3dDopplerMax",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSet3dDopplerMax(double sound, double dopplerval)"
+  },
+  {
+    "name": "FMODInstanceSet3dMinMaxDistance",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODInstanceSet3dMinMaxDistance(double instance, double Min, double Max)"
+  },
+  {
+    "name": "FMODInstanceSet3DPanLevel",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSet3DPanLevel(double instance, double panlevel)"
+  },
+  {
+    "name": "FMODInstanceSet3dPosition",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODInstanceSet3dPosition(double instance,double x,double y,double z)"
+  },
+  {
+    "name": "FMODInstanceSet3DSpread",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "By default (0), if a stereo sound was played in 3d, and it was directly in front of you,"
+  },
+  {
+    "name": "FMODInstanceSetFrequency",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetFrequency(double instance, double freq)"
+  },
+  {
+    "name": "FMODInstanceSetLoopCount",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetLoopCount(double instance, double loopcount)"
+  },
+  {
+    "name": "FMODInstanceSetLoopPoints",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODInstanceSetLoopPoints(double instance, double start, double end)"
+  },
+  {
+    "name": "FMODInstanceSetMuted",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetMuted(double instance, double mute)"
+  },
+  {
+    "name": "FMODInstanceSetPan",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetPan(double instance, double p)"
+  },
+  {
+    "name": "FMODInstanceSetPaused",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetPaused(double instance, double pause)"
+  },
+  {
+    "name": "FMODInstanceSetPitch",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetPitch(double instance, double pitch)"
+  },
+  {
+    "name": "FMODInstanceSetPosition",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetPosition(double instance, double p)"
+  },
+  {
+    "name": "FMODInstanceSetSpeakerMix",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8"
+    ],
+    "detail": "export double FMODInstanceSetSpeakerMix("
+  },
+  {
+    "name": "FMODInstanceSetVolume",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODInstanceSetVolume(double instance, double volume)"
+  },
+  {
+    "name": "FMODInstanceSoundGetLength",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceSoundGetLength(double instance)"
+  },
+  {
+    "name": "FMODInstanceStop",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODInstanceStop(double instance)"
+  },
+  {
+    "name": "FMODListenerHearsDistanceOnly",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODListenerHearsDistanceOnly(double listener, double truefalse)"
+  },
+  {
+    "name": "FMODListenerSet3dPosition",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODListenerSet3dPosition(double number, double x, double y, double z)"
+  },
+  {
+    "name": "FMODListenerSet3dPositionEx",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8",
+      "argument9"
+    ],
+    "detail": "export double FMODListenerSet3dPositionEx(double number, double x, double y, double z, double fx, double fy, double fz, double ux, double uy, double uz)"
+  },
+  {
+    "name": "FMODListenerSetNumber",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODListenerSetNumber(double number)"
+  },
+  {
+    "name": "FMODMasterSetVolume",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODMasterSetVolume(double volume)"
+  },
+  {
+    "name": "FMODMicStart",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODMicStart(double sound)"
+  },
+  {
+    "name": "FMODMicStop",
+    "params": [],
+    "detail": "export double FMODMicStop()"
+  },
+  {
+    "name": "FMODNormalizeSpectrumData",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODNormalizeSpectrumData(double startpos, double size)"
+  },
+  {
+    "name": "FMODNormalizeWaveData",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODNormalizeWaveData(double startpos, double size)"
+  },
+  {
+    "name": "FMODServerError",
+    "params": [],
+    "detail": "show_debug_message(string(FMODGetLastError()))"
+  },
+  {
+    "name": "FMODSetDopplerFPS",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSetDopplerFPS(double fps)"
+  },
+  {
+    "name": "FMODSetPassword",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSetPassword(LPCSTR password)"
+  },
+  {
+    "name": "FMODSetWorldScale",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSetWorldScale(double scale)"
+  },
+  {
+    "name": "FMODSnapShotToDsList",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODSnapShotToDsList(double startpos, double size, double ds)"
+  },
+  {
+    "name": "FMODSoundAdd",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODSoundAdd(LPCSTR soundfile, double threed, double streamed)"
+  },
+  {
+    "name": "FMODSoundAddAsyncStream",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundAddAsyncStream(url/file, threed)"
+  },
+  {
+    "name": "FMODSoundAddEffect",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "This unit does nothing but take inputs and mix them together then feed the result to the soundcard unit."
+  },
+  {
+    "name": "FMODSoundAsyncReady",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundAsyncReady(double sound)"
+  },
+  {
+    "name": "FMODSoundFree",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundFree(double sound)"
+  },
+  {
+    "name": "FMODSoundGetLength",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundGetLength(double sound)"
+  },
+  {
+    "name": "FMODSoundGetLoopCount",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundGetLoopCount(double sound)"
+  },
+  {
+    "name": "FMODSoundGetMaxDist",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundGetMaxDist(double sound)"
+  },
+  {
+    "name": "FMODSoundGetMaxVolume",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundGetMaxVolume(double sound)"
+  },
+  {
+    "name": "FMODSoundGetMusicChannelVolume",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundGetMusicChannelVolume(double sound, double channel)"
+  },
+  {
+    "name": "FMODSoundGetMusicNumChannels",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundGetMusicNumChannels(double sound)"
+  },
+  {
+    "name": "FMODSoundGetNumChannels",
+    "params": [
+      "argument0"
+    ],
+    "detail": "export double FMODSoundGetNumChannels(double sound)"
+  },
+  {
+    "name": "FMODSoundInstanciate",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Do not use.."
+  },
+  {
+    "name": "FMODSoundIs3d",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns if a sound is 3d"
+  },
+  {
+    "name": "FMODSoundIsStreamed",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns if a sound is streamed"
+  },
+  {
+    "name": "FMODSoundLoop",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundLoop(double sound, double paused)"
+  },
+  {
+    "name": "FMODSoundLoop3d",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "export double FMODSoundLoop3d(double sound, double x, double y, double z, double paused)"
+  },
+  {
+    "name": "FMODSoundPlay",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "show_debug_message(\"FMODSoundPlay With Arg0: \" +string(argument0))"
+  },
+  {
+    "name": "FMODSoundPlay3d",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "export double FMODSoundPlay3d(double sound, double x, double y, double z, double paused)"
+  },
+  {
+    "name": "FMODSoundSet3dCone",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "export double FMODSoundSet3dCone(double sound, double insideconeangle, double outsideconeangle, double outsidevolume)"
+  },
+  {
+    "name": "FMODSoundSet3dDopplerMax",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundSet3dDopplerMax(double sound, double dopplerval)"
+  },
+  {
+    "name": "FMODSoundSet3dMinMaxDistance",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODSoundSet3dMinMaxDistance(double sound, double Min, double Max)"
+  },
+  {
+    "name": "FMODSoundSetEffects",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundSetEffects(double sound, double effects)"
+  },
+  {
+    "name": "FMODSoundSetGroup",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundSetGroup(double sound, double group)"
+  },
+  {
+    "name": "FMODSoundSetLoopCount",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundSetLoopCount(double sound, double count)"
+  },
+  {
+    "name": "FMODSoundSetLoopPoints",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODSoundSetLoopPoints(double sound, double start, double end)"
+  },
+  {
+    "name": "FMODSoundSetMaxVolume",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "export double FMODSoundSetMaxVolume(double sound, double volume)"
+  },
+  {
+    "name": "FMODSoundSetMusicChannelVolume",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "export double FMODSoundSetMusicChannelVolume(double sound, double channel, double volume)"
+  },
+  {
+    "name": "FMODSpectrumSetSnapshotType",
+    "params": [
+      "argument0"
+    ],
+    "detail": "w[n] = 1.0"
+  },
+  {
+    "name": "FMODUpdate",
+    "params": [],
+    "detail": "export double FMODUpdate3dPositions()"
+  },
+  {
+    "name": "FMODUpdateTakeOverDone",
+    "params": [],
+    "detail": "export double FMODUpdateTakeOverDone()"
+  },
+  {
+    "name": "FMODUpdateTakeOverWhileLocked",
+    "params": [],
+    "detail": "export double FMODUpdateTakeOverWhileLocked()"
+  },
+  {
+    "name": "force_unlock_someone",
+    "params": [
+      "argument0"
+    ],
+    "detail": "switch ( db_charname[fighter_get_dbid_no_fail(argument0),1] )"
+  },
+  {
+    "name": "form_get_dbid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - fighter name"
+  },
+  {
+    "name": "freebuffer",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Frees (deletes) a buffer. You cannot free the default buffer (0)"
+  },
+  {
+    "name": "FreeLoaded",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "FreeLoaded2",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "FreeLoadedC",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "FreeLoadedOnlyC",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "fstate_air_attack",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_air_dodge",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_attack",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_broken",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_crouch",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_dodge",
+    "params": [],
+    "detail": "Glide toss."
+  },
+  {
+    "name": "fstate_down",
+    "params": [],
+    "detail": "if ( image_index == 0 )"
+  },
+  {
+    "name": "fstate_edge",
+    "params": [],
+    "detail": "if ( facing == 0 )"
+  },
+  {
+    "name": "fstate_entry",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_fall",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_flinch",
+    "params": [],
+    "detail": "if ( air == 0 && vspeed >= 0 )"
+  },
+  {
+    "name": "fstate_grabbed",
+    "params": [],
+    "detail": "if ( string ( attacker.attack_type ) != \"hold\" )"
+  },
+  {
+    "name": "fstate_heavy",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_jump",
+    "params": [],
+    "detail": "if ( vspeed < 0 )"
+  },
+  {
+    "name": "fstate_land",
+    "params": [],
+    "detail": "if ( grab || ( shieldup && attacking ) )"
+  },
+  {
+    "name": "fstate_locked",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_out",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_respawn",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_run",
+    "params": [],
+    "detail": "if ( timer mod 2 == 0 )"
+  },
+  {
+    "name": "fstate_shielding",
+    "params": [],
+    "detail": "spark = instance_create ( x + actual_width * ( 1 - facing * 2 ) * size - 4 + random ( 4 ) , y - 4 - random ( 8 ) , obj_spark_effect );"
+  },
+  {
+    "name": "fstate_sleep",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_stairs",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_stand",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_toha_dodge",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_tumble",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstate_ukemi",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstateac_grabbreak",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "fstateac_jump",
+    "params": [],
+    "detail": "lagless jump cancel"
+  },
+  {
+    "name": "fstateac_sidedodge",
+    "params": [
+      "argument0"
+    ],
+    "detail": "activates side dodge"
+  },
+  {
+    "name": "fstateac_spotdodge",
+    "params": [],
+    "detail": "activates spot dodge"
+  },
+  {
+    "name": "fstateac_ukemi",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - direction"
+  },
+  {
+    "name": "g_achievement_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "g_achievements_startup",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "g_h_create",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "g_h_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "g_h_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gacha_collect_init",
+    "params": [],
+    "detail": "if global.initialized_gacha_once = 1"
+  },
+  {
+    "name": "gacha_deinitialize",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gacha_initialization",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gacha_roll",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gacha_rollxten",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gameplay_clear",
+    "params": [],
+    "detail": "with ( obj_enemy )"
+  },
+  {
+    "name": "gameplay_reset",
+    "params": [],
+    "detail": "if ( 1 == 1 )"
+  },
+  {
+    "name": "gc_assign_ai",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gc_bonus_pause",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gc_camera",
+    "params": [],
+    "detail": "camera_l -= 128;"
+  },
+  {
+    "name": "gc_check_if_data_exists",
+    "params": [
+      "argument0"
+    ],
+    "detail": "If fighter with directory name from argument0 is not loaded, returns -1."
+  },
+  {
+    "name": "gc_delete_char_data",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "for ( i = 0 ; i < MAX_FIGHTERS ; i += 1 )"
+  },
+  {
+    "name": "gc_draw",
+    "params": [],
+    "detail": "draw_set_alpha ( .5 );"
+  },
+  {
+    "name": "gc_draw_new_hud",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gc_end",
+    "params": [],
+    "detail": "for ( u = 0 ; u < SLOTS_PER_FIGHTER ; u += 1 )"
+  },
+  {
+    "name": "gc_fighter_id",
+    "params": [
+      "argument0"
+    ],
+    "detail": "If fighter with directory name from argument0 is not loaded, returns -1."
+  },
+  {
+    "name": "gc_load_chars_UNUSED",
+    "params": [],
+    "detail": "Loaded database - will be used in order to avoid loading same data twice."
+  },
+  {
+    "name": "gc_load_fighter",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gc_mark_sfx_unload",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gc_meter_x_set",
+    "params": [],
+    "detail": "This script sets X position of damage meters to appropriate positions, depending on number of players."
+  },
+  {
+    "name": "gc_narration_pdefeat",
+    "params": [
+      "argument0"
+    ],
+    "detail": "computer player... defeated"
+  },
+  {
+    "name": "gc_pause",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "gc_player_start_turn",
+    "params": [],
+    "detail": "this makes the players turn around to other players at the start of the match in a nice way"
+  },
+  {
+    "name": "gc_public_settings",
+    "params": [],
+    "detail": "gc_reset_settings"
+  },
+  {
+    "name": "gc_reset_settings",
+    "params": [],
+    "detail": "gc_reset_settings"
+  },
+  {
+    "name": "gc_start",
+    "params": [],
+    "detail": "temp_assist = global.assistlist[aa]"
+  },
+  {
+    "name": "generate_sword_trail",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "Argument0 - owner of the sword trail"
+  },
+  {
+    "name": "get_01_time",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "returns clamped time from 0 to 1 basing on a timer variable and start/end points in time"
+  },
+  {
+    "name": "get_active",
+    "params": [],
+    "detail": "checks if the gm window active window"
+  },
+  {
+    "name": "get_angle_360",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "get_focus",
+    "params": [],
+    "detail": "checks if the gm window has the focus"
+  },
+  {
+    "name": "get_foreground",
+    "params": [],
+    "detail": "gets the current foreground window"
+  },
+  {
+    "name": "get_new_item_id",
+    "params": [],
+    "detail": "returns new item id for collision detection and stuff"
+  },
+  {
+    "name": "get_real_assist_next",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "get_slot_color",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "get_this_one",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "get_unique_dir_angles",
+    "params": [],
+    "detail": "melty blood no momentum cancel hit"
+  },
+  {
+    "name": "get_version_name",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a version name depending on the internal string received."
+  },
+  {
+    "name": "getmacaddress",
+    "params": [],
+    "detail": "returns the computers local MAC address. Do not just rely on this for player banning and the"
+  },
+  {
+    "name": "getpos",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Returns the read or write pos"
+  },
+  {
+    "name": "getsockid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Argument0: Socket id to get the WINSOCK id from."
+  },
+  {
+    "name": "gfx_atkattach",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_clear",
+    "params": [],
+    "detail": "This script is supposed to get rid of all GFX effects lingering on the stage."
+  },
+  {
+    "name": "gfx_darkelec_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_ef_crown",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_duster",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_duster2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_duster3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_jab",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - x"
+  },
+  {
+    "name": "gfx_ef_nspark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_spark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_whiff",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_whiffspark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - x"
+  },
+  {
+    "name": "gfx_ef_whirl",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_ef_whirl2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_force_splash",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "0, 1 - x,y"
+  },
+  {
+    "name": "gfx_fslaunch_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_fstextdraw_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_fstextstep_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_gameovertile_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_gameovertile_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_huddie_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_huddie_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_kotr_draw",
+    "params": [],
+    "detail": "if ( mode == 0 )"
+  },
+  {
+    "name": "gfx_kotr_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_land_effect",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "arg0 - x"
+  },
+  {
+    "name": "gfx_reversescale_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_shieldbit_gen",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "gfx_ssbbar",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "argument0 - y"
+  },
+  {
+    "name": "gfx_sweat_gen",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "gfx_sweat_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_sweat64_gen",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gfx_throwtech",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "gfx_try_splash",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "0, 1 - x,y"
+  },
+  {
+    "name": "gfx_whiff_scr",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "gmfocus_define",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "heal_player",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "hitbox_hitspark",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "This script forces the creation of hitspark of a hitbox."
+  },
+  {
+    "name": "hitbox_hitspark_stun",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "This script forces the creation of hitspark of a hitbox + stun the player appropriately."
+  },
+  {
+    "name": "hostip",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Gets the ip of the specified host name."
+  },
+  {
+    "name": "HowToUse",
+    "params": [
+      "argument0"
+    ],
+    "detail": "or true if large mp3"
+  },
+  {
+    "name": "hsv_set",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - hue change (0-360)"
+  },
+  {
+    "name": "hudanim_countdown",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_failure",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_game",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_go",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_p_death",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_p_reset",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_p_score",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "window_w / ( MAX_FIGHTERS + 1 ) * ( argument0 + 1 ) - 80"
+  },
+  {
+    "name": "hudanim_ready",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_record",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_sd",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_success",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_time",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "hudanim_update",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "HuffCompress",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Compresses a file with the Huffman algorithm (EXTRA)"
+  },
+  {
+    "name": "HuffDecompress",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Decompresses a file encoded with the Huffman algorithm (EXTRA)"
+  },
+  {
+    "name": "initGMSEmulate",
+    "params": [],
+    "detail": "replaces GM sound add"
+  },
+  {
+    "name": "initiateEvent1",
+    "params": [],
+    "detail": "gc_reset_settings();    // Default match settings"
+  },
+  {
+    "name": "input_update",
+    "params": [],
+    "detail": "if ( in_check [ i , 0 ] == 1 || in_held2 [ i , 0 ] == 2 ) in_g_down = 1;"
+  },
+  {
+    "name": "input_update_online",
+    "params": [],
+    "detail": "if ( in_check [ i , 0 ] == 1 || in_held2 [ i , 0 ] == 2 ) in_g_down = 1;"
+  },
+  {
+    "name": "install_event",
+    "params": [
+      "argument0"
+    ],
+    "detail": "gc_reset_settings();"
+  },
+  {
+    "name": "instance_destroy2",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "interpolate_sword_trail",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "iptouint",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Converts a ip string (ie 202.13.23.1) to a number."
+  },
+  {
+    "name": "is_on_floor",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "isound_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": ", 0 , 1"
+  },
+  {
+    "name": "ispr_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": "This is a \"sprite_add\" script to be used in items."
+  },
+  {
+    "name": "ispr_add_alpha",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "item_batter",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "item_candamage",
+    "params": [],
+    "detail": "Returns 0 if vermin player is not damagable due to invincibility"
+  },
+  {
+    "name": "item_candamageatk",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns 0 if vermin player is the argument0 player or is it's teammate and friendly fire is off"
+  },
+  {
+    "name": "item_could_ride",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - player object to check"
+  },
+  {
+    "name": "item_get_dbid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - stage name"
+  },
+  {
+    "name": "item_get_stuck_x",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "arg0 - target object"
+  },
+  {
+    "name": "item_get_stuck_y",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "arg0 - target object"
+  },
+  {
+    "name": "item_heavy_throw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "item_pick",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "item_pick_attempt",
+    "params": [],
+    "detail": "This script will attempt to pick nearest passing item if none is held."
+  },
+  {
+    "name": "item_pick_ground",
+    "params": [],
+    "detail": "sound_play ( itemgetsnd );"
+  },
+  {
+    "name": "item_posupdate",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "item_stick_to_point",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "arg0 - target object"
+  },
+  {
+    "name": "item_throw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "itemcreate_capsule",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - x"
+  },
+  {
+    "name": "itemcreate_crate",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - x"
+  },
+  {
+    "name": "itemcreate_findname",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - x"
+  },
+  {
+    "name": "items_load",
+    "params": [],
+    "detail": "// This is a list of items generated by player characters (Link's bombs, Peach's turnips, etc)."
+  },
+  {
+    "name": "items_load_base",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - item id"
+  },
+  {
+    "name": "items_load_script",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "items_load_scripts",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "items_spawn",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "items_unload",
+    "params": [],
+    "detail": "for ( i = 0 ; i < ds_list_size ( char_items ) ; i += 1 )"
+  },
+  {
+    "name": "itemspawn_gen_contr",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "generates a random item from contr category"
+  },
+  {
+    "name": "itemspawn_gen_every",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "generates a random item from every category (light, heavy)"
+  },
+  {
+    "name": "itemspawn_gen_light",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "generates a random item from light category (the ones with db_itemfreq larger than 0)"
+  },
+  {
+    "name": "itemspawn_init",
+    "params": [],
+    "detail": "create database of usable items"
+  },
+  {
+    "name": "itemspawn_step",
+    "params": [],
+    "detail": "itemspawn_timer = 3;"
+  },
+  {
+    "name": "itmpnt_add_anim",
+    "params": [
+      "argument0"
+    ],
+    "detail": "show_message ( \"itmpnt_add_anim#\"+string(argument0)+\"##culprit#\"+string(object_get_name(object_index))+\"#\"+string(event_type)+\"#\"+string(event_number)+\"#\"+strin"
+  },
+  {
+    "name": "itmpnt_add_frame",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_add_frame2",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "show_message ( \"itmpnt_add_anim#\"+string(argument0)+\"##culprit#\"+string(object_get_name(object_index))+\"#\"+string(event_type)+\"#\"+string(event_number)+\"#\"+strin"
+  },
+  {
+    "name": "itmpnt_add_set",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_clear",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_clear_anim",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_clear_set",
+    "params": [
+      "argument0"
+    ],
+    "detail": "show_message ( \"itmpnt_clear_set#\"+string(argument0) );"
+  },
+  {
+    "name": "itmpnt_current_a",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_current_x",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_current_y",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_get_a",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_get_p",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_get_x",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_get_y",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_set_a",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_set_branch",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_set_p",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_set_x",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_frame_set_y",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_free",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_init",
+    "params": [],
+    "detail": "Item hold point assign system"
+  },
+  {
+    "name": "itmpnt_load_anim",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "show_message ( \"itmpnt_load_anim#\"+string(argument0)+\"#\"+string(argument1) );"
+  },
+  {
+    "name": "itmpnt_load_anim2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "show_message ( \"itmpnt_load_anim2#\"+string(argument0)+\"#\"+string(argument1)+\"#\"+string(argument2)+\"#\"+string(argument3) );"
+  },
+  {
+    "name": "itmpnt_load_anim3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "show_message ( \"itmpnt_load_anim2#\"+string(argument0)+\"#\"+string(argument1)+\"#\"+string(argument2)+\"#\"+string(argument3) );"
+  },
+  {
+    "name": "itmpnt_name_assign",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_name_identify",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_num_anim",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_num_frame",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "itmpnt_num_set",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "joy_axes",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_axes(id)"
+  },
+  {
+    "name": "joy_axis",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_axis(id, axis)"
+  },
+  {
+    "name": "joy_ball_x",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_ball_x(id, ball)  [or joy_ball_x(id) for ball 0]"
+  },
+  {
+    "name": "joy_ball_y",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_ball_y(id, ball)  [or joy_ball_y(id) for ball 0]"
+  },
+  {
+    "name": "joy_balls",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_balls(id)"
+  },
+  {
+    "name": "joy_button",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_button(id, button)"
+  },
+  {
+    "name": "joy_buttons",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_buttons(id)"
+  },
+  {
+    "name": "joy_count",
+    "params": [],
+    "detail": "joy_count()"
+  },
+  {
+    "name": "joy_find",
+    "params": [],
+    "detail": "joy_find()"
+  },
+  {
+    "name": "joy_gmid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Used internally to imitate Game Maker's handling of joystick IDs."
+  },
+  {
+    "name": "joy_hat",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_hat(id, hat)  [or joy_hat(id) for hat 0]"
+  },
+  {
+    "name": "joy_hat_x",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_hat_x(id, hat)  [or joy_hat_x(id) for hat 0]"
+  },
+  {
+    "name": "joy_hat_y",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_hat_y(id, hat)  [or joy_hat_y(id) for hat 0]"
+  },
+  {
+    "name": "joy_hats",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_hats(id)"
+  },
+  {
+    "name": "joy_hi",
+    "params": [],
+    "detail": "joy_hi()"
+  },
+  {
+    "name": "joy_init",
+    "params": [],
+    "detail": "joy_init()"
+  },
+  {
+    "name": "joy_list",
+    "params": [],
+    "detail": "joy_list()"
+  },
+  {
+    "name": "joy_name",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_name(id)"
+  },
+  {
+    "name": "joy_pressed",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_pressed(id, button)"
+  },
+  {
+    "name": "joy_r",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_r(id)"
+  },
+  {
+    "name": "joy_released",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joy_released(id, button)"
+  },
+  {
+    "name": "joy_u",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_u(id)"
+  },
+  {
+    "name": "joy_update",
+    "params": [],
+    "detail": "joy_update()"
+  },
+  {
+    "name": "joy_v",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_v(id)"
+  },
+  {
+    "name": "joy_x",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_x(id)"
+  },
+  {
+    "name": "joy_y",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_y(id)"
+  },
+  {
+    "name": "joy_z",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joy_z(id)"
+  },
+  {
+    "name": "joystick_axes",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_axes(id)"
+  },
+  {
+    "name": "joystick_buttons",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_buttons(id)"
+  },
+  {
+    "name": "joystick_check_button",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "joystick_check_button(id, button)"
+  },
+  {
+    "name": "joystick_direction",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_direction(id)"
+  },
+  {
+    "name": "joystick_exists",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_exists(id)"
+  },
+  {
+    "name": "joystick_has_pov",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_has_pov(id)"
+  },
+  {
+    "name": "joystick_name",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_name(id)"
+  },
+  {
+    "name": "joystick_pov",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_pov(id)"
+  },
+  {
+    "name": "joystick_rpos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_rpos(id)"
+  },
+  {
+    "name": "joystick_upos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_upos(id)"
+  },
+  {
+    "name": "joystick_vpos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_vpos(id)"
+  },
+  {
+    "name": "joystick_xpos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_xpos(id)"
+  },
+  {
+    "name": "joystick_ypos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_ypos(id)"
+  },
+  {
+    "name": "joystick_zpos",
+    "params": [
+      "argument0"
+    ],
+    "detail": "joystick_zpos(id)"
+  },
+  {
+    "name": "keycode_return",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - key id"
+  },
+  {
+    "name": "Known Problems and Questions",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "lastinIP",
+    "params": [],
+    "detail": "Returns the last incoming IP received from any of the sockets."
+  },
+  {
+    "name": "lastinPort",
+    "params": [],
+    "detail": "Returns the last incoming port number received from any of the sockets."
+  },
+  {
+    "name": "leInitObamaMake",
+    "params": [],
+    "detail": "show_debug_message(\"created directory\");"
+  },
+  {
+    "name": "leOthersObamaMake",
+    "params": [],
+    "detail": "show_debug_message(\"deinit\");"
+  },
+  {
+    "name": "lerp",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "leStepObamaMake",
+    "params": [],
+    "detail": "show_debug_message(\"start step\");"
+  },
+  {
+    "name": "list_of_changed_shit",
+    "params": [],
+    "detail": "obj_menu:"
+  },
+  {
+    "name": "load_assists",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "load_enemy_assets",
+    "params": [
+      "argument0"
+    ],
+    "detail": "the enemy folder name"
+  },
+  {
+    "name": "load_enemy_database",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "load_Events",
+    "params": [],
+    "detail": "if  file_exists(\"data/eventclear.txt\"){"
+  },
+  {
+    "name": "load_gallery_prev",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "LoadFMOD",
+    "params": [],
+    "detail": "Call this when the game starts to create the dll interface"
+  },
+  {
+    "name": "loading_refresh",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "loading_screen",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "lock_character",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "loop_track",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - filename"
+  },
+  {
+    "name": "luna_nights_step_stuff",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "md5buffer",
+    "params": [
+      "argument0"
+    ],
+    "detail": "returns the MD5 hash of the data inside the buffer"
+  },
+  {
+    "name": "md5string",
+    "params": [
+      "argument0"
+    ],
+    "detail": "returns a md5 hash of argument0"
+  },
+  {
+    "name": "menu_crusade_crusade",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_challenge",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_gacha",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_gallery",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_mikotower",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_music",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_music_versus",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_draw_sticker",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_controls",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_crusade",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_data",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_online",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_options",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_return",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_solo",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_main_title",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_reload_cbust_file",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_solo_arcade",
+    "params": [],
+    "detail": "if ( two_player )"
+  },
+  {
+    "name": "menu_solo_challenge",
+    "params": [],
+    "detail": "FMODSoundPlay ( menu_ok );"
+  },
+  {
+    "name": "menu_solo_classic",
+    "params": [],
+    "detail": "FMODSoundPlay ( menu_ok );"
+  },
+  {
+    "name": "menu_solo_return",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_solo_stadium",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_solo_training",
+    "params": [],
+    "detail": "FMODSoundPlay ( menu_ok );"
+  },
+  {
+    "name": "menu_stadium_multiman",
+    "params": [
+      "argument0"
+    ],
+    "detail": "FMODSoundPlay ( menu_ok );"
+  },
+  {
+    "name": "menu_stadium_platforms",
+    "params": [],
+    "detail": "FMODSoundPlay ( menu_ok );"
+  },
+  {
+    "name": "menu_stadium_targets",
+    "params": [],
+    "detail": "FMODSoundPlay ( menu_ok );"
+  },
+  {
+    "name": "menu_step_challenge",
+    "params": [],
+    "detail": "var o;"
+  },
+  {
+    "name": "menu_step_gacha",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_step_gallery",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_step_mikotower",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_step_music",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "menu_step_music_versus",
+    "params": [],
+    "detail": "var o;"
+  },
+  {
+    "name": "menu_step_sticker",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "midmatch_fighter_load",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8"
+    ],
+    "detail": "argument0 = ID(from 1 to 5), argument1 = bin name, argument2 = alt, argument3 = palette, argument4 load message"
+  },
+  {
+    "name": "mikotower_create_floor_sprite",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "mikotower_draw_bruteforce",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "mikotower_surface_thing_fuck_off",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "mod2",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "myhost",
+    "params": [],
+    "detail": "Returns your host name"
+  },
+  {
+    "name": "nametag_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": "Adds a nametag to the database and returns it's number."
+  },
+  {
+    "name": "nametag_chr2nm",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Converts a character to nametag code. Returns a value in double."
+  },
+  {
+    "name": "nametag_delete",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - nametag identificator"
+  },
+  {
+    "name": "nametag_load",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a string with nametag characters."
+  },
+  {
+    "name": "nametag_random",
+    "params": [],
+    "detail": "Returns a random nametag from list."
+  },
+  {
+    "name": "nametag_str2nm",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Converts a string to nametag code. Returns a value in string with characters filled in appriopriately."
+  },
+  {
+    "name": "netconnected",
+    "params": [],
+    "detail": "checks if the local computer is connected to the internet"
+  },
+  {
+    "name": "newpop_creater",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "newpop_script",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "no_script",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "normalize_angle",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Normalize an angle between 0 and 360"
+  },
+  {
+    "name": "notify_get_date",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - id of the notification string"
+  },
+  {
+    "name": "notify_get_date_struct",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - id of the notification string"
+  },
+  {
+    "name": "notify_mark",
+    "params": [
+      "argument0"
+    ],
+    "detail": "marks a notification as already displayed"
+  },
+  {
+    "name": "notify_schedule",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "schedule a notification to pop up"
+  },
+  {
+    "name": "notify_string",
+    "params": [
+      "argument0"
+    ],
+    "detail": "list of notification messages"
+  },
+  {
+    "name": "ntp_add_chat",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ntp_buffer_keys",
+    "params": [],
+    "detail": "This script is for updating the key buffer, which will be later used to send the message or directly in the game."
+  },
+  {
+    "name": "ntp_c_end",
+    "params": [],
+    "detail": "This script shuts down a client session."
+  },
+  {
+    "name": "ntp_c_msg_character",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_c_msg_data",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_c_receive",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - timeout cap (0 for no timeout)."
+  },
+  {
+    "name": "ntp_c_receivem",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_c_send",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_c_send_udp",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_c_start",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Argument 0 - target address."
+  },
+  {
+    "name": "ntp_disable_ready",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_game2settings",
+    "params": [],
+    "detail": "This script sets the online settings variables to match the actual game values."
+  },
+  {
+    "name": "ntp_h_accept_player",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Argument 0 - socket."
+  },
+  {
+    "name": "ntp_h_end",
+    "params": [],
+    "detail": "This script shuts down a hosted session."
+  },
+  {
+    "name": "ntp_h_msg_character",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_h_msg_customp",
+    "params": [],
+    "detail": "This scripts writes the content of custom player message to send to clients."
+  },
+  {
+    "name": "ntp_h_msg_items",
+    "params": [],
+    "detail": "This scripts writes the content of item toggle message to send to clients."
+  },
+  {
+    "name": "ntp_h_msg_players",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_h_msg_ready",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_h_msg_settings",
+    "params": [],
+    "detail": "This script writes the content of settings message to send to clients."
+  },
+  {
+    "name": "ntp_h_receive",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - timeout cap (0 for no timeout)."
+  },
+  {
+    "name": "ntp_h_receivem",
+    "params": [
+      "argument0"
+    ],
+    "detail": "file_text_write_string ( flog2 , \"p\"+string(p+1) );"
+  },
+  {
+    "name": "ntp_h_remove_player",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Argument 0 - player ID."
+  },
+  {
+    "name": "ntp_h_send2all",
+    "params": [],
+    "detail": "This script sends written message to all available players."
+  },
+  {
+    "name": "ntp_h_send2all_exc",
+    "params": [
+      "argument0"
+    ],
+    "detail": "This script sends written message to all available players, excluding one."
+  },
+  {
+    "name": "ntp_h_send2all_udp",
+    "params": [],
+    "detail": "This script sends written message to all available players."
+  },
+  {
+    "name": "ntp_h_start",
+    "params": [],
+    "detail": "No arguments."
+  },
+  {
+    "name": "ntp_load_icon",
+    "params": [
+      "argument0"
+    ],
+    "detail": "This loads player's stock icon and color basing on char/alt/color."
+  },
+  {
+    "name": "ntp_matchstart",
+    "params": [],
+    "detail": "Called by obj_online when we are starting a match in lobby."
+  },
+  {
+    "name": "ntp_matchstart_lobby",
+    "params": [],
+    "detail": "Called by obj_online when in lobby and we are supposed to start up the match start procedure."
+  },
+  {
+    "name": "ntp_player_icon",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "Draws a player's stock icon."
+  },
+  {
+    "name": "ntp_release_ports",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_reset_settings",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_send_chat",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - text"
+  },
+  {
+    "name": "ntp_settings2game",
+    "params": [],
+    "detail": "This script sets the variables game actually uses to values from online settings."
+  },
+  {
+    "name": "ntp_shutdown",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "ntp_try_forward",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "object_stun",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "last_image_index = image_index;"
+  },
+  {
+    "name": "ol_button_cmc",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button_cmc_challenge",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button_cmc2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button_cmc2_2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "ol_button_cmc3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button_cmc3_2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button_sticker",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "if ( argument4 == argument5 )"
+  },
+  {
+    "name": "ol_button_toha",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button1",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button1s",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button with text separation and bottom text scale-to-fit."
+  },
+  {
+    "name": "ol_button2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_button5",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "Draw type 1 button."
+  },
+  {
+    "name": "ol_controls_button",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "arg0 - lx"
+  },
+  {
+    "name": "ol_controls_field",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "draw_set_alpha ( .0625 );"
+  },
+  {
+    "name": "ol_controls_field_key",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "draw_set_alpha ( .0625 );"
+  },
+  {
+    "name": "ol_player",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "if ( obj_online.p_custom[i,5] )"
+  },
+  {
+    "name": "p_interaction",
+    "params": [],
+    "detail": "pwu = 0;"
+  },
+  {
+    "name": "pak_crypt",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "En/Decrypts a string (EXTRA)"
+  },
+  {
+    "name": "pak_file_add",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Adds a file to the PAK. The filename can contain folders with either slash"
+  },
+  {
+    "name": "pak_file_add_from_file",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Adds a file to the PAK from an existing file. The filename (internal) can contain folders with either slash"
+  },
+  {
+    "name": "pak_file_count",
+    "params": [],
+    "detail": "Returns total number of files in PAK"
+  },
+  {
+    "name": "pak_file_crypt",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "En/Decrypt a file in the open PAK. (EXTRA)"
+  },
+  {
+    "name": "pak_file_delete",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Arg0: FileName"
+  },
+  {
+    "name": "pak_file_getcontents",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a the contents of a file with the given index"
+  },
+  {
+    "name": "pak_file_index",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the index for a given file name"
+  },
+  {
+    "name": "pak_file_rename",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Arg0: Old Name"
+  },
+  {
+    "name": "pak_file_save_to_file",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Adds a file to the PAK from an existing file. The filename (internal) can contain folders with either slash"
+  },
+  {
+    "name": "pak_file_setcontents",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Sets the contents of a file"
+  },
+  {
+    "name": "pak_file_size",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the file size in bytes"
+  },
+  {
+    "name": "pak_free",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "pak_init",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Arg0: Extra Functions (Boolean)"
+  },
+  {
+    "name": "pak_load",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Arg0: PAK FileName"
+  },
+  {
+    "name": "pak_reset",
+    "params": [],
+    "detail": "Resets the PAK file"
+  },
+  {
+    "name": "pak_save",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Arg0: PAK FileName"
+  },
+  {
+    "name": "palette_d_set",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "palette_grayscale",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "palette_metal",
+    "params": [],
+    "detail": "General script that is supposed to use a palette for you"
+  },
+  {
+    "name": "palette_own_set",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "palette_own_setm",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "palette_pick_back_slot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "global.gs_palette[argument0] = 0;"
+  },
+  {
+    "name": "palette_pick_free_slot",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "global.gs_palette[argument0] = 0;"
+  },
+  {
+    "name": "palette_pick_team_slot",
+    "params": [
+      "argument0"
+    ],
+    "detail": "global.gs_palette[argument0] = 0;"
+  },
+  {
+    "name": "palette_reset",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "palette_set",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "palette_use",
+    "params": [],
+    "detail": "General script that is supposed to use a palette for you"
+  },
+  {
+    "name": "palette_use_stock",
+    "params": [
+      "argument0"
+    ],
+    "detail": "General script that is supposed to use a palette for you"
+  },
+  {
+    "name": "palette_use_stockown",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - preview shader to use"
+  },
+  {
+    "name": "palette_use2",
+    "params": [
+      "argument0"
+    ],
+    "detail": "&& palettedo"
+  },
+  {
+    "name": "palette_use3",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "General script that is supposed to use a palette for you"
+  },
+  {
+    "name": "particles_deinit",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "particles_init",
+    "params": [],
+    "detail": "globalvar ptype_smoke2;"
+  },
+  {
+    "name": "pbuffer_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_add2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_attack",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_clear",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_clear_one",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_facing",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_hspeed",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_keys",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_sprite",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_state",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_vspeed",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_x",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "pbuffer_y",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "peekmessage",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "Copies any data recieved on a specified socket to the internal buffer but"
+  },
+  {
+    "name": "place_x",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Transforms X coordinate from top left coordinate (as seen in image editors) to in-game coordinate (relative to origin)"
+  },
+  {
+    "name": "place_y",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Transforms y coordinate from top left coordinate (as seen in image editors) to in-game coordinate (relative to origin)"
+  },
+  {
+    "name": "play_attack_voice",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "play_music",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - directory name"
+  },
+  {
+    "name": "play_music_individual_loop",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - directory name"
+  },
+  {
+    "name": "play_music_series_loop",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - directory name"
+  },
+  {
+    "name": "play_music2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "if ( room == rm_arena && bgm_volume > 0 )"
+  },
+  {
+    "name": "play_track",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - filename"
+  },
+  {
+    "name": "play_victory_theme",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - played who won ( 0 - MAX_FIGHTERS-1 )"
+  },
+  {
+    "name": "player_direction_refresh",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "player_item_load",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "player_shield_refresh",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "pokeball_randomize",
+    "params": [],
+    "detail": "var a, b, i;"
+  },
+  {
+    "name": "pos_mod",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "precision_check",
+    "params": [],
+    "detail": "if keyboard_check(vk_f8) exit;"
+  },
+  {
+    "name": "proj_holdup",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "push_achievement",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "push_test_popup(\"Akyuu: You can grab the keys to unlock new paths.\", 4, 180)"
+  },
+  {
+    "name": "push_test_popup",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "push_test_popup(\"Akyuu: You can grab the keys to unlock new paths.\", 4, 180)"
+  },
+  {
+    "name": "read_file_to_string",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - File to parse"
+  },
+  {
+    "name": "read_file_to_string2",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - File to parse"
+  },
+  {
+    "name": "readbit",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Reads the bit at a certain position in a number"
+  },
+  {
+    "name": "readbyte",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a byte from the buffer."
+  },
+  {
+    "name": "readchars",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Reads a sequence of characters from the buffer."
+  },
+  {
+    "name": "readdouble",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a double from the buffer."
+  },
+  {
+    "name": "readfloat",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a float from the buffer."
+  },
+  {
+    "name": "readint",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a int from the buffer."
+  },
+  {
+    "name": "readsep",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Finds a string in a buffer and returns the data before the string and increments the"
+  },
+  {
+    "name": "readshort",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a short int from the buffer."
+  },
+  {
+    "name": "readstring",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a null terminated string from the buffer."
+  },
+  {
+    "name": "readuint",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a unsigned int from the buffer."
+  },
+  {
+    "name": "readushort",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns a unsigned short int from the buffer."
+  },
+  {
+    "name": "recalculate_sword_trail",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "*"
+  },
+  {
+    "name": "receivemessage",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "Receives data from the selected tcp or udp socket and copies to the"
+  },
+  {
+    "name": "record_analyze",
+    "params": [],
+    "detail": "switch ( version )"
+  },
+  {
+    "name": "record_gen_empty",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "record_load_1",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - Character Total ID."
+  },
+  {
+    "name": "record_load_2",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - Character Total ID."
+  },
+  {
+    "name": "record_load_3",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Argument 0 - Offset."
+  },
+  {
+    "name": "record_load_4",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - Character Total ID."
+  },
+  {
+    "name": "record_read_checksum",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - target address (first 4 bytes will be checksum, next argument1 will be checked)"
+  },
+  {
+    "name": "record_save_1",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - Character Total ID."
+  },
+  {
+    "name": "record_save_2",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - Character Total ID."
+  },
+  {
+    "name": "record_save_3",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Argument 0 - Offset."
+  },
+  {
+    "name": "record_save_4",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Argument 0 - Character Total ID."
+  },
+  {
+    "name": "record_save_end",
+    "params": [],
+    "detail": "this is booted up when the game is closed"
+  },
+  {
+    "name": "record_save_unlocks",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "record_schedule_character",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "if ( db_charname[i,1] == \"shantae\" )"
+  },
+  {
+    "name": "record_total_1",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the number of characters that cleared the given bonus."
+  },
+  {
+    "name": "record_total_2",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the number of characters that cleared the given bonus."
+  },
+  {
+    "name": "record_total_4",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the number of characters that cleared the given mode."
+  },
+  {
+    "name": "record_unlock_character",
+    "params": [
+      "argument0"
+    ],
+    "detail": "if not_cmc = 1"
+  },
+  {
+    "name": "record_unlock_character_real",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "if not_cmc = 1"
+  },
+  {
+    "name": "record_unlock_character_real2",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "if not_cmc = 1"
+  },
+  {
+    "name": "record_unlock_stage",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "if not_cmc = 1"
+  },
+  {
+    "name": "record_write_checksum",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - target address (first 4 bytes will be checksum, next argument1 will be checked)"
+  },
+  {
+    "name": "record_write_version",
+    "params": [],
+    "detail": "this will update the record file's internal version number"
+  },
+  {
+    "name": "replace_char_icon_music_room",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "replace_char_icon_unlocks",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "replace_icon_achs",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "replace_stage_icon_music_room",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "result_adder_check",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "results_tree",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "argument0 - x"
+  },
+  {
+    "name": "room_goto_notify",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - target room"
+  },
+  {
+    "name": "rule_bonus_death",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_bonus_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_bonus_end",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_bonus_enddraw",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "draw_set_alpha ( menu_alpha * 0.5 );"
+  },
+  {
+    "name": "rule_challenge_death",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_challenge_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_challenge_end",
+    "params": [
+      "argument0"
+    ],
+    "detail": "candidate = argument0"
+  },
+  {
+    "name": "rule_challenge_end_stock",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "rule_challenge_endNO",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_challenge_hit",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_challenge_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_challenge_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_coin_death",
+    "params": [],
+    "detail": "xx = x;"
+  },
+  {
+    "name": "rule_coin_drop",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "rule_coin_hit",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "rule_coin_init",
+    "params": [],
+    "detail": "Coin doesn't have stock display."
+  },
+  {
+    "name": "rule_coin_step",
+    "params": [],
+    "detail": "OBV part"
+  },
+  {
+    "name": "rule_dm_end",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_dm_init",
+    "params": [],
+    "detail": "No need for stocks for Deathmatch."
+  },
+  {
+    "name": "rule_dm_step",
+    "params": [],
+    "detail": "Deathmatch game rules main script!"
+  },
+  {
+    "name": "rule_event_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_kotr_death",
+    "params": [],
+    "detail": "Did we SD?"
+  },
+  {
+    "name": "rule_kotr_end",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_kotr_init",
+    "params": [],
+    "detail": "King of the Ring doesn't have stock display."
+  },
+  {
+    "name": "rule_kotr_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_mh_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_multiman_death",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_multiman_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_multiman_end",
+    "params": [],
+    "detail": "Revert the rules."
+  },
+  {
+    "name": "rule_multiman_init",
+    "params": [],
+    "detail": "Whether we are doing 2 player or not."
+  },
+  {
+    "name": "rule_multiman_step",
+    "params": [],
+    "detail": "if ( stack_tough < 19 )"
+  },
+  {
+    "name": "rule_platform_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_platform_step",
+    "params": [],
+    "detail": "Target test main script!"
+  },
+  {
+    "name": "rule_rttf_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_rttf_step",
+    "params": [],
+    "detail": "Target test main script!"
+  },
+  {
+    "name": "rule_sd_death",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_sd_step",
+    "params": [],
+    "detail": "show_question ("
+  },
+  {
+    "name": "rule_stageend_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_stageend_step_arcade",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_stageend_step_challengemh",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_stamina_init",
+    "params": [],
+    "detail": "Stamina forces the display of stock icons on damage meters."
+  },
+  {
+    "name": "rule_stock_death",
+    "params": [],
+    "detail": "Take a stock away."
+  },
+  {
+    "name": "rule_stock_end",
+    "params": [
+      "argument0"
+    ],
+    "detail": "show_message ( \"stocks 0: \" + string ( obj_score_control.t_stocks[0] ) +"
+  },
+  {
+    "name": "rule_stock_init",
+    "params": [],
+    "detail": "Stock forces the display of stock icons on damage meters."
+  },
+  {
+    "name": "rule_stock_step",
+    "params": [],
+    "detail": "if ( keyboard_check_pressed ( vk_space ) )"
+  },
+  {
+    "name": "rule_target_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_target_step",
+    "params": [],
+    "detail": "Target test main script!"
+  },
+  {
+    "name": "rule_time_death",
+    "params": [],
+    "detail": "Did we SD?"
+  },
+  {
+    "name": "rule_time_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_time_end",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_time_init",
+    "params": [],
+    "detail": "Time doesn't have stock display."
+  },
+  {
+    "name": "rule_time_step",
+    "params": [],
+    "detail": "if ( keyboard_check ( vk_control ) )"
+  },
+  {
+    "name": "rule_training_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_training_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_volley_init",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rule_volley_step",
+    "params": [],
+    "detail": "ball = -1;"
+  },
+  {
+    "name": "rules_announce",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rules_init",
+    "params": [],
+    "detail": "This is the script used to set up the rules of game."
+  },
+  {
+    "name": "rules_stagecomplete",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rules_stagecomplete_arcade",
+    "params": [],
+    "detail": "if obj_score_control.stocks[0] = 0{"
+  },
+  {
+    "name": "rules_stagecomplete_challengemh",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "rules_sudden_death",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "arguments 0-5 - participating players"
+  },
+  {
+    "name": "rules_winner_find",
+    "params": [],
+    "detail": "This is a very early version of this script. It's for finding the winner and setting the players on results screen."
+  },
+  {
+    "name": "sample_event_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "save_Events",
+    "params": [],
+    "detail": "// Save events"
+  },
+  {
+    "name": "scr_alt_stuff_v7_fix",
+    "params": [],
+    "detail": "Jio was here"
+  },
+  {
+    "name": "scr_assist_hitassistflag",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_assist_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_assists_lock",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_cmc_menu_main",
+    "params": [],
+    "detail": "case 6:"
+  },
+  {
+    "name": "scr_control_more_stuff",
+    "params": [],
+    "detail": "if ( !file_exists ( \"data/un1.bin\" ) )"
+  },
+  {
+    "name": "scr_control_save_stuff",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_draw_c_score",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_draw_challenge_keys",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_enemy_combocounter",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_enemy_damagecalc",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_enemy_dirget",
+    "params": [],
+    "detail": "melty blood no momentum cancel hit"
+  },
+  {
+    "name": "scr_enemy_hitenemyflag",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_enemy_hitgfx",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_enemy_kbcalc",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_enemy_screenshake",
+    "params": [],
+    "detail": "Screen shake."
+  },
+  {
+    "name": "scr_enemy_sfxplay",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_favorite_read",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_favorite_write",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_fighter_handler_build",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_fighters_lock",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_force_invincible",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_gstatue_load",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_gstatue_save",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_hyde_arcade_draw",
+    "params": [],
+    "detail": "VS."
+  },
+  {
+    "name": "scr_hyde_arcade_step",
+    "params": [],
+    "detail": "if !sound_exists(snd_unib)"
+  },
+  {
+    "name": "scr_items_disable",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_items_lock",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_legacy_menu",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_melty_arcade_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_achs_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_achs_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_data_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_data_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_fave_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_fave_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_links_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_links_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_main_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_mouse_pos_checker",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_multiman_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_multiman_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_options_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_options_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_stadium_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_stadium_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_unlocks_draw",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_menu_unlocks_step",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_not_cmc_fighter",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_nuke_all",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_obj_control_poke_item",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_obj_control_stage",
+    "params": [],
+    "detail": "db_stagename [ global.bonus_stage_id , 0 ] = \"bonus\";"
+  },
+  {
+    "name": "scr_stages_lock",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_toha_menu_main",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "scr_tptosubmap",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "instance_create(x,y,obj_tptotemp)"
+  },
+  {
+    "name": "scr_un_call_unlock_stage",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "screen_shake",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "script1909",
+    "params": [],
+    "detail": "Called in Scripts > Rules > VS Rules > rule_stock_end()"
+  },
+  {
+    "name": "script1912",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "script1913",
+    "params": [],
+    "detail": "write time"
+  },
+  {
+    "name": "script1987",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "script1989",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "script2007",
+    "params": [],
+    "detail": "for ( i = 1 ; i <= db_charnum ; i += 1 )"
+  },
+  {
+    "name": "script2037",
+    "params": [],
+    "detail": "if ( data_slot [ gc_fighter_id ( db_charname[global.gs_character[i],1+global.gs_form[i]*3] ) ] <= 0 )"
+  },
+  {
+    "name": "script2050",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "script2051",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "for ( i = 0 ; i < MAX_FIGHTERS ; i += 1 )"
+  },
+  {
+    "name": "script2065",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "script2083",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8"
+    ],
+    "detail": "argument0 = ID(from 1 to 5), argument1 = bin name, argument2 = alt, argument3 = palette, argument4 load message"
+  },
+  {
+    "name": "script2125",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "script2134",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "sendmessage",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "Sends the data in a buffer through the selected tcp or udp socket."
+  },
+  {
+    "name": "sense_convert",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "this is for controller to process an axis value according to its sensitivity"
+  },
+  {
+    "name": "set_aura",
+    "params": [],
+    "detail": "aura = max ( 0 , min ( 10 , percent/18 + ((falls+sds-kos)>0)*1.33 ) );"
+  },
+  {
+    "name": "set_challenge_enemy",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "set_challenge_switch",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 = Switch ID"
+  },
+  {
+    "name": "set_cutscene_text_settings",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "set_enemy_challenge",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7",
+      "argument8"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "set_hitlag",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "set_locked_control",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "set_locked_control_stages",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "set_round_text_settings",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "set_rounds_with_text",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "set_xprev",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - object to set last x of"
+  },
+  {
+    "name": "set_yprev",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "argument0 - object to set last y of"
+  },
+  {
+    "name": "setformat",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "When sending messages over a tcp socket the messages need to be seperated."
+  },
+  {
+    "name": "setnagle",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Turns on/off the naggle (TCP_NODELAY) algorithm."
+  },
+  {
+    "name": "setpos",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Sets the read/write pos in a buffer"
+  },
+  {
+    "name": "setsync",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Changes the blocking/non-blocking mode of a socket."
+  },
+  {
+    "name": "shader_create",
+    "params": [],
+    "detail": "shader_pswap = d3d_ps_create( \""
+  },
+  {
+    "name": "shader_destroy",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "shield_cancel",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "show_message",
+    "params": [
+      "argument0"
+    ],
+    "detail": "get_string ( string ( object_get_name ( object_index ) ) + \"#\" + string ( event_type ) + \"#\" + string ( event_action ) , \"\" );"
+  },
+  {
+    "name": "sockexit",
+    "params": [],
+    "detail": "Call this when you want to free winsock. (The dll automatically does this"
+  },
+  {
+    "name": "socklasterror",
+    "params": [],
+    "detail": "Returns the error code for the last socket related error."
+  },
+  {
+    "name": "sockstart",
+    "params": [],
+    "detail": "Call this when you want to start winsock only after you have used sockexit()"
+  },
+  {
+    "name": "sound_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": ", 0 , 1"
+  },
+  {
+    "name": "sound_add_nar",
+    "params": [
+      "argument0"
+    ],
+    "detail": ", 0 , 1"
+  },
+  {
+    "name": "sound_delete",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Does nothing. no need for that with FMOD's tiny sound footprint."
+  },
+  {
+    "name": "sound_isplaying",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sound_loop",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sound_pan",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "this gets the sound. 0, null sound if not found"
+  },
+  {
+    "name": "sound_play",
+    "params": [
+      "argument0"
+    ],
+    "detail": "this gets the sound. 0, null sound if not found"
+  },
+  {
+    "name": "sound_play_pitch",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "this gets the sound. 0, null sound if not found"
+  },
+  {
+    "name": "sound_play2",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sound_stop",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sound_volume",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "this gets the sound. 0, null sound if not found"
+  },
+  {
+    "name": "spawn_door",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6"
+    ],
+    "detail": "x,y, name"
+  },
+  {
+    "name": "spawn_enemy",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "x,y, name"
+  },
+  {
+    "name": "specific_win_quote",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "spr_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5",
+      "argument6",
+      "argument7"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "spr_add_alpha",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "spr_add_from_surface",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "spr_delete",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sprite_set_precise",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sss_load",
+    "params": [],
+    "detail": "Load SSS resources."
+  },
+  {
+    "name": "sss_unload",
+    "params": [],
+    "detail": "Unload resources used by SSS."
+  },
+  {
+    "name": "stage_ban_load",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stage_ban_save",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stage_bg_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": "if ( temp_loading )"
+  },
+  {
+    "name": "stage_bg_projection",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "stage_bg_projection_x",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "returns the y of a point inside a projected window"
+  },
+  {
+    "name": "stage_bg_projection_y",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "returns the y of a point inside a projected window"
+  },
+  {
+    "name": "stage_bglayer_auto",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "This is the function that will make background scroll, following the camera,"
+  },
+  {
+    "name": "stage_bglayer_auto2",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stage_deinstall_bg_object",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stage_get_dbid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - stage name"
+  },
+  {
+    "name": "stage_hitbox",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "fx = instance_create((other.argument0+other.argument2)*0.5 + fx_x, (other.argument1+other.argument3)*0.5 - fx_y,gfx);"
+  },
+  {
+    "name": "stage_hitbox_nostun",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "Returns object id if the pointed surface was hit, also puts the attacker in suitable hitstun."
+  },
+  {
+    "name": "stage_install_bg_object",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stage_lighting",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "stage_lighting_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "stage_load_bin",
+    "params": [
+      "argument0"
+    ],
+    "detail": "stage_load_bin"
+  },
+  {
+    "name": "stage_load_bin_1",
+    "params": [
+      "argument0"
+    ],
+    "detail": "stage_load_bin_1"
+  },
+  {
+    "name": "stage_load_bin_2",
+    "params": [
+      "argument0"
+    ],
+    "detail": "stage_load_bin_2"
+  },
+  {
+    "name": "stage_msk_add",
+    "params": [
+      "argument0"
+    ],
+    "detail": "if ( temp_loading )"
+  },
+  {
+    "name": "stage_msk_add2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4",
+      "argument5"
+    ],
+    "detail": "if ( temp_loading )"
+  },
+  {
+    "name": "stage_scr_load",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "stage_spr_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3"
+    ],
+    "detail": "if ( temp_loading )"
+  },
+  {
+    "name": "stagebonus_init",
+    "params": [],
+    "detail": "Set the camera boundaries + maximal zoom level. Minimal zoom level is determined by camera boundaries."
+  },
+  {
+    "name": "startup_assists_thing",
+    "params": [],
+    "detail": "What can be found with game maker 8.1 searches:"
+  },
+  {
+    "name": "startup_c_munny",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "startup_gacha_max",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stats_gen_add",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "This scripts adds a value to a stat."
+  },
+  {
+    "name": "stats_gen_create",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "stats_gen_read",
+    "params": [
+      "argument0"
+    ],
+    "detail": "This script reads a 4-byte value and returns it."
+  },
+  {
+    "name": "stats_gen_read_lite",
+    "params": [
+      "argument0"
+    ],
+    "detail": "This script reads a 4-byte value and returns it."
+  },
+  {
+    "name": "stats_gen_update",
+    "params": [],
+    "detail": "this is supposed to process the old stats file and do things to it if there is an update to be done"
+  },
+  {
+    "name": "stats_gen_write",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "This script writes a 4-byte value into general records bin."
+  },
+  {
+    "name": "stick_angle",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "for angled specials and stuff"
+  },
+  {
+    "name": "sticker_make_bin",
+    "params": [],
+    "detail": "file = file_bin_open ( \"data/stickers.bin\" , 1 );"
+  },
+  {
+    "name": "sticker_read_bin",
+    "params": [],
+    "detail": "file = file_bin_open ( \"data/stickers.bin\" , 0 );"
+  },
+  {
+    "name": "stop_music",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "surface_set_target2",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "sword_trail2_render_pass",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "tcpaccept",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Accepts any incoming connections on a listening socket."
+  },
+  {
+    "name": "tcpconnect",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "creates a socket and connects to the ip and port"
+  },
+  {
+    "name": "tcpconnected",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = Socket id to check"
+  },
+  {
+    "name": "tcpip",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Returns the ip that the socket is connected to."
+  },
+  {
+    "name": "tcplisten",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "Creates a listening socket to monitor a certain port for incoming"
+  },
+  {
+    "name": "tempmus_end",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "tempmus_play",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - path"
+  },
+  {
+    "name": "tempmus_play2",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 - gmse sound"
+  },
+  {
+    "name": "tempmus_stop",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 - track id (0-15)"
+  },
+  {
+    "name": "tempmus_update",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "title_to_css",
+    "params": [],
+    "detail": "global.menu_blend = make_color_rgb ( 67 , 80 , 239 );"
+  },
+  {
+    "name": "trigger_cutscene",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "udpconnect",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Creates a udp socket."
+  },
+  {
+    "name": "ufighter_get_dbid",
+    "params": [
+      "argument0"
+    ],
+    "detail": "arg0 - fighter name"
+  },
+  {
+    "name": "ufighter_get_stock",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "returns a stock icon of a fighter with a given id"
+  },
+  {
+    "name": "ufighter_load_settings",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument 0 - db_charu fighter id"
+  },
+  {
+    "name": "uinttoip",
+    "params": [
+      "argument0"
+    ],
+    "detail": "Converts a number to a ip address."
+  },
+  {
+    "name": "un_check_arcade",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 = name to unlock"
+  },
+  {
+    "name": "un_check_arcade_stage",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2"
+    ],
+    "detail": "argument0 = name to unlock"
+  },
+  {
+    "name": "un_check_classic",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "argument0 = name to unlock"
+  },
+  {
+    "name": "un_check_classic_stage",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": "argument0 = name to unlock"
+  },
+  {
+    "name": "un_tutoNOTASCRIPT",
+    "params": [],
+    "detail": "Tutorial"
+  },
+  {
+    "name": "unbin_fighter_lol",
+    "params": [
+      "argument0"
+    ],
+    "detail": ""
+  },
+  {
+    "name": "unload_enemy_assets",
+    "params": [],
+    "detail": "the enemy folder name"
+  },
+  {
+    "name": "unload_gallery_prev",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "UnloadFMOD",
+    "params": [],
+    "detail": "This frees the FMOD dll"
+  },
+  {
+    "name": "unlock_load_pak",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "unlock_make_bin",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "unlock_read_bin",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "unlockables_arcade",
+    "params": [],
+    "detail": "if global.unlock_someone != \"\"{"
+  },
+  {
+    "name": "unlockables_challenge",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "unlockables_classic",
+    "params": [],
+    "detail": "put classic unlockables here"
+  },
+  {
+    "name": "unlockables_clastadium",
+    "params": [],
+    "detail": "if ( ctotal_rttf >= 10 )"
+  },
+  {
+    "name": "unlockables_late",
+    "params": [],
+    "detail": "if ( unlock_character == -1 )"
+  },
+  {
+    "name": "unlockables_stadium",
+    "params": [],
+    "detail": "called in rule_bonus_end (when player chooses to leave the stadium minigame)"
+  },
+  {
+    "name": "unlockables_sum",
+    "params": [],
+    "detail": "if not_cmc = 1"
+  },
+  {
+    "name": "unlockables_versus",
+    "params": [
+      "argument0"
+    ],
+    "detail": "put versus unlockables here"
+  },
+  {
+    "name": "v7_unlocks_leftover",
+    "params": [],
+    "detail": "// rika and fnfrog in a match in versus mode for ellie"
+  },
+  {
+    "name": "wall_action_script",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "warrant_dragon_ball",
+    "params": [
+      "argument0"
+    ],
+    "detail": "argument0 = the one"
+  },
+  {
+    "name": "workspace",
+    "params": [],
+    "detail": ""
+  },
+  {
+    "name": "writebyte",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Write 1 byte. The value can be between 0 and 255"
+  },
+  {
+    "name": "writechars",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes a sequence of characters to the buffer."
+  },
+  {
+    "name": "writedouble",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Same as writefloat but the number can be much larger. It can write any number GM supports."
+  },
+  {
+    "name": "writefloat",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes a 4 byte real number (number that can contain a decimal place)."
+  },
+  {
+    "name": "writeint",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes a 4 byte integer to the internal buffer. The value can be between"
+  },
+  {
+    "name": "writeshort",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes a 2 byte integer to the buffer. the value can be between"
+  },
+  {
+    "name": "writestring",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Write a null terminated string to the buffer"
+  },
+  {
+    "name": "writeuint",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes a 4 byte UNSIGNED integer to the internal buffer. The value can be between"
+  },
+  {
+    "name": "writeushort",
+    "params": [
+      "argument0",
+      "argument1"
+    ],
+    "detail": "Writes a 2 byte UNSIGNED integer to the buffer. the value can be between"
+  },
+  {
+    "name": "zone_add",
+    "params": [
+      "argument0",
+      "argument1",
+      "argument2",
+      "argument3",
+      "argument4"
+    ],
+    "detail": ""
+  }
+]

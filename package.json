@@ -1,9 +1,10 @@
 {
   "name": "crusade-tools",
-  "displayName": "Crusade Tools",
-  "description": "Monitor and analyze Crusade project logs (error.log, spritecount.log)",
+  "displayName": "%crusade-tools.displayName%",
+  "description": "%crusade-tools.description%",
   "version": "0.0.1",
   "publisher": "valentin",
+  "l10n": "./l10n",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -11,79 +12,185 @@
     "Programming Languages",
     "Other"
   ],
+  "keywords": [
+    "smash crusade",
+    "game maker",
+    "modding",
+    "fighter",
+    "stage",
+    "sprite",
+    "moveset"
+  ],
   "activationEvents": [
-    "*"
+    "workspaceContains:INDEX",
+    "workspaceContains:fighter",
+    "workspaceContains:stage",
+    "onView:crusadeExplorer",
+    "onCommand:crusade-tools.createCharacter",
+    "onCommand:crusade-tools.openErrorLog"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "crusade-script",
+        "aliases": [
+          "Crusade Script"
+        ],
+        "filenamePatterns": [
+          "**/fighter/**/*.txt",
+          "**/item/**/*.txt",
+          "**/stage/**/*.txt",
+          "**/assist/**/*.txt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "crusade-script",
+        "scopeName": "source.crusade-script",
+        "path": "./syntaxes/crusade.tmLanguage.json"
+      }
+    ],
     "commands": [
       {
         "command": "crusade-tools.createCharacter",
-        "title": "🎮 Create New Character",
+        "title": "%crusade-tools.command.createCharacter%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.toggleWatch",
-        "title": "🎮 Toggle Log Watch",
+        "title": "%crusade-tools.command.toggleWatch%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.clearLogs",
-        "title": "🎮 Clear All Logs",
+        "title": "%crusade-tools.command.clearLogs%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.openErrorLog",
-        "title": "🎮 Open error.log",
+        "title": "%crusade-tools.command.openErrorLog%",
         "category": "Crusade"
       },
       {
         "command": "crusade-tools.openFighter",
-        "title": "Open Fighter",
+        "title": "%crusade-tools.command.openFighter%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.refreshExplorer",
+        "title": "%crusade-tools.command.refreshExplorer%",
+        "category": "Crusade",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "crusade-tools.openGame",
+        "title": "%crusade-tools.command.openGame%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.compileCharacter",
+        "title": "%crusade-tools.command.compileCharacter%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.openPalette",
+        "title": "%crusade-tools.command.openPalette%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.previewSprite",
+        "title": "%crusade-tools.command.previewSprite%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.previewCharacterData",
+        "title": "%crusade-tools.command.previewCharacterData%",
+        "category": "Crusade"
+      },
+      {
+        "command": "crusade-tools.previewStageData",
+        "title": "%crusade-tools.command.previewStageData%",
         "category": "Crusade"
       }
     ],
     "viewsContainers": {
-        "activitybar": [
-            {
-                "id": "crusade",
-                "title": "Crusade Tools",
-                "icon": "media/icon.svg"
-            }
-        ]
+      "activitybar": [
+        {
+          "id": "crusade",
+          "title": "%crusade-tools.displayName%",
+          "icon": "media/icon.svg"
+        }
+      ]
     },
     "views": {
-        "crusade":[
-            {
-                "id":"crusadeExplorer",
-                "name":"Explorer",
-                "icon": "media/icon.svg"
-            }
-        ]
-
+      "crusade": [
+        {
+          "id": "crusadeExplorer",
+          "name": "%crusade-tools.view.explorer%",
+          "icon": "media/icon.svg"
+        },
+        {
+          "id": "crusadeDiagnostics",
+          "name": "%crusade-tools.view.diagnostics%"
+        },
+        {
+          "id": "crusadeAssets",
+          "name": "%crusade-tools.view.assets%"
+        }
+      ]
     },
     "menus": {
+      "view/title": [
+        {
+          "command": "crusade-tools.refreshExplorer",
+          "when": "view == crusadeExplorer",
+          "group": "navigation"
+        },
+        {
+          "command": "crusade-tools.createCharacter",
+          "when": "view == crusadeExplorer",
+          "group": "navigation"
+        }
+      ],
       "view/item/context": [
-          {
-              "command": "crusade-tools.openFighter",
-              "when": "view == crusadeExplorer",
-              "group": "navigation"
-            }
-        ]
+        {
+          "command": "crusade-tools.openGame",
+          "when": "view == crusadeExplorer",
+          "group": "1_run"
+        },
+        {
+          "command": "crusade-tools.compileCharacter",
+          "when": "viewItem == fighter",
+          "group": "2_build"
+        },
+        {
+          "command": "crusade-tools.previewSprite",
+          "when": "viewItem == file && resourceExtname == .png",
+          "group": "3_preview"
+        },
+        {
+          "command": "crusade-tools.playMusic",
+          "when": "viewItem == file && (resourceExtname == .ogg || resourceExtname == .mp3 || resourceExtname == .wav)",
+          "group": "3_preview"
+        }
+      ]
     },
     "configuration": {
-      "title": "Crusade Tools",
+      "title": "%crusade-tools.displayName%",
       "properties": {
-          "crusade-tools.autoWatch": {
-              "type": "boolean",
-              "default": true,
-              "description": "Automatically watch Crusade logs"
-          },
-          "crusade-tools.gamePath": {
-              "type": "string",
-              "default": "",
-              "description": "Path to Smash Crusade executable"
-          }
+        "crusade-tools.autoWatch": {
+          "type": "boolean",
+          "default": true,
+          "description": "%crusade-tools.config.autoWatch%"
+        },
+        "crusade-tools.gamePath": {
+          "type": "string",
+          "default": "",
+          "description": "%crusade-tools.config.gamePath%"
+        }
       }
     }
   },
@@ -95,9 +202,14 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
-    "@types/node": "16.x",
     "@types/mocha": "^10.0.0",
+    "@types/node": "^16.18.126",
+    "@types/vscode": "^1.80.0",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
   }
 }

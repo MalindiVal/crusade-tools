@@ -1,0 +1,20 @@
+////
+// DEINIT
+////
+
+stage_deinstall_bg_object();
+var i;
+
+// Unload stage masks.
+for ( i = 0 ; i <= 10 ; i += 1 )
+  if ( sprite_exists ( global.msk_stg[i] ) )
+    spr_delete ( global.msk_stg[i] );
+
+// Unload stage sprites.
+for ( i = 0 ; i <= 11 ; i += 1 )
+  if ( sprite_exists ( global.spr_stg[i] ) )
+    spr_delete ( global.spr_stg[i] );
+
+// Unload stage backgrounds.
+if ( background_exists ( background_index[0] ) )
+  background_delete ( background_index[0] );
